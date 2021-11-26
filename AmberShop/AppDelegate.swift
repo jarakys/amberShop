@@ -13,6 +13,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
+        StoreManager.shared.getCategories(completion: nil)
+        StoreManager.shared.getMenu(completion: nil)
         // Override point for customization after application launch.
         return true
     }
