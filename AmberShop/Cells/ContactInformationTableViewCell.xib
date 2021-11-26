@@ -11,11 +11,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactInformationTableViewCell" rowHeight="148" id="KGk-i7-Jjw" customClass="ContactInformationTableViewCell" customModule="AmberShop" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="407" height="148"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="ContactInformationTableViewCell" rowHeight="144" id="KGk-i7-Jjw" customClass="ContactInformationTableViewCell" customModule="AmberShop" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="407" height="144"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" ambiguous="YES" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <rect key="frame" x="0.0" y="0.0" width="407" height="148"/>
+                <rect key="frame" x="0.0" y="0.0" width="407" height="144"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SxM-le-mCU">
@@ -29,24 +29,6 @@
                                     <constraint firstAttribute="width" constant="20" id="YI4-zS-8sR"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Киев, Бульвар Леси Украинки 29, офис 75" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ka-us-0Nb">
-                                <rect key="frame" x="55" y="20" width="283.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="info@amber-futbolka.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gaC-5m-aez">
-                                <rect key="frame" x="55" y="62" width="168" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+38 (044) 285 42 99" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e8Q-oM-xUk">
-                                <rect key="frame" x="55" y="104" width="138.5" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="p4f-C9-k4E">
                                 <rect key="frame" x="20" y="61" width="20" height="17.5"/>
                                 <color key="tintColor" systemColor="systemGrayColor"/>
@@ -63,31 +45,78 @@
                                     <constraint firstAttribute="height" constant="20" id="zeR-f5-lh0"/>
                                 </constraints>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+38 (044) 228 02 79" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K6G-1u-3bO">
-                                <rect key="frame" x="208.5" y="104" width="137" height="17"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Киев, Бульвар Леси Украинки 29, офис 75" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wim-xn-9Rh">
+                                <rect key="frame" x="55" y="15" width="295" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="295" id="Fwq-zN-n1n"/>
+                                    <constraint firstAttribute="height" constant="25" id="PYA-N0-6lr"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="info@amber-futbolka.com" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="awN-2N-Yyd">
+                                <rect key="frame" x="55" y="55" width="180" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="180" id="O6S-qb-ye4"/>
+                                    <constraint firstAttribute="height" constant="25" id="mmD-42-PT8"/>
+                                </constraints>
                                 <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="+38 (044) 285 42 99" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Utr-VX-z1F">
+                                <rect key="frame" x="55" y="95" width="150" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7lq-4e-3d6"/>
+                                    <constraint firstAttribute="height" constant="25" id="tiW-9m-6iJ"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="+38 (044) 285 42 99" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="yg0-hE-OmZ">
+                                <rect key="frame" x="220" y="95" width="150" height="25"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="52K-ka-8ku"/>
+                                    <constraint firstAttribute="height" constant="25" id="Xec-SE-fZq"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
+                            </textView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="EeK-yj-sIt"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="yg0-hE-OmZ" firstAttribute="top" secondItem="awN-2N-Yyd" secondAttribute="bottom" constant="15" id="83L-s2-E4P"/>
                             <constraint firstItem="UCr-hO-ZOc" firstAttribute="top" secondItem="p4f-C9-k4E" secondAttribute="bottom" constant="20" id="9cR-pR-WUD"/>
-                            <constraint firstItem="gaC-5m-aez" firstAttribute="top" secondItem="4ka-us-0Nb" secondAttribute="bottom" constant="25" id="DmN-xc-P6I"/>
+                            <constraint firstItem="Utr-VX-z1F" firstAttribute="leading" secondItem="UCr-hO-ZOc" secondAttribute="trailing" constant="15" id="I5m-L0-u7u"/>
                             <constraint firstItem="p4f-C9-k4E" firstAttribute="top" secondItem="9JV-rv-NjL" secondAttribute="bottom" constant="20" id="NcM-YT-Mij"/>
-                            <constraint firstItem="4ka-us-0Nb" firstAttribute="leading" secondItem="9JV-rv-NjL" secondAttribute="trailing" constant="15" id="UJ1-po-dTU"/>
-                            <constraint firstItem="gaC-5m-aez" firstAttribute="leading" secondItem="p4f-C9-k4E" secondAttribute="trailing" constant="15" id="XVG-hx-Ym5"/>
-                            <constraint firstItem="e8Q-oM-xUk" firstAttribute="top" secondItem="gaC-5m-aez" secondAttribute="bottom" constant="25" id="ZJu-S2-wPX"/>
-                            <constraint firstItem="K6G-1u-3bO" firstAttribute="top" secondItem="gaC-5m-aez" secondAttribute="bottom" constant="25" id="bcF-o6-x2A"/>
-                            <constraint firstItem="4ka-us-0Nb" firstAttribute="top" secondItem="SxM-le-mCU" secondAttribute="top" constant="20" id="cgH-mR-ARL"/>
+                            <constraint firstItem="wim-xn-9Rh" firstAttribute="leading" secondItem="9JV-rv-NjL" secondAttribute="trailing" constant="15" id="Xoa-5D-H16"/>
+                            <constraint firstItem="awN-2N-Yyd" firstAttribute="top" secondItem="wim-xn-9Rh" secondAttribute="bottom" constant="15" id="egd-Gk-LeY"/>
+                            <constraint firstItem="awN-2N-Yyd" firstAttribute="leading" secondItem="p4f-C9-k4E" secondAttribute="trailing" constant="15" id="gPH-q7-JwI"/>
+                            <constraint firstItem="wim-xn-9Rh" firstAttribute="top" secondItem="EeK-yj-sIt" secondAttribute="top" constant="15" id="h0i-Kt-6Rd"/>
+                            <constraint firstItem="yg0-hE-OmZ" firstAttribute="leading" secondItem="Utr-VX-z1F" secondAttribute="trailing" constant="15" id="mCb-W0-Esd"/>
                             <constraint firstItem="UCr-hO-ZOc" firstAttribute="leading" secondItem="SxM-le-mCU" secondAttribute="leading" constant="20" id="nEy-hf-Blv"/>
                             <constraint firstItem="p4f-C9-k4E" firstAttribute="leading" secondItem="SxM-le-mCU" secondAttribute="leading" constant="20" id="qlk-V7-WjM"/>
                             <constraint firstItem="9JV-rv-NjL" firstAttribute="top" secondItem="SxM-le-mCU" secondAttribute="top" constant="20" id="rCa-z8-wrY"/>
-                            <constraint firstItem="K6G-1u-3bO" firstAttribute="leading" secondItem="e8Q-oM-xUk" secondAttribute="trailing" constant="15" id="sZ5-V1-9XG"/>
-                            <constraint firstItem="e8Q-oM-xUk" firstAttribute="leading" secondItem="UCr-hO-ZOc" secondAttribute="trailing" constant="15" id="seR-Bd-GNJ"/>
+                            <constraint firstItem="Utr-VX-z1F" firstAttribute="top" secondItem="awN-2N-Yyd" secondAttribute="bottom" constant="15" id="unu-T0-NtU"/>
                             <constraint firstItem="9JV-rv-NjL" firstAttribute="leading" secondItem="SxM-le-mCU" secondAttribute="leading" constant="20" id="vLn-BR-wOe"/>
                             <constraint firstAttribute="height" constant="120" id="wPT-MZ-Z0H"/>
+                            <constraint firstItem="EeK-yj-sIt" firstAttribute="bottom" secondItem="UCr-hO-ZOc" secondAttribute="bottom" id="yyP-Qi-z8x"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -99,7 +128,7 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
-            <point key="canvasLocation" x="92.028985507246389" y="82.366071428571431"/>
+            <point key="canvasLocation" x="92.028985507246389" y="81.026785714285708"/>
         </tableViewCell>
     </objects>
     <resources>

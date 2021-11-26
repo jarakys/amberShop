@@ -26,6 +26,11 @@
 		116F974C274C02AE00F08F86 /* ContactInformationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F974A274C02AE00F08F86 /* ContactInformationTableViewCell.swift */; };
 		116F974D274C02AE00F08F86 /* ContactInformationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 116F974B274C02AE00F08F86 /* ContactInformationTableViewCell.xib */; };
 		116F9750274C0BEA00F08F86 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 116F974F274C0BEA00F08F86 /* UIView.swift */; };
+		117515A22751196000B41E1D /* DeliveryInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117515A12751196000B41E1D /* DeliveryInfoViewController.swift */; };
+		117515A52751248000B41E1D /* DeliveryInfoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117515A32751248000B41E1D /* DeliveryInfoTableViewCell.swift */; };
+		117515A62751248000B41E1D /* DeliveryInfoTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117515A42751248000B41E1D /* DeliveryInfoTableViewCell.xib */; };
+		117515AE27513D2800B41E1D /* OrderFormTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117515AC27513D2800B41E1D /* OrderFormTableViewCell.swift */; };
+		117515AF27513D2800B41E1D /* OrderFormTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117515AD27513D2800B41E1D /* OrderFormTableViewCell.xib */; };
 		AAAF9B1BDA7C449CC802C0C4 /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7377D2648768E19D6FA88568 /* Pods_AmberShop.framework */; };
 		ED8CE8F52750439700CECA8B /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8F42750439700CECA8B /* APIRouter.swift */; };
 		ED8CE8F7275043B800CECA8B /* NetwrokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8F6275043B800CECA8B /* NetwrokManager.swift */; };
@@ -65,8 +70,14 @@
 		116F974A274C02AE00F08F86 /* ContactInformationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactInformationTableViewCell.swift; sourceTree = "<group>"; };
 		116F974B274C02AE00F08F86 /* ContactInformationTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ContactInformationTableViewCell.xib; sourceTree = "<group>"; };
 		116F974F274C0BEA00F08F86 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		117515A12751196000B41E1D /* DeliveryInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryInfoViewController.swift; sourceTree = "<group>"; };
+		117515A32751248000B41E1D /* DeliveryInfoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeliveryInfoTableViewCell.swift; sourceTree = "<group>"; };
+		117515A42751248000B41E1D /* DeliveryInfoTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DeliveryInfoTableViewCell.xib; sourceTree = "<group>"; };
+		117515AC27513D2800B41E1D /* OrderFormTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderFormTableViewCell.swift; sourceTree = "<group>"; };
+		117515AD27513D2800B41E1D /* OrderFormTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderFormTableViewCell.xib; sourceTree = "<group>"; };
+		48BCB5C74023D181F1425E64 /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
 		7377D2648768E19D6FA88568 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		78D0C0DE3A9BB37CCAA483AF /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
+		A536F1F0DAC210A6F85507A3 /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
 		ED8CE8F42750439700CECA8B /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		ED8CE8F6275043B800CECA8B /* NetwrokManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokManager.swift; sourceTree = "<group>"; };
 		ED8CE8FA2750451A00CECA8B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -81,7 +92,6 @@
 		ED8CE90F27505FCA00CECA8B /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		ED8CE9112750612C00CECA8B /* ModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewModel.swift; sourceTree = "<group>"; };
 		ED8CE913275063AD00CECA8B /* String+HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLText.swift"; sourceTree = "<group>"; };
-		F428557620A0B0DA6103076E /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,8 +111,8 @@
 			children = (
 				1162B1FB274970F2000F7A03 /* AmberShop */,
 				1162B1FA274970F2000F7A03 /* Products */,
-				C978568680F7304970ED9855 /* Pods */,
 				34806B633CB69DD465F50537 /* Frameworks */,
+				E3263FDEB01754846B0755AD /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -137,12 +147,15 @@
 		116F973F274BD03F00F08F86 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				117515A727513C1000B41E1D /* Cart */,
 				116F9744274BD4F100F08F86 /* LabelCollectionViewCell.swift */,
 				116F9745274BD4F100F08F86 /* LabelCollectionViewCell.xib */,
 				116F974A274C02AE00F08F86 /* ContactInformationTableViewCell.swift */,
 				116F974B274C02AE00F08F86 /* ContactInformationTableViewCell.xib */,
 				116642DD274D034A006652ED /* ProductTableViewCell.swift */,
 				116642DE274D034A006652ED /* ProductTableViewCell.xib */,
+				117515A32751248000B41E1D /* DeliveryInfoTableViewCell.swift */,
+				117515A42751248000B41E1D /* DeliveryInfoTableViewCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -158,6 +171,15 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
+		117515A727513C1000B41E1D /* Cart */ = {
+			isa = PBXGroup;
+			children = (
+				117515AC27513D2800B41E1D /* OrderFormTableViewCell.swift */,
+				117515AD27513D2800B41E1D /* OrderFormTableViewCell.xib */,
+			);
+			path = Cart;
+			sourceTree = "<group>";
+		};
 		34806B633CB69DD465F50537 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,11 +188,11 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		C978568680F7304970ED9855 /* Pods */ = {
+		E3263FDEB01754846B0755AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				F428557620A0B0DA6103076E /* Pods-AmberShop.debug.xcconfig */,
-				78D0C0DE3A9BB37CCAA483AF /* Pods-AmberShop.release.xcconfig */,
+				A536F1F0DAC210A6F85507A3 /* Pods-AmberShop.debug.xcconfig */,
+				48BCB5C74023D181F1425E64 /* Pods-AmberShop.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -205,6 +227,7 @@
 				116642DB274D02B0006652ED /* ProductsViewController.swift */,
 				116642E1274D3E5D006652ED /* ModalViewController.swift */,
 				116642E3274D6182006652ED /* ContactsViewController.swift */,
+				117515A12751196000B41E1D /* DeliveryInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -288,11 +311,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				117515A62751248000B41E1D /* DeliveryInfoTableViewCell.xib in Resources */,
 				1162B209274970F4000F7A03 /* LaunchScreen.storyboard in Resources */,
 				116642E0274D034A006652ED /* ProductTableViewCell.xib in Resources */,
 				116F974D274C02AE00F08F86 /* ContactInformationTableViewCell.xib in Resources */,
 				1162B206274970F4000F7A03 /* Assets.xcassets in Resources */,
 				1162B204274970F2000F7A03 /* Main.storyboard in Resources */,
+				117515AF27513D2800B41E1D /* OrderFormTableViewCell.xib in Resources */,
 				116F9747274BD4F100F08F86 /* LabelCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -350,14 +375,17 @@
 				ED8CE90B2750547D00CECA8B /* ProductItemModel.swift in Sources */,
 				116642E4274D6182006652ED /* ContactsViewController.swift in Sources */,
 				ED8CE91027505FCA00CECA8B /* UIImageView+LoadImage.swift in Sources */,
+				117515A22751196000B41E1D /* DeliveryInfoViewController.swift in Sources */,
 				116F9749274BEAE900F08F86 /* CatalogViewController.swift in Sources */,
 				ED8CE90527504EFF00CECA8B /* MenuViewModel.swift in Sources */,
 				1162B201274970F2000F7A03 /* MainViewController.swift in Sources */,
 				ED8CE8FE2750454D00CECA8B /* CategoryModel.swift in Sources */,
 				ED8CE8F7275043B800CECA8B /* NetwrokManager.swift in Sources */,
 				116F9746274BD4F100F08F86 /* LabelCollectionViewCell.swift in Sources */,
+				117515A52751248000B41E1D /* DeliveryInfoTableViewCell.swift in Sources */,
 				116F973A274BA3B600F08F86 /* BaseViewController.swift in Sources */,
 				116642DC274D02B0006652ED /* ProductsViewController.swift in Sources */,
+				117515AE27513D2800B41E1D /* OrderFormTableViewCell.swift in Sources */,
 				ED8CE8F52750439700CECA8B /* APIRouter.swift in Sources */,
 				116642DA274CFECD006652ED /* UIColor.swift in Sources */,
 				ED8CE9122750612C00CECA8B /* ModalViewModel.swift in Sources */,
@@ -516,7 +544,7 @@
 		};
 		1162B20E274970F4000F7A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = F428557620A0B0DA6103076E /* Pods-AmberShop.debug.xcconfig */;
+			baseConfigurationReference = A536F1F0DAC210A6F85507A3 /* Pods-AmberShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -546,7 +574,7 @@
 		};
 		1162B20F274970F4000F7A03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 78D0C0DE3A9BB37CCAA483AF /* Pods-AmberShop.release.xcconfig */;
+			baseConfigurationReference = 48BCB5C74023D181F1425E64 /* Pods-AmberShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

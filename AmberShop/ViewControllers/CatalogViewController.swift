@@ -10,6 +10,8 @@ import UIKit
 class CatalogViewController: BaseViewController {
 
     @IBOutlet weak var catalogTableView: UITableView!
+    @IBOutlet weak var ruButton: UIButton!
+    @IBOutlet weak var uaBtton: UIButton!
     
     private lazy var viewModel: MenuViewModel = {
         MenuViewModel()
@@ -74,6 +76,14 @@ class CatalogViewController: BaseViewController {
         separateNaviationController?.pushViewController(vc, animated: false)
         self.dismiss(animated: true, completion: nil)
     }
+    
+    @objc private func aboutUsDidClick() {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DeliveryInfo") as! DeliveryInfoViewController
+        separateNaviationController?.popToRootViewController(animated: false)
+        separateNaviationController?.pushViewController(vc, animated: false)
+        self.dismiss(animated: true, completion: nil)
+    }
 }
 
 class SelectionCell: UITableViewCell {
@@ -125,6 +135,20 @@ extension CatalogViewController: UITableViewDelegate, UITableViewDataSource {
         let horizontalConstr = sectionLabel.centerXAnchor.constraint(equalTo: sectionView.centerXAnchor)
         let leftConstr = sectionLabel.leftAnchor.constraint(equalTo: sectionView.leftAnchor, constant: 20)
         sectionView.addConstraints([horizontalConstr, leftConstr])
+        
+        if section == 2 {
+            let sectionButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            let attributedString = NSAttributedString(string: viewModel.nodes[section].name, attributes: [
+                NSAttributedString.Key.foregroundColor : UIColor.black,
+                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+                ])
+
+            sectionButton.setAttributedTitle(attributedString, for: .normal)
+            sectionButton.addTarget(self, action: #selector(aboutUsDidClick), for: .touchUpInside)
+            sectionButton.contentHorizontalAlignment = .left
+            sectionButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        return sectionButton
+        }
         
         if section == 3 {
             let sectionButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))

@@ -27,6 +27,7 @@ class MainViewController: BaseViewController {
         contentCollectionView.allowsSelection = true
         photoImageView.image = UIImage(named: "testImg2")
         titleLabel.text = "Футболки по отраслям"
+        titleLabel.font = .boldSystemFont(ofSize: 25)
         viewModel.$nodes.sink(receiveValue: {[weak self] _ in
             self?.contentCollectionView.reloadData()
         }).store(in: &cancellable)

@@ -27,13 +27,13 @@ class ProductsViewController: BaseViewController {
         contentTableView.separatorStyle = .none
         contentTableView.allowsSelection = false
         
-        contentTableView.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
-        contentTableView.backgroundColor = .white
-        contentTableView.layer.masksToBounds = false
-        contentTableView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-        contentTableView.layer.shadowOpacity = 1
-        contentTableView.layer.shadowOffset = CGSize(width: 0, height: 0)
-        contentTableView.layer.shadowRadius = 16
+//        contentTableView.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
+//        contentTableView.backgroundColor = .white
+//        contentTableView.layer.masksToBounds = false
+//        contentTableView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+//        contentTableView.layer.shadowOpacity = 1
+//        contentTableView.layer.shadowOffset = CGSize(width: 0, height: 0)
+//        contentTableView.layer.shadowRadius = 16
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: contentTableView.frame.width, height: 50))
         headerView.backgroundColor = .clear
@@ -120,16 +120,16 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let heaserView = UIView()
-        heaserView.backgroundColor = .clear
-        
-        return heaserView
-    }
-    
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        20
-    }
+//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+//        let heaserView = UIView()
+//        heaserView.backgroundColor = .clear
+//        
+//        return heaserView
+//    }
+//    
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        20
+//    }
 
 }
 // MARK: UIGestureRecognizerDelegate

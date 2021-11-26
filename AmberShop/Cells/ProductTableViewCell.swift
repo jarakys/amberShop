@@ -19,6 +19,7 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var toCartButton: UIButton!
+    @IBOutlet weak var containerView: UIView!
     
     var delegate: ProductTableViewCellDelegate?
     
@@ -33,16 +34,18 @@ class ProductTableViewCell: UITableViewCell {
         
         descriptionLabel.textColor = .gray
         
+        
         priceLabel.font = .boldSystemFont(ofSize: 20)
         
-        self.backgroundColor = .white
-        self.layer.masksToBounds = false
-        self.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-        self.layer.shadowOpacity = 1
-        self.layer.shadowOffset = CGSize(width: 0, height: 0)
-        self.layer.shadowRadius = 10
+        containerView.backgroundColor = .white
+        containerView.layer.masksToBounds = false
+        containerView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
+        containerView.layer.shadowOpacity = 0.6
+        containerView.layer.shadowOffset = CGSize(width: 0, height: 0)
+        containerView.layer.shadowRadius = 5
         
         titleLabel.textContainer.maximumNumberOfLines = 2
+        titleLabel.font = .boldSystemFont(ofSize: 17)
         descriptionLabel.textContainer.maximumNumberOfLines = 1
     }
 
