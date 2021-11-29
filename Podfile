@@ -7,4 +7,5 @@ target 'AmberShop' do
 
  pod 'Presentr'
  pod 'Kingfisher'
+ pod 'IQKeyboardManager' 
 end

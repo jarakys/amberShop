@@ -70,7 +70,11 @@ class BaseViewController: UIViewController {
     }
     
     @objc func cartButtonDidClick() {
-        
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Cart") as! CartViewController
+        navigationController?.popToRootViewController(animated: false)
+        navigationController?.pushViewController(vc, animated: false)
+        self.dismiss(animated: true, completion: nil)
     }
     
     @objc func menuButtonDidClick() {
