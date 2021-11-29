@@ -12,7 +12,8 @@ class CartTableViewCell: UITableViewCell {
     @IBOutlet weak var productsTableView: AutoSizingUITableView!
     @IBOutlet weak var containerView: UIView!
     @IBOutlet weak var totalPriceLabel: UILabel!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    
+    var dataRows = ["test","test1","test2"]
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -41,18 +42,23 @@ class CartTableViewCell: UITableViewCell {
 
 extension CartTableViewCell: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        3
+        dataRows.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "ProductCartTableViewCell", for: indexPath) as! ProductCartTableViewCell
         cell.iconImageVIew.image = UIImage(named: "testImg")
-        cell.titleLabel.text = "TEST"
+        cell.titleLabel.text = dataRows[indexPath.row]
+        cell.deleteAction = { [weak self] in
+            guard let self = self else {return}
+            self.dataRows.remove(at: indexPath.row)
+            self.productsTableView.reloadData()
+        }
         return cell
         
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         UITableView.automaticDimension
     }
-  
 }
