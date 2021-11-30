@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import IQKeyboardManager
+import IQKeyboardManagerSwift
 
 class OrderFormTableViewCell: UITableViewCell {
 
@@ -37,9 +37,9 @@ class OrderFormTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         configure()
-        IQKeyboardManager.shared().isEnabled = true
-        IQKeyboardManager.shared().isEnableAutoToolbar = true
-        IQKeyboardManager.shared().enableDebugging = false
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.enableAutoToolbar = true
+        IQKeyboardManager.shared.enableDebugging = false
     }
     
     private func configure() {
