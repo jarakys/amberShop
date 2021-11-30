@@ -6,6 +6,4 @@ target 'AmberShop' do
   use_frameworks!
 
  pod 'Presentr'
- pod 'Kingfisher'
- pod 'IQKeyboardManager' 
 end
