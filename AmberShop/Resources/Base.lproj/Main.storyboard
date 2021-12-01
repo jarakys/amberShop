@@ -581,6 +581,36 @@
             </objects>
             <point key="canvasLocation" x="6169" y="144"/>
         </scene>
+        <!--Product Detail View Controller-->
+        <scene sceneID="lMn-KN-yMI">
+            <objects>
+                <viewController id="wmJ-K4-SBY" customClass="ProductDetailViewController" customModule="AmberShop" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LoZ-gm-pp2">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="UEI-3E-cKt">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="Fng-3h-hnW"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Fng-3h-hnW" firstAttribute="trailing" secondItem="UEI-3E-cKt" secondAttribute="trailing" id="Ja8-ip-72p"/>
+                            <constraint firstItem="UEI-3E-cKt" firstAttribute="top" secondItem="Fng-3h-hnW" secondAttribute="top" id="SDi-IE-iTO"/>
+                            <constraint firstItem="Fng-3h-hnW" firstAttribute="bottom" secondItem="UEI-3E-cKt" secondAttribute="bottom" id="ge7-q9-JUc"/>
+                            <constraint firstItem="UEI-3E-cKt" firstAttribute="leading" secondItem="Fng-3h-hnW" secondAttribute="leading" id="pmV-K0-4OD"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="contentTableView" destination="UEI-3E-cKt" id="5y6-oB-OV6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="3IV-Hz-UqB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="7119" y="145"/>
+        </scene>
     </scenes>
     <resources>
         <image name="calendar" catalog="system" width="128" height="106"/>
