@@ -15,6 +15,16 @@ class StoreManager {
     
     private(set) var categories = [CategoryModel]()
     private(set) var menu = [MenuItemModel]()
+    private(set) var deliveryInfoModel: DeliveryInfoModel?
+    
+    func initStore() {
+        categories = []
+        menu = []
+        deliveryInfoModel = nil
+        getCategories(completion: nil)
+        getMenu(completion: nil)
+        getDeliveryInfo(completion: nil)
+    }
     
     func getCategories(completion: (([CategoryModel]?, Error?) -> Void)?) {
         guard categories.isEmpty else {
@@ -53,6 +63,27 @@ class StoreManager {
                 }
                 self.menu = menuObject
                 completion?(self.menu, nil)
+            case .failure(let error):
+                completion?(nil, error)
+            }
+        })
+    }
+    
+    func getDeliveryInfo(completion: ((DeliveryInfoModel?, Error?) -> Void)?) {
+        guard deliveryInfoModel == nil else {
+            completion?(deliveryInfoModel, nil)
+            return
+        }
+
+        NetworkManager.shared.sendRequest(route: .delivery, completion: {result in
+            switch result {
+            case .success(let data):
+                guard let deliveryObject = try? JSONDecoder().decode(DeliveryInfoModel.self, from: data) else {
+                    completion?(nil, nil)
+                    return
+                }
+                self.deliveryInfoModel = deliveryObject
+                completion?(self.deliveryInfoModel, nil)
             case .failure(let error):
                 completion?(nil, error)
             }

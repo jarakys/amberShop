@@ -24,9 +24,9 @@ class MenuViewModel: BaseViewModel {
                 return
             }
             var nodes = menuItems.map({ MenuModel(name: $0.name, menuItems: $0.subcategories) })
-            nodes.append(MenuModel(name: "О НАС", menuItems: []))
-            nodes.append(MenuModel(name: "ДОСТАВКА И ОПЛАТА", menuItems: []))
-            nodes.append(MenuModel(name: "КОНТАКТЫ", menuItems: []))
+            nodes.append(MenuModel(name: "about_us".localized, menuItems: []))
+            nodes.append(MenuModel(name: "delivery".localized, menuItems: []))
+            nodes.append(MenuModel(name: "contacts".localized, menuItems: []))
             self.nodes = nodes
             self.inProgress = false
         })

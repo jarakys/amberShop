@@ -27,6 +27,11 @@ class DeliveryInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    
+    func setText(text: String) {
+        contentTextView.attributedText = text.getHTMLText()
+    }
+    
     func setImages(imgs: [UIImage]?)
     {
         if imgs != nil {

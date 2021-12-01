@@ -18,3 +18,13 @@ struct ProductItemModel: Codable {
     let add_photo2: [String?]?
     let characteristics: [String?]?
 }
+
+extension ProductItemModel: Equatable, Hashable {
+    static func ==(lhs: ProductItemModel, rhs: ProductItemModel) -> Bool {
+        return lhs.id == rhs.id
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+}

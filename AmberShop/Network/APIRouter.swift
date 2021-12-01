@@ -12,14 +12,23 @@ enum APIRouter {
     case categories
     case menu
     case product(categoryId: String)
+    case sendOrder(orderRequestModel: OrderRequestModel)
+    case delivery
 
     private static let apiKey = "api_key=123456789"
     static let host = "https://amber-futbolka.com/index.php?route=common/api"
-
+    
+    var localization: String {
+        var localization: String = LocalStorageManager.shared.get(key: .localization) ?? ""
+        if localization == "ru" {
+            localization = ""
+        }
+        return localization
+    }
     
     private var method: String {
         switch self {
-        case .categories, .menu, .product:
+        case .categories, .menu, .product, .delivery:
             return "GET"
         default: return "POST"
         }
@@ -28,11 +37,15 @@ enum APIRouter {
     private var path: String {
         switch self {
         case .categories:
-            return "/categories&\(Self.apiKey)"
+            return "/categories\(localization)&\(Self.apiKey)"
         case .menu:
-            return "/menu&\(Self.apiKey)&menu_id=1"
+            return "/menu\(localization)&\(Self.apiKey)&menu_id=1"
         case .product(let categoryId):
-            return "/products&\(Self.apiKey)&category_id=\(categoryId)"
+            return "/products\(localization)&\(Self.apiKey)&category_id=\(categoryId)"
+        case .delivery:
+            return "/delivery\(localization)"
+        case .sendOrder:
+            return "/add_order"
         }
     }
     
@@ -41,8 +54,12 @@ enum APIRouter {
     }
     
     // MARK: - Parameters
-    private var parameters: [String:Any]? {
-        return nil
+    private var parameters: OrderRequestModel? {
+        switch self {
+        case .sendOrder(let orderRequestModel):
+            return orderRequestModel
+        default : return nil
+        }
     }
     
     func asURLRequest() throws -> URLRequest {
@@ -54,7 +71,7 @@ enum APIRouter {
         urlRequest.allHTTPHeaderFields = headers
         if let parameters = parameters {
             do {
-                urlRequest.httpBody = try JSONSerialization.data(withJSONObject: parameters, options: [])
+                urlRequest.httpBody = try JSONEncoder().encode(parameters)
             } catch  {
                 
             }

@@ -36,6 +36,8 @@ class ModalViewController: UIViewController {
         descriptionLabel.attributedText = viewModel.name.getHTMLText()
         
         closeButton.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
+        toCartButton.setTitle("go_to_basket".localized, for: .normal)
+        titleLabel.text = "t_shirt_added_to_cart".localized
     }
     
     @objc func closeButtonDidClick() {

@@ -16,8 +16,6 @@ class MainViewController: BaseViewController {
     private lazy var viewModel: MainViewModel = {
         MainViewModel()
     }()
-
-    let textContent = ["СБУ","СУД","САП","НАБУ","ПОЛИЦИЯ","ПРОКУРАТУРА","РАЗНОЕ"]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,16 +24,18 @@ class MainViewController: BaseViewController {
         contentCollectionView.register(UINib(nibName: "LabelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LabelCollectionViewCell")
         contentCollectionView.allowsSelection = true
         photoImageView.image = UIImage(named: "testImg2")
-        titleLabel.text = "Футболки по отраслям"
+        titleLabel.localizationKey = "t_shirts_by_industry"
         titleLabel.font = .boldSystemFont(ofSize: 25)
         viewModel.$nodes.sink(receiveValue: {[weak self] _ in
-            self?.contentCollectionView.reloadData()
+            DispatchQueue.main.async {
+                self?.contentCollectionView.reloadData()
+            }
         }).store(in: &cancellable)
         
         viewModel.$error.sink(receiveValue: {[weak self] error in
             guard let error = error else { return }
-            let alert = UIAlertController(title: "Ошибка", message: error.localizedDescription, preferredStyle: .alert)
-            alert.addAction(.init(title: "Retry", style: .default, handler: {_ in
+            let alert = UIAlertController(title: "error".localized, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(.init(title: "retry".localized, style: .default, handler: {_ in
                 self?.viewModel.loadData()
             }))
             self?.present(alert, animated: true, completion: nil)

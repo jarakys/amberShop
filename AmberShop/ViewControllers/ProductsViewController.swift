@@ -27,18 +27,10 @@ class ProductsViewController: BaseViewController {
         contentTableView.separatorStyle = .none
         contentTableView.allowsSelection = false
         
-//        contentTableView.contentInset = .init(top: 20, left: 0, bottom: 0, right: 0)
-//        contentTableView.backgroundColor = .white
-//        contentTableView.layer.masksToBounds = false
-//        contentTableView.layer.shadowColor = UIColor(red: 0, green: 0, blue: 0, alpha: 0.1).cgColor
-//        contentTableView.layer.shadowOpacity = 1
-//        contentTableView.layer.shadowOffset = CGSize(width: 0, height: 0)
-//        contentTableView.layer.shadowRadius = 16
-        
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: contentTableView.frame.width, height: 50))
         headerView.backgroundColor = .clear
         let headerLabel = UILabel()
-        headerLabel.text = "Креативные футболки сферы \(category?.name ?? "")"
+        headerLabel.text = "\("creative_sphere_t_shirts".localized) \(category?.name ?? "")"
         headerLabel.font = .boldSystemFont(ofSize: 20)
         headerLabel.textAlignment = .center
         headerLabel.adjustsFontSizeToFitWidth = true
@@ -62,8 +54,8 @@ class ProductsViewController: BaseViewController {
         
         viewModel.$error.sink(receiveValue: {[weak self] error in
             guard let error = error else { return }
-            let alert = UIAlertController(title: "Ошибка", message: error.localizedDescription, preferredStyle: .alert)
-            alert.addAction(.init(title: "Retry", style: .default, handler: {_ in
+            let alert = UIAlertController(title: "error".localized, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(.init(title: "retry".localized, style: .default, handler: {_ in
                 self?.viewModel.loadData()
             }))
             self?.present(alert, animated: true, completion: nil)
@@ -119,17 +111,6 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
         cell.delegate = self
         return cell
     }
-    
-//    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-//        let heaserView = UIView()
-//        heaserView.backgroundColor = .clear
-//        
-//        return heaserView
-//    }
-//    
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        20
-//    }
 
 }
 // MARK: UIGestureRecognizerDelegate
@@ -140,6 +121,7 @@ extension ProductsViewController: UIGestureRecognizerDelegate {
 
 extension ProductsViewController: ProductTableViewCellDelegate {
     func toCartButtonDidClick(model: ProductItemModel) {
+        LocalStorageManager.shared.add(key: .savedProducts, value: model)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Modal") as! ModalViewController
         vc.productItem = model

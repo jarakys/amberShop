@@ -1,0 +1,29 @@
+/* 
+  Localizable.strings
+  AmberShop
+
+  Created by Kirill on 01.12.2021.
+  
+*/
+"about_us" = "О НАС";
+"delivery" = "ДОСТАВКА И ОПЛАТА";
+"contacts" = "КОНТАКТЫ";
+"error" = "Ошибка";
+"retry" = "Повторить";
+"t_shirts_by_industry" = "Футболки по отраслямР";
+"your_basket" = "Ваша корзина";
+"fill_out_the_application_form" = "Заполните форму заявки";
+"payment_and_delivery" = "Оплата и доставка";
+"your_name" = "Ваше имя";
+"your_lastname" = "Ваша фамилия";
+"phone_number" = "Номер телефона";
+"your_city" = "Ваш населенный пункт";
+"post_office" = "Отделение почты или адресс";
+"comment_on_the_order" = "Comment on the order";
+"policy" = "Соглашаюсь с условиями обработки данных";
+"checkout" = "Оформить заказ";
+"total_payable" = "Итого к оплате: ";
+"creative_sphere_t_shirts" = "Креативные футболки сферы";
+"go_to_basket" = "Перейти в корзину";
+"to_basket" = "В корзину";
+"t_shirt_added_to_cart" = "Футболка добавлена в корзину";

@@ -45,16 +45,14 @@ class ProductCartTableViewCell: UITableViewCell {
         
         deleteButton.addTarget(self, action: #selector(deleteButtonDidClick), for: .touchUpInside)
     }
+    
+    func configure(for model: ProductItemModel) {
+        iconImageVIew.loadImage(imageURL: (model.add_photo1 ?? model.add_photo2?.first ?? model.add_photo2?.last ?? "") ?? "")
+        titleLabel.attributedText = model.name.getHTMLText()
+        priceLabel.text = model.price
+    }
 
     @objc func deleteButtonDidClick() {
         deleteAction()
-    }
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    override var intrinsicContentSize: CGSize {
-        return contentView.frame.size
     }
 }

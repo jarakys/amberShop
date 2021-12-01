@@ -47,6 +47,8 @@ class ProductTableViewCell: UITableViewCell {
         titleLabel.textContainer.maximumNumberOfLines = 2
         titleLabel.font = .boldSystemFont(ofSize: 17)
         descriptionLabel.textContainer.maximumNumberOfLines = 1
+        
+        toCartButton.setTitle("to_basket".localized, for: .normal)
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

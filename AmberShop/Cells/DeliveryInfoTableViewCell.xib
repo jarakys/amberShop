@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -28,7 +28,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nne-HF-Mfh">
-                        <rect key="frame" x="25" y="70" width="348" height="200"/>
+                        <rect key="frame" x="25" y="61" width="348" height="200"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <viewLayoutGuide key="contentLayoutGuide" id="gVh-T0-AUk"/>
                         <viewLayoutGuide key="frameLayoutGuide" id="ksf-0b-7Bj"/>
@@ -38,11 +38,11 @@
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                     </textView>
                     <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="wB4-jY-b9d">
-                        <rect key="frame" x="25" y="296" width="204" height="7"/>
+                        <rect key="frame" x="25" y="277" width="204" height="26"/>
                     </stackView>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="nne-HF-Mfh" firstAttribute="top" secondItem="JyC-fD-Ith" secondAttribute="bottom" constant="25" id="2XL-6p-Da1"/>
+                    <constraint firstItem="nne-HF-Mfh" firstAttribute="top" secondItem="JyC-fD-Ith" secondAttribute="bottom" constant="16" id="2XL-6p-Da1"/>
                     <constraint firstItem="JyC-fD-Ith" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="25" id="8R3-Lo-tas"/>
                     <constraint firstItem="nne-HF-Mfh" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="DmF-hn-W5r"/>
                     <constraint firstItem="JyC-fD-Ith" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="Lff-qy-tSn"/>
@@ -50,7 +50,7 @@
                     <constraint firstAttribute="trailing" secondItem="nne-HF-Mfh" secondAttribute="trailing" constant="20" id="XUh-iz-Btg"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="wB4-jY-b9d" secondAttribute="trailing" constant="20" id="Yff-fX-u1B"/>
                     <constraint firstItem="wB4-jY-b9d" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="bd7-xt-Ycc"/>
-                    <constraint firstItem="wB4-jY-b9d" firstAttribute="top" secondItem="nne-HF-Mfh" secondAttribute="bottom" constant="26" id="fBr-xb-LOg"/>
+                    <constraint firstItem="wB4-jY-b9d" firstAttribute="top" secondItem="nne-HF-Mfh" secondAttribute="bottom" constant="16" id="fBr-xb-LOg"/>
                     <constraint firstAttribute="trailing" secondItem="JyC-fD-Ith" secondAttribute="trailing" id="gYX-RL-tOv"/>
                 </constraints>
             </tableViewCellContentView>

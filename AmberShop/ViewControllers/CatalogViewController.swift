@@ -29,7 +29,9 @@ class CatalogViewController: BaseViewController {
         configureLeftBar()
 
         viewModel.$nodes.sink(receiveValue: {[weak self] _ in
-            self?.catalogTableView.reloadData()
+            DispatchQueue.main.async {
+                self?.catalogTableView.reloadData()
+            }
         }).store(in: &cancellable)
         
         viewModel.$error.sink(receiveValue: {[weak self] error in
@@ -44,6 +46,9 @@ class CatalogViewController: BaseViewController {
         viewModel.$inProgress.sink(receiveValue: {[weak self] inProgress in
             //TODOs Dimas
         }).store(in: &cancellable)
+        
+        ruButton.addTarget(self, action: #selector(ruDidClick(_:)), for: .touchUpInside)
+        uaBtton.addTarget(self, action: #selector(uaDidClick(_:)), for: .touchUpInside)
     }
     
     override func configureRightBar() {
@@ -67,6 +72,24 @@ class CatalogViewController: BaseViewController {
         let closeBarBtn = UIBarButtonItem(customView: closeBtn)
         
         self.navigationItem.setRightBarButtonItems([closeBarBtn, cartBarBtn], animated: false)
+    }
+    
+    @objc private func ruDidClick(_ sender: UIButton) {
+        UserDefaults.standard.set(["ru"], forKey: "AppleLanguages")
+        UserDefaults.standard.synchronize()
+        Bundle.setLanguage("ru")
+        LocalStorageManager.shared.set(key: .localization, value: "ru")
+        StoreManager.shared.initStore()
+        viewModel.loadData()
+    }
+    
+    @objc private func uaDidClick(_ sender: UIButton) {
+        UserDefaults.standard.set(["uk"], forKey: "AppleLanguages")
+        UserDefaults.standard.synchronize()
+        Bundle.setLanguage("uk")
+        LocalStorageManager.shared.set(key: .localization, value: "ua")
+        StoreManager.shared.initStore()
+        viewModel.loadData()
     }
     
     @objc private func contactsDidClick() {
