@@ -19,6 +19,7 @@ class MainViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configNotification()
         contentCollectionView.delegate = self
         contentCollectionView.dataSource = self
         contentCollectionView.register(UINib(nibName: "LabelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LabelCollectionViewCell")
@@ -45,7 +46,21 @@ class MainViewController: BaseViewController {
             //TODOs Dimas
         }).store(in: &cancellable)
     }
-
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+//        viewModel.loadData()
+    }
+    
+    func configNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(localizationChange(_:)), name: Notification.Name("LocalizationChanged"), object: nil)
+    }
+    
+    @objc func localizationChange(_ notification: Notification) {
+        viewModel.loadData()
+        
+    }
+    
 }
 
 extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5wI-nD-YDh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5wI-nD-YDh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -298,10 +298,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" verticalHuggingPriority="252" translatesAutoresizingMaskIntoConstraints="NO" id="0Cr-ao-XlY">
-                                <rect key="frame" x="0.0" y="54" width="414" height="405"/>
+                                <rect key="frame" x="0.0" y="54" width="414" height="363"/>
                                 <subviews>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="+38 (044) 285 42 99" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAV-LN-gPV">
-                                        <rect key="frame" x="50" y="76.5" width="150" height="30"/>
+                                        <rect key="frame" x="50" y="55" width="150" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="CkM-i1-nUK"/>
@@ -313,7 +313,7 @@
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="+38 (050) 444 55 66" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E5k-di-gzI">
-                                        <rect key="frame" x="50" y="106.5" width="150" height="30"/>
+                                        <rect key="frame" x="50" y="85" width="150" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="ZF6-vS-PzX"/>
@@ -325,7 +325,7 @@
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
                                     <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="info@amber-futbolka.com" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="oPh-5L-Gus">
-                                        <rect key="frame" x="50" y="221.5" width="364" height="30"/>
+                                        <rect key="frame" x="50" y="200" width="364" height="30"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="30" id="YeD-la-lrP"/>
@@ -335,26 +335,26 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Пн - Пт: с 09:00 до 18:00    Обед: с 13:00 до 14:00" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLn-lr-80h">
-                                        <rect key="frame" x="50" y="151.5" width="180" height="50"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" adjustsFontForContentSizeCategory="YES" translatesAutoresizingMaskIntoConstraints="NO" id="FLn-lr-80h">
+                                        <rect key="frame" x="50" y="130" width="200" height="50"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="50" id="e4b-8o-41U"/>
-                                            <constraint firstAttribute="width" constant="180" id="in3-NI-XAO"/>
+                                            <constraint firstAttribute="width" constant="200" id="in3-NI-XAO"/>
                                         </constraints>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Контакты" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpd-7J-rhq">
-                                        <rect key="frame" x="20" y="30" width="80" height="21.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mpd-7J-rhq">
+                                        <rect key="frame" x="20" y="30" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="phone.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="aTb-i7-cqh">
-                                        <rect key="frame" x="20" y="83" width="20" height="17.5"/>
+                                        <rect key="frame" x="20" y="61.5" width="20" height="17.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="2qc-IG-D3I"/>
@@ -362,7 +362,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="calendar" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="gvr-sL-SNA">
-                                        <rect key="frame" x="20" y="157.5" width="20" height="17.5"/>
+                                        <rect key="frame" x="20" y="136" width="20" height="17.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="JLM-lr-r0J"/>
@@ -370,7 +370,7 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mail.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="MuT-qi-uSP">
-                                        <rect key="frame" x="20" y="227.5" width="20" height="17.5"/>
+                                        <rect key="frame" x="20" y="206" width="20" height="17.5"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="20" id="Jpc-Tp-ocN"/>
@@ -378,15 +378,15 @@
                                         </constraints>
                                     </imageView>
                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mappin" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="RkB-FG-g1Q">
-                                        <rect key="frame" x="20" y="271" width="20" height="20"/>
+                                        <rect key="frame" x="20" y="249.5" width="20" height="20"/>
                                         <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="akB-s3-fe2"/>
                                             <constraint firstAttribute="width" constant="20" id="ww3-9y-Hu9"/>
                                         </constraints>
                                     </imageView>
-                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" text="Киев, Бульвар Леси Украинки 29, офис 75" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-60-dn7">
-                                        <rect key="frame" x="50" y="266.5" width="364" height="25"/>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="9d8-60-dn7">
+                                        <rect key="frame" x="50" y="245" width="364" height="25"/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="25" id="D2e-OR-GRK"/>
@@ -396,14 +396,14 @@
                                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         <dataDetectorType key="dataDetectorTypes" phoneNumber="YES" link="YES" address="YES"/>
                                     </textView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="МЫ В СОЦ. СЕТЯХ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezp-e9-BvZ">
-                                        <rect key="frame" x="20" y="309.5" width="149" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ezp-e9-BvZ">
+                                        <rect key="frame" x="20" y="288" width="0.0" height="0.0"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="F4m-dG-mbA">
-                                        <rect key="frame" x="20" y="350" width="115" height="25"/>
+                                        <rect key="frame" x="20" y="308" width="115" height="25"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XhE-zd-EZD">
                                                 <rect key="frame" x="0.0" y="0.0" width="25" height="25"/>
@@ -467,7 +467,7 @@
                                 </constraints>
                             </view>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="Uo4-5m-Kzd">
-                                <rect key="frame" x="0.0" y="459" width="414" height="383"/>
+                                <rect key="frame" x="0.0" y="417" width="414" height="425"/>
                             </mapView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="geU-o0-od1">
                                 <rect key="frame" x="0.0" y="842" width="414" height="54"/>
@@ -505,11 +505,13 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="adressTextView" destination="9d8-60-dn7" id="9TB-Il-Ffd"/>
                         <outlet property="bottomLabel" destination="Ezp-e9-BvZ" id="hJG-Tb-cER"/>
                         <outlet property="facebookButton" destination="XhE-zd-EZD" id="gyz-6U-gLD"/>
                         <outlet property="footerLabel" destination="eHS-Rd-7Gt" id="c2a-ZP-Mnj"/>
                         <outlet property="infoView" destination="0Cr-ao-XlY" id="b09-PY-I1m"/>
                         <outlet property="positionMapView" destination="Uo4-5m-Kzd" id="Q8E-iE-UN3"/>
+                        <outlet property="scheduleTextView" destination="FLn-lr-80h" id="CYr-Xz-A3O"/>
                         <outlet property="titleLabel" destination="mpd-7J-rhq" id="ebq-jx-Mzu"/>
                         <outlet property="twitterButton" destination="oVE-nN-gXe" id="Als-dB-cQr"/>
                         <outlet property="youtubeButton" destination="nq8-e8-7hX" id="Baq-kD-PaT"/>

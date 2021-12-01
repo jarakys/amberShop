@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		112CD22E27578EB200EE36BF /* UIButton+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CD22D27578EB200EE36BF /* UIButton+Localization.swift */; };
+		112CD230275794E400EE36BF /* TextView+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CD22F275794E400EE36BF /* TextView+Localization.swift */; };
+		112CD2322757989700EE36BF /* MKPointAnnotation+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CD2312757989700EE36BF /* MKPointAnnotation+Localization.swift */; };
 		1162B1FD274970F2000F7A03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B1FC274970F2000F7A03 /* AppDelegate.swift */; };
 		1162B1FF274970F2000F7A03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B1FE274970F2000F7A03 /* SceneDelegate.swift */; };
 		1162B201274970F2000F7A03 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B200274970F2000F7A03 /* MainViewController.swift */; };
@@ -36,7 +39,7 @@
 		117F93952753E988001EC86D /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117F93932753E988001EC86D /* CartTableViewCell.xib */; };
 		117F93982753F13D001EC86D /* ProductCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F93962753F13D001EC86D /* ProductCartTableViewCell.swift */; };
 		117F93992753F13D001EC86D /* ProductCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117F93972753F13D001EC86D /* ProductCartTableViewCell.xib */; };
-		50B496C749A60AB5BDE1B135 /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B5F7B3C25CCA99AF838BBB2D /* Pods_AmberShop.framework */; };
+		D90084D767980F744C50CB3E /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */; };
 		ED8CE8F52750439700CECA8B /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8F42750439700CECA8B /* APIRouter.swift */; };
 		ED8CE8F7275043B800CECA8B /* NetwrokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8F6275043B800CECA8B /* NetwrokManager.swift */; };
 		ED8CE8FB2750451A00CECA8B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8FA2750451A00CECA8B /* MainViewModel.swift */; };
@@ -68,6 +71,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		112CD22D27578EB200EE36BF /* UIButton+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Localization.swift"; sourceTree = "<group>"; };
+		112CD22F275794E400EE36BF /* TextView+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "TextView+Localization.swift"; sourceTree = "<group>"; };
+		112CD2312757989700EE36BF /* MKPointAnnotation+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MKPointAnnotation+Localization.swift"; sourceTree = "<group>"; };
 		1162B1F9274970F2000F7A03 /* AmberShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmberShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1162B1FC274970F2000F7A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1162B1FE274970F2000F7A03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -99,9 +105,9 @@
 		117F93932753E988001EC86D /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		117F93962753F13D001EC86D /* ProductCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTableViewCell.swift; sourceTree = "<group>"; };
 		117F93972753F13D001EC86D /* ProductCartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTableViewCell.xib; sourceTree = "<group>"; };
-		1DA3D72B62BDC4C260E1A7B2 /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
-		B5F7B3C25CCA99AF838BBB2D /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		CADAE5BB318A021C181B740E /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
+		299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
+		2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
+		6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED8CE8F42750439700CECA8B /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		ED8CE8F6275043B800CECA8B /* NetwrokManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokManager.swift; sourceTree = "<group>"; };
 		ED8CE8FA2750451A00CECA8B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -138,8 +144,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAFA1FC2756A48600AE2073 /* Kingfisher in Frameworks */,
-				50B496C749A60AB5BDE1B135 /* Pods_AmberShop.framework in Frameworks */,
 				EDAFA1FF2756A4BF00AE2073 /* IQKeyboardManagerSwift in Frameworks */,
+				D90084D767980F744C50CB3E /* Pods_AmberShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -152,7 +158,7 @@
 				1162B1FB274970F2000F7A03 /* AmberShop */,
 				1162B1FA274970F2000F7A03 /* Products */,
 				E3263FDEB01754846B0755AD /* Pods */,
-				AF4F2C3E985BD12E2620506D /* Frameworks */,
+				E1A2AAC5489D5D775620F684 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -213,6 +219,9 @@
 				EDAFA20A2756C34F00AE2073 /* String+isMatch.swift */,
 				EDAFA21D2756DCAD00AE2073 /* String+Localization.swift */,
 				EDAFA21F2756E9CF00AE2073 /* UILabel+Localization.swift */,
+				112CD22D27578EB200EE36BF /* UIButton+Localization.swift */,
+				112CD22F275794E400EE36BF /* TextView+Localization.swift */,
+				112CD2312757989700EE36BF /* MKPointAnnotation+Localization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,10 +239,10 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
-		AF4F2C3E985BD12E2620506D /* Frameworks */ = {
+		E1A2AAC5489D5D775620F684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				B5F7B3C25CCA99AF838BBB2D /* Pods_AmberShop.framework */,
+				6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -241,8 +250,8 @@
 		E3263FDEB01754846B0755AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				CADAE5BB318A021C181B740E /* Pods-AmberShop.debug.xcconfig */,
-				1DA3D72B62BDC4C260E1A7B2 /* Pods-AmberShop.release.xcconfig */,
+				2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */,
+				299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -347,11 +356,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1162B20D274970F4000F7A03 /* Build configuration list for PBXNativeTarget "AmberShop" */;
 			buildPhases = (
-				1C4FB6B03AD86C037C2FB47A /* [CP] Check Pods Manifest.lock */,
+				C36027415CD9AA90233C4AC1 /* [CP] Check Pods Manifest.lock */,
 				1162B1F5274970F2000F7A03 /* Sources */,
 				1162B1F6274970F2000F7A03 /* Frameworks */,
 				1162B1F7274970F2000F7A03 /* Resources */,
-				75CEEFB06B0B2BCAE13B9E0D /* [CP] Embed Pods Frameworks */,
+				F1BC5C544306C6668EEDA407 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -427,7 +436,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1C4FB6B03AD86C037C2FB47A /* [CP] Check Pods Manifest.lock */ = {
+		C36027415CD9AA90233C4AC1 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -449,7 +458,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		75CEEFB06B0B2BCAE13B9E0D /* [CP] Embed Pods Frameworks */ = {
+		F1BC5C544306C6668EEDA407 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -483,12 +492,15 @@
 				EDAFA2202756E9CF00AE2073 /* UILabel+Localization.swift in Sources */,
 				117515A22751196000B41E1D /* DeliveryInfoViewController.swift in Sources */,
 				116F9749274BEAE900F08F86 /* CatalogViewController.swift in Sources */,
+				112CD230275794E400EE36BF /* TextView+Localization.swift in Sources */,
 				EDAFA20F2756C76F00AE2073 /* OrderRequestModel.swift in Sources */,
 				ED8CE90527504EFF00CECA8B /* MenuViewModel.swift in Sources */,
 				117F93982753F13D001EC86D /* ProductCartTableViewCell.swift in Sources */,
 				1162B201274970F2000F7A03 /* MainViewController.swift in Sources */,
 				ED8CE8FE2750454D00CECA8B /* CategoryModel.swift in Sources */,
+				112CD2322757989700EE36BF /* MKPointAnnotation+Localization.swift in Sources */,
 				ED8CE8F7275043B800CECA8B /* NetwrokManager.swift in Sources */,
+				112CD22E27578EB200EE36BF /* UIButton+Localization.swift in Sources */,
 				116F9746274BD4F100F08F86 /* LabelCollectionViewCell.swift in Sources */,
 				EDAFA20B2756C34F00AE2073 /* String+isMatch.swift in Sources */,
 				117515A52751248000B41E1D /* DeliveryInfoTableViewCell.swift in Sources */,
@@ -672,7 +684,7 @@
 		};
 		1162B20E274970F4000F7A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CADAE5BB318A021C181B740E /* Pods-AmberShop.debug.xcconfig */;
+			baseConfigurationReference = 2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -702,7 +714,7 @@
 		};
 		1162B20F274970F4000F7A03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1DA3D72B62BDC4C260E1A7B2 /* Pods-AmberShop.release.xcconfig */;
+			baseConfigurationReference = 299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

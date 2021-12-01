@@ -10,7 +10,7 @@
 "contacts" = "КОНТАКТЫ";
 "error" = "Ошибка";
 "retry" = "Повторить";
-"t_shirts_by_industry" = "Футболки по отраслямР";
+"t_shirts_by_industry" = "Футболки по отраслям";
 "your_basket" = "Ваша корзина";
 "fill_out_the_application_form" = "Заполните форму заявки";
 "payment_and_delivery" = "Оплата и доставка";
@@ -27,3 +27,10 @@
 "go_to_basket" = "Перейти в корзину";
 "to_basket" = "В корзину";
 "t_shirt_added_to_cart" = "Футболка добавлена в корзину";
+"contacts_lower" = "Котакты";
+"all_rights_reserved" = "Amder-futbolka.com 2021 ⓒ Все права защищены";
+"we_in_social_networks" = "МЫ В СОЦ. СЕТЯХ";
+"shop_adress" = "Киев, Бульвар Леси Украинки 29, офис 75";
+"legal_company_amber" = "Юредичесская копания АМБЕР";
+"schedule" = "Пн - Пт: с 09:00 до 18:00    Обед: с 13:00 до 14:00";
+

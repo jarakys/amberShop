@@ -45,7 +45,7 @@
                                     <constraint firstAttribute="height" constant="20" id="zeR-f5-lh0"/>
                                 </constraints>
                             </imageView>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsVerticalScrollIndicator="NO" editable="NO" text="Киев, Бульвар Леси Украинки 29, офис 75" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wim-xn-9Rh">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" showsVerticalScrollIndicator="NO" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="wim-xn-9Rh">
                                 <rect key="frame" x="55" y="15" width="295" height="25"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -128,6 +128,9 @@
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="adressTextView" destination="wim-xn-9Rh" id="ug2-VU-QBt"/>
+            </connections>
             <point key="canvasLocation" x="92.028985507246389" y="81.026785714285708"/>
         </tableViewCell>
     </objects>

@@ -18,7 +18,9 @@ class ContactsViewController: BaseViewController {
     @IBOutlet weak var twitterButton: UIButton!
     @IBOutlet weak var youtubeButton: UIButton!
     @IBOutlet weak var footerLabel: UILabel!
-
+    @IBOutlet weak var scheduleTextView: UITextView!
+    @IBOutlet weak var adressTextView: UITextView!
+    
     let coordinate = CLLocationCoordinate2D(latitude: 50.42065, longitude: 30.54739)
     
     
@@ -29,15 +31,19 @@ class ContactsViewController: BaseViewController {
         infoView.tintColor = .white
         
         titleLabel.font = .boldSystemFont(ofSize: 20)
+        titleLabel.localizationKey = "contacts_lower"
         
         bottomLabel.font = .boldSystemFont(ofSize: 18)
+        bottomLabel.localizationKey = "we_in_social_networks"
         positionMapView.region = MKCoordinateRegion(center: coordinate, span: MKCoordinateSpan(latitudeDelta: 0.003, longitudeDelta: 0.003))
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
-        annotation.title = "Юредичесская копания АМБЕР"
+        annotation.localizationKey = "legal_company_amber"
         
         positionMapView.addAnnotation(annotation)
-        footerLabel.text = "Amder-futbolka.com 2021 \u{24D2} Все права защищены"
+        footerLabel.localizationKey = "all_rights_reserved"
+        adressTextView.localizationKey = "shop_adress"
+        scheduleTextView.localizationKey = "schedule"
         
     }
     

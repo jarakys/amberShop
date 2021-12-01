@@ -75,20 +75,20 @@ class CatalogViewController: BaseViewController {
     }
     
     @objc private func ruDidClick(_ sender: UIButton) {
+        LocalStorageManager.shared.set(key: .localization, value: "ru")
+        StoreManager.shared.initStore()
         UserDefaults.standard.set(["ru"], forKey: "AppleLanguages")
         UserDefaults.standard.synchronize()
         Bundle.setLanguage("ru")
-        LocalStorageManager.shared.set(key: .localization, value: "ru")
-        StoreManager.shared.initStore()
         viewModel.loadData()
     }
     
     @objc private func uaDidClick(_ sender: UIButton) {
+        LocalStorageManager.shared.set(key: .localization, value: "ua")
+        StoreManager.shared.initStore()
         UserDefaults.standard.set(["uk"], forKey: "AppleLanguages")
         UserDefaults.standard.synchronize()
         Bundle.setLanguage("uk")
-        LocalStorageManager.shared.set(key: .localization, value: "ua")
-        StoreManager.shared.initStore()
         viewModel.loadData()
     }
     

@@ -14,13 +14,17 @@ class ProductsViewController: BaseViewController {
     @IBOutlet weak var contentTableView: UITableView!
     
     public var category: CategoryModel?
-    
+    var categoryName: String {
+        (category?.name ?? "").localized
+    }
+    let headerLabel = UILabel()
     private lazy var viewModel: ProductViewModel = {
         ProductViewModel(categoryId: category?.category_id ?? "")
     }()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        configNotification()
         contentTableView.delegate = self
         contentTableView.dataSource = self
         contentTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
@@ -29,8 +33,7 @@ class ProductsViewController: BaseViewController {
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: contentTableView.frame.width, height: 50))
         headerView.backgroundColor = .clear
-        let headerLabel = UILabel()
-        headerLabel.text = "\("creative_sphere_t_shirts".localized) \(category?.name ?? "")"
+        headerLabel.localizationKey = "\("creative_sphere_t_shirts".localized) \(category?.name.localized ?? "")"
         headerLabel.font = .boldSystemFont(ofSize: 20)
         headerLabel.textAlignment = .center
         headerLabel.adjustsFontSizeToFitWidth = true
@@ -90,6 +93,15 @@ class ProductsViewController: BaseViewController {
     
     override func closeButtonDidClick() {
         navigationController?.popViewController(animated: true)
+    }
+    
+    func configNotification() {
+        NotificationCenter.default.addObserver(self, selector: #selector(localizationChange(_:)), name: Notification.Name("LocalizationChanged"), object: nil)
+    }
+    
+    @objc func localizationChange(_ notification: Notification) {
+        viewModel.loadData()
+        headerLabel.localizationKey = "\("creative_sphere_t_shirts".localized) \(category?.name.localized ?? "")"
     }
     
 }
