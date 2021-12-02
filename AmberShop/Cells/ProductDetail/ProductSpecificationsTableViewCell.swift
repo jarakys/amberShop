@@ -24,7 +24,7 @@ class ProductSpecificationsTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.contentView.backgroundColor = UIColor.hexColor(hex: "f7f7f7")
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

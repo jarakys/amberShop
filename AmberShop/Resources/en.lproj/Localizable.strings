@@ -8,6 +8,7 @@
 "about_us" = "О НАС";
 "delivery" = "ДОСТАВКА И ОПЛАТА";
 "contacts" = "КОНТАКТЫ";
+"add_to_basket" = "ДОБАВИТЬ В КОРЗИНУ";
 "error" = "Ошибка";
 "retry" = "Повторить";
 "t_shirts_by_industry" = "Футболки по отраслям";
@@ -25,5 +26,12 @@
 "total_payable" = "Итого к оплате: ";
 "creative_sphere_t_shirts" = "Креативные футболки сферы";
 "go_to_basket" = "Перейти в корзину";
-"to_basket" = "В корзину";
+"to_basket" = "К товару";
 "t_shirt_added_to_cart" = "Футболка добавлена в корзину";
+"contacts_lower" = "Котакты";
+"all_rights_reserved" = "Amder-futbolka.com 2021 ⓒ Все права защищены";
+"we_in_social_networks" = "МЫ В СОЦ. СЕТЯХ";
+"shop_adress" = "Киев, Бульвар Леси Украинки 29, офис 75";
+"legal_company_amber" = "Юредичесская копания АМБЕР";
+"schedule" = "Пн - Пт: с 09:00 до 18:00    Обед: с 13:00 до 14:00";
+

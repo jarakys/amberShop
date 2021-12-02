@@ -8,6 +8,7 @@
 "about_us" = "ПРО НАС";
 "delivery" = "ДОСТАВКА І ОПЛАТА";
 "contacts" = "КОНТАКТИ";
+"add_to_basket" = "ДОДАТИ ДО КОШИКА";
 "error" = "Помилка";
 "retry" = "Повторити";
 "t_shirts_by_industry" = "Футболки по галузям";
@@ -25,7 +26,7 @@
 "total_payable" = "Разом до оплати: ";
 "creative_sphere_t_shirts" = "Креативні футболки сфери";
 "go_to_basket" = "Перейти до кошику";
-"to_basket" = "До кошику";
+"to_basket" = "К товару";
 "t_shirt_added_to_cart" = "Футболка додана до кошика";
 "contacts_lower" = "Котакти";
 "all_rights_reserved" = "Amder-futbolka.com 2021 ⓒ Всі права захищені";

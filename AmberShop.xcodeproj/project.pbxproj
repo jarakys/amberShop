@@ -19,6 +19,8 @@
 		112CD24127580AEB00EE36BF /* ProductSpecificationsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112CD23F27580AEB00EE36BF /* ProductSpecificationsTableViewCell.xib */; };
 		112CD2442758105F00EE36BF /* TableSizesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CD2422758105F00EE36BF /* TableSizesTableViewCell.swift */; };
 		112CD2452758105F00EE36BF /* TableSizesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112CD2432758105F00EE36BF /* TableSizesTableViewCell.xib */; };
+		112CD248275813AB00EE36BF /* TextDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CD246275813AB00EE36BF /* TextDescriptionTableViewCell.swift */; };
+		112CD249275813AB00EE36BF /* TextDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112CD247275813AB00EE36BF /* TextDescriptionTableViewCell.xib */; };
 		1162B1FD274970F2000F7A03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B1FC274970F2000F7A03 /* AppDelegate.swift */; };
 		1162B1FF274970F2000F7A03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B1FE274970F2000F7A03 /* SceneDelegate.swift */; };
 		1162B201274970F2000F7A03 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B200274970F2000F7A03 /* MainViewController.swift */; };
@@ -92,6 +94,8 @@
 		112CD23F27580AEB00EE36BF /* ProductSpecificationsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductSpecificationsTableViewCell.xib; sourceTree = "<group>"; };
 		112CD2422758105F00EE36BF /* TableSizesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableSizesTableViewCell.swift; sourceTree = "<group>"; };
 		112CD2432758105F00EE36BF /* TableSizesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSizesTableViewCell.xib; sourceTree = "<group>"; };
+		112CD246275813AB00EE36BF /* TextDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescriptionTableViewCell.swift; sourceTree = "<group>"; };
+		112CD247275813AB00EE36BF /* TextDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextDescriptionTableViewCell.xib; sourceTree = "<group>"; };
 		1162B1F9274970F2000F7A03 /* AmberShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmberShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1162B1FC274970F2000F7A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1162B1FE274970F2000F7A03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -181,6 +185,8 @@
 				112CD23F27580AEB00EE36BF /* ProductSpecificationsTableViewCell.xib */,
 				112CD2422758105F00EE36BF /* TableSizesTableViewCell.swift */,
 				112CD2432758105F00EE36BF /* TableSizesTableViewCell.xib */,
+				112CD246275813AB00EE36BF /* TextDescriptionTableViewCell.swift */,
+				112CD247275813AB00EE36BF /* TextDescriptionTableViewCell.xib */,
 			);
 			path = ProductDetail;
 			sourceTree = "<group>";
@@ -464,6 +470,7 @@
 				112CD2452758105F00EE36BF /* TableSizesTableViewCell.xib in Resources */,
 				112CD24127580AEB00EE36BF /* ProductSpecificationsTableViewCell.xib in Resources */,
 				116F974D274C02AE00F08F86 /* ContactInformationTableViewCell.xib in Resources */,
+				112CD249275813AB00EE36BF /* TextDescriptionTableViewCell.xib in Resources */,
 				1162B206274970F4000F7A03 /* Assets.xcassets in Resources */,
 				1162B204274970F2000F7A03 /* Main.storyboard in Resources */,
 				112CD2392757FCA000EE36BF /* ImageTableViewCell.xib in Resources */,
@@ -536,6 +543,7 @@
 				112CD230275794E400EE36BF /* TextView+Localization.swift in Sources */,
 				EDAFA20F2756C76F00AE2073 /* OrderRequestModel.swift in Sources */,
 				ED8CE90527504EFF00CECA8B /* MenuViewModel.swift in Sources */,
+				112CD248275813AB00EE36BF /* TextDescriptionTableViewCell.swift in Sources */,
 				117F93982753F13D001EC86D /* ProductCartTableViewCell.swift in Sources */,
 				1162B201274970F2000F7A03 /* MainViewController.swift in Sources */,
 				ED8CE8FE2750454D00CECA8B /* CategoryModel.swift in Sources */,

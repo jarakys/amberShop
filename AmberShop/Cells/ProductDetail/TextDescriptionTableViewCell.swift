@@ -1,5 +1,5 @@
 //
-//  TableSizesTableViewCell.swift
+//  TextDescriptionTableViewCell.swift
 //  AmberShop
 //
 //  Created by Kyrylo Chernov on 01.12.2021.
@@ -7,15 +7,12 @@
 
 import UIKit
 
-class TableSizesTableViewCell: UITableViewCell {
-    @IBOutlet weak var titleLabel: UILabel!
-    
-    @IBOutlet weak var sizesImageView: UIImageView!
-    @IBOutlet weak var tshirtMetricsImageView: UIImageView!
+class TextDescriptionTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var contentLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-//        titleLabel.font = .boldSystemFont(ofSize: 22)
         // Initialization code
     }
 

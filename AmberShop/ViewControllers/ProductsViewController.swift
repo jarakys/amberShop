@@ -135,12 +135,7 @@ extension ProductsViewController: ProductTableViewCellDelegate {
     func toCartButtonDidClick(model: ProductItemModel) {
         LocalStorageManager.shared.add(key: .savedProducts, value: model)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "Modal") as! ModalViewController
-        vc.productItem = model
-        presenter.presentationType = .popup
-        let modifiedAnimation = CrossDissolveAnimation(options: .normal(duration: 0.2))
-        presenter.transitionType = TransitionType.custom(modifiedAnimation)
-        presenter.dismissTransitionType = TransitionType.custom(modifiedAnimation)
-        customPresentViewController(presenter, viewController: vc, animated: true)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetail") as! ProductDetailViewController
+        self.navigationController?.pushViewController(vc, animated: false)
     }
 }
