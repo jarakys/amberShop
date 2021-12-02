@@ -21,6 +21,7 @@
 		112CD2452758105F00EE36BF /* TableSizesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112CD2432758105F00EE36BF /* TableSizesTableViewCell.xib */; };
 		112CD248275813AB00EE36BF /* TextDescriptionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112CD246275813AB00EE36BF /* TextDescriptionTableViewCell.swift */; };
 		112CD249275813AB00EE36BF /* TextDescriptionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 112CD247275813AB00EE36BF /* TextDescriptionTableViewCell.xib */; };
+		112FA2B227597A4300D2D2B2 /* TextFieldWithPadding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 112FA2B127597A4300D2D2B2 /* TextFieldWithPadding.swift */; };
 		1162B1FD274970F2000F7A03 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B1FC274970F2000F7A03 /* AppDelegate.swift */; };
 		1162B1FF274970F2000F7A03 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B1FE274970F2000F7A03 /* SceneDelegate.swift */; };
 		1162B201274970F2000F7A03 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1162B200274970F2000F7A03 /* MainViewController.swift */; };
@@ -101,6 +102,7 @@
 		112CD2432758105F00EE36BF /* TableSizesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableSizesTableViewCell.xib; sourceTree = "<group>"; };
 		112CD246275813AB00EE36BF /* TextDescriptionTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextDescriptionTableViewCell.swift; sourceTree = "<group>"; };
 		112CD247275813AB00EE36BF /* TextDescriptionTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TextDescriptionTableViewCell.xib; sourceTree = "<group>"; };
+		112FA2B127597A4300D2D2B2 /* TextFieldWithPadding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextFieldWithPadding.swift; sourceTree = "<group>"; };
 		1162B1F9274970F2000F7A03 /* AmberShop.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmberShop.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1162B1FC274970F2000F7A03 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1162B1FE274970F2000F7A03 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -375,6 +377,7 @@
 			children = (
 				EDAFA2012756A73900AE2073 /* ContentSizedTableView.swift */,
 				EDAFA2312759292800AE2073 /* BlurLoader.swift */,
+				112FA2B127597A4300D2D2B2 /* TextFieldWithPadding.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -552,6 +555,7 @@
 				EDAFA2302759290500AE2073 /* UIView+addBlurLoader.swift in Sources */,
 				117F9391275398BB001EC86D /* CartViewController.swift in Sources */,
 				EDAFA2072756B98A00AE2073 /* OrderError.swift in Sources */,
+				112FA2B227597A4300D2D2B2 /* TextFieldWithPadding.swift in Sources */,
 				EDAFA2142756DAC300AE2073 /* AnyLanguageBundle.swift in Sources */,
 				EDAFA2202756E9CF00AE2073 /* UILabel+Localization.swift in Sources */,
 				EDAFA22E2759021100AE2073 /* ProductDetailModel.swift in Sources */,

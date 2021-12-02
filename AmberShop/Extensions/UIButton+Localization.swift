@@ -13,10 +13,10 @@ extension UIButton {
     public var localizationKey: String? {
         set {
             self.setTitle(newValue?.localized, for: .normal)
-            objc_setAssociatedObject(self, &UILabel.localizedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self, &UIButton.localizedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
         get {
-            return objc_getAssociatedObject(self, &UILabel.localizedKey) as? String
+            return objc_getAssociatedObject(self, &UIButton.localizedKey) as? String
         }
     }
 

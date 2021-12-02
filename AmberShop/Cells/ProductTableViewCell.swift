@@ -48,7 +48,9 @@ class ProductTableViewCell: UITableViewCell {
         titleLabel.font = .boldSystemFont(ofSize: 17)
         descriptionLabel.textContainer.maximumNumberOfLines = 1
         
+        
         toCartButton.localizationKey = "to_basket"
+        
 //        toCartButton.setTitle("to_basket".localized, for: .normal)
     }
 
@@ -64,6 +66,7 @@ class ProductTableViewCell: UITableViewCell {
         descriptionLabel.attributedText = model.description.getHTMLText(with: descriptionLabel.font)
         priceLabel.text = model.formatedPrice
         iconImageView.loadImage(imageURL: model.add_photo1 ?? "")
+        toCartButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
     }
     
     @objc func toCartButtonDidClick(_ sender: Any) {

@@ -63,37 +63,30 @@ class OrderFormTableViewCell: UITableViewCell {
         nameTextField.backgroundColor = lightGrayColor
         nameTextField.layer.cornerRadius = 10
         nameTextField.attributedPlaceholder = NSAttributedString(string: "your_name".localized, attributes: attribute)
-        nameTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
         surmaneTextField.backgroundColor = lightGrayColor
         surmaneTextField.layer.cornerRadius = 10
         surmaneTextField.attributedPlaceholder = NSAttributedString(string: "your_lastname".localized, attributes: attribute)
-        surmaneTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
         phoneNumberTextField.backgroundColor = lightGrayColor
         phoneNumberTextField.layer.cornerRadius = 10
         phoneNumberTextField.attributedPlaceholder = NSAttributedString(string: "phone_number".localized, attributes: attribute)
-        phoneNumberTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
         emailTextField.backgroundColor = lightGrayColor
         emailTextField.layer.cornerRadius = 10
         emailTextField.attributedPlaceholder = NSAttributedString(string: "E-mail", attributes: attribute)
-        emailTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
         cityTextField.backgroundColor = lightGrayColor
         cityTextField.layer.cornerRadius = 10
         cityTextField.attributedPlaceholder = NSAttributedString(string: "your_city".localized, attributes: attribute)
-        cityTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
         postAdressTexField.backgroundColor = lightGrayColor
         postAdressTexField.layer.cornerRadius = 10
         postAdressTexField.attributedPlaceholder = NSAttributedString(string: "post_office".localized, attributes: attribute)
-        postAdressTexField.layer.sublayerTransform = CATransform3DMakeTranslation(10, 0, 0)
         
         commentsTextField.backgroundColor = lightGrayColor
         commentsTextField.layer.cornerRadius = 10
         commentsTextField.attributedPlaceholder = NSAttributedString(string: "comment_on_the_order".localized, attributes: attribute)
-        commentsTextField.layer.sublayerTransform = CATransform3DMakeTranslation(10, -30, 0)
 
         containerView.layer.borderWidth = 0.5
         containerView.layer.borderColor = UIColor.black.withAlphaComponent(0.3).cgColor
