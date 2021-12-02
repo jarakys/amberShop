@@ -15,6 +15,7 @@ class TableSizesTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        titleLabel.localizationKey = "table_sizes"
 //        titleLabel.font = .boldSystemFont(ofSize: 22)
         // Initialization code
     }

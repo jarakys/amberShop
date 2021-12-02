@@ -48,8 +48,8 @@ class ProductCartTableViewCell: UITableViewCell {
     
     func configure(for model: ProductItemModel) {
         iconImageVIew.loadImage(imageURL: (model.add_photo1 ?? model.add_photo2?.first ?? model.add_photo2?.last ?? "") ?? "")
-        titleLabel.attributedText = model.name.getHTMLText()
-        priceLabel.text = model.price
+        titleLabel.attributedText = model.name.getHTMLText(with: titleLabel.font)
+        priceLabel.text = model.formatedPrice
     }
 
     @objc func deleteButtonDidClick() {

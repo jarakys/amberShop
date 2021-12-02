@@ -18,15 +18,14 @@ class MainViewModel: BaseViewModel {
     
     func loadData() {
         inProgress = true
-        
         StoreManager.shared.getCategories(completion: {[weak self] categories, error in
             guard let self = self else { return }
+            self.inProgress = false
             guard let categories = categories else {
                 self.error = error
                 return
             }
             self.nodes = categories
-            self.inProgress = false
         })
     }
     

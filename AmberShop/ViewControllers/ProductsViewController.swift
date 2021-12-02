@@ -42,8 +42,8 @@ class ProductsViewController: BaseViewController {
         headerLabel.translatesAutoresizingMaskIntoConstraints = false
         headerLabel.minimumScaleFactor = 0.5
         let horizontalConstr = headerLabel.centerXAnchor.constraint(equalTo: headerView.centerXAnchor)
-        let leftConstr = headerLabel.leftAnchor.constraint(equalTo: headerView.leftAnchor)
-        let rightConstr = headerLabel.rightAnchor.constraint(equalTo: headerView.rightAnchor)
+        let leftConstr = headerLabel.leftAnchor.constraint(equalTo: headerView.leftAnchor, constant: 8)
+        let rightConstr = headerLabel.rightAnchor.constraint(equalTo: headerView.rightAnchor, constant: -8)
         headerView.addConstraints([horizontalConstr, leftConstr, rightConstr])
         
         contentTableView.tableHeaderView = headerView
@@ -61,11 +61,20 @@ class ProductsViewController: BaseViewController {
             alert.addAction(.init(title: "retry".localized, style: .default, handler: {_ in
                 self?.viewModel.loadData()
             }))
+            alert.addAction(.init(title: "cancel".localized, style: .default, handler: {_ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
             self?.present(alert, animated: true, completion: nil)
         }).store(in: &cancellable)
         
         viewModel.$inProgress.sink(receiveValue: {[weak self] inProgress in
-            //TODOs Dimas
+            guard inProgress else {
+                Timer.scheduledTimer(withTimeInterval: 0.5, repeats: false, block: {_ in
+                    self?.view.removeBluerLoader()
+                })
+                return
+            }
+            self?.view.showBlurLoader()
         }).store(in: &cancellable)
         
         self.navigationController?.interactivePopGestureRecognizer?.delegate = self;
@@ -133,9 +142,9 @@ extension ProductsViewController: UIGestureRecognizerDelegate {
 
 extension ProductsViewController: ProductTableViewCellDelegate {
     func toCartButtonDidClick(model: ProductItemModel) {
-        LocalStorageManager.shared.add(key: .savedProducts, value: model)
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetail") as! ProductDetailViewController
+        vc.viewModel = ProductDetailViewModel(productId: model.id)
         self.navigationController?.pushViewController(vc, animated: false)
     }
 }

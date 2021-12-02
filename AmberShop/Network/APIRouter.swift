@@ -14,6 +14,7 @@ enum APIRouter {
     case product(categoryId: String)
     case sendOrder(orderRequestModel: OrderRequestModel)
     case delivery
+    case productDetails(productId: String)
 
     private static let apiKey = "api_key=123456789"
     static let host = "https://amber-futbolka.com/index.php?route=common/api"
@@ -28,7 +29,7 @@ enum APIRouter {
     
     private var method: String {
         switch self {
-        case .categories, .menu, .product, .delivery:
+        case .categories, .menu, .product, .delivery, .productDetails:
             return "GET"
         default: return "POST"
         }
@@ -46,6 +47,8 @@ enum APIRouter {
             return "/delivery\(localization)"
         case .sendOrder:
             return "/add_order"
+        case .productDetails(let productId):
+            return "/product\(localization)&\(Self.apiKey)&product_id=\(productId)"
         }
     }
     

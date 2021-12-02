@@ -17,6 +17,10 @@ struct ProductItemModel: Codable {
     let add_photo1: String?
     let add_photo2: [String?]?
     let characteristics: [String?]?
+    
+    var formatedPrice: String {
+        String(format: "%.02f", Double(price) ?? 470.0)
+    }
 }
 
 extension ProductItemModel: Equatable, Hashable {

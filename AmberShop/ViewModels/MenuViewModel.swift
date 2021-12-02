@@ -17,6 +17,7 @@ class MenuViewModel: BaseViewModel {
     }
     
     func loadData() {
+        inProgress = true
         StoreManager.shared.getMenu(completion: {[weak self] menuItems, error in
             guard let self = self else { return }
             guard let menuItems = menuItems else {

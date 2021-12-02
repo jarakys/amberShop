@@ -8,7 +8,7 @@
 import UIKit
 import Presentr
 
-protocol ProductTableViewCellDelegate {
+protocol ProductTableViewCellDelegate: AnyObject {
     func toCartButtonDidClick(model: ProductItemModel)
 }
 
@@ -21,7 +21,7 @@ class ProductTableViewCell: UITableViewCell {
     @IBOutlet weak var toCartButton: UIButton!
     @IBOutlet weak var containerView: UIView!
     
-    var delegate: ProductTableViewCellDelegate?
+    weak var delegate: ProductTableViewCellDelegate?
     
     private var productItem: ProductItemModel?
     
@@ -60,9 +60,9 @@ class ProductTableViewCell: UITableViewCell {
     
     func configure(for model: ProductItemModel) {
         productItem = model
-        titleLabel.attributedText = model.name.getHTMLText()
-        descriptionLabel.attributedText = model.description.getHTMLText()
-        priceLabel.text = model.price
+        titleLabel.attributedText = model.name.getHTMLText(with: titleLabel.font)
+        descriptionLabel.attributedText = model.description.getHTMLText(with: descriptionLabel.font)
+        priceLabel.text = model.formatedPrice
         iconImageView.loadImage(imageURL: model.add_photo1 ?? "")
     }
     

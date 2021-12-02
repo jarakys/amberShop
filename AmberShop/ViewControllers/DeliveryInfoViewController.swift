@@ -59,7 +59,6 @@ extension DeliveryInfoViewController: UITableViewDelegate, UITableViewDataSource
             return cell
         }
         cell.setImage(img: UIImage(named: "logo.icon")!)
-        
         return cell
     }
     

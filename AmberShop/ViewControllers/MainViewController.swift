@@ -39,17 +39,20 @@ class MainViewController: BaseViewController {
             alert.addAction(.init(title: "retry".localized, style: .default, handler: {_ in
                 self?.viewModel.loadData()
             }))
+            alert.addAction(.init(title: "cancel".localized, style: .default, handler: {_ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
             self?.present(alert, animated: true, completion: nil)
         }).store(in: &cancellable)
         
         viewModel.$inProgress.sink(receiveValue: {[weak self] inProgress in
-            //TODOs Dimas
+            inProgress ? self?.view.showBlurLoader() : self?.view.removeBluerLoader()
         }).store(in: &cancellable)
+        viewModel.loadData()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-//        viewModel.loadData()
     }
     
     func configNotification() {
@@ -58,7 +61,6 @@ class MainViewController: BaseViewController {
     
     @objc func localizationChange(_ notification: Notification) {
         viewModel.loadData()
-        
     }
     
 }

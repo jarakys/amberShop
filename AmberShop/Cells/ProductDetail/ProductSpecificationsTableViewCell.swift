@@ -33,4 +33,21 @@ class ProductSpecificationsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    func configure(for model: ProductDetailModel) {
+        materialLabel.localizationKey = "material"
+        sizeLabel.localizationKey = "sizes"
+        branchLabel.localizationKey = "branch"
+        manufacturerLabel.localizationKey = "manufacturer"
+        typeInflictionLabel.localizationKey = "type_printing"
+        availabilityLabel.localizationKey = "availability"
+        
+        materialNameLabel.attributedText = model.manufacturer?.getHTMLText(with: materialNameLabel.font)
+        if let sizes = model.option.first(where: { $0.name == "Размер" || $0.name == "Розмір" }) {
+            sizeNameLabel.text = sizes.product_option_value.map({ $0.name }).joined(separator: ", ")
+        }
+        manufacturerNameLabel.attributedText = model.manufacturer?.getHTMLText(with: manufacturerNameLabel.font)
+        typeInflictionNameLabel.localizationKey = "digital_printing"
+        availabilityNameLabel.localizationKey = (Int(model.quantity) ?? 0) > 0 ? "in_stock" : "not_in_stock"
+    }
+    
 }

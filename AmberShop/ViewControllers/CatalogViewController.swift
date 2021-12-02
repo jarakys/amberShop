@@ -40,13 +40,16 @@ class CatalogViewController: BaseViewController {
             alert.addAction(.init(title: "Retry", style: .default, handler: {_ in
                 self?.viewModel.loadData()
             }))
+            alert.addAction(.init(title: "cancel".localized, style: .default, handler: {_ in
+                self?.navigationController?.popViewController(animated: true)
+            }))
             self?.present(alert, animated: true, completion: nil)
         }).store(in: &cancellable)
         
         viewModel.$inProgress.sink(receiveValue: {[weak self] inProgress in
-            //TODOs Dimas
+            inProgress ? self?.view.showBlurLoader() : self?.view.removeBluerLoader()
         }).store(in: &cancellable)
-        
+        viewModel.loadData()
         ruButton.addTarget(self, action: #selector(ruDidClick(_:)), for: .touchUpInside)
         uaBtton.addTarget(self, action: #selector(uaDidClick(_:)), for: .touchUpInside)
     }

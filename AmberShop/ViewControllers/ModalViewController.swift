@@ -33,7 +33,7 @@ class ModalViewController: UIViewController {
         
         titleLabel.text = viewModel.title
         iconImageView.loadImage(imageURL: viewModel.image ?? "")
-        descriptionLabel.attributedText = viewModel.name.getHTMLText()
+        descriptionLabel.attributedText = viewModel.name.getHTMLText(with: descriptionLabel.font)
         
         closeButton.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
         toCartButton.localizationKey = "go_to_basket"

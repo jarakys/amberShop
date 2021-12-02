@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -19,25 +19,27 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ih5-dR-Esh">
-                        <rect key="frame" x="10" y="10" width="437" height="65.5"/>
+                        <rect key="frame" x="10" y="10" width="437" height="152.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="25"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TIT-Ij-y7l">
-                        <rect key="frame" x="10" y="90.5" width="437" height="20.5"/>
+                        <rect key="frame" x="10" y="177.5" width="437" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" systemColor="systemGrayColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="REn-5b-H6b">
-                        <rect key="frame" x="0.0" y="136" width="457" height="437"/>
+                        <rect key="frame" x="0.0" y="223" width="457" height="350"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="350" id="VGS-K1-ALk"/>
+                        </constraints>
                     </imageView>
                 </subviews>
                 <constraints>
                     <constraint firstItem="TIT-Ij-y7l" firstAttribute="top" secondItem="Ih5-dR-Esh" secondAttribute="bottom" constant="15" id="1Ep-1c-A4v"/>
                     <constraint firstItem="Ih5-dR-Esh" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="6DF-bY-kiD"/>
-                    <constraint firstItem="REn-5b-H6b" firstAttribute="height" secondItem="H2p-sc-9uM" secondAttribute="height" multiplier="0.75" id="GNL-oe-YCP"/>
                     <constraint firstAttribute="trailing" secondItem="TIT-Ij-y7l" secondAttribute="trailing" constant="10" id="M2b-Ym-TnA"/>
                     <constraint firstItem="TIT-Ij-y7l" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="kGm-Va-zz1"/>
                     <constraint firstAttribute="trailing" secondItem="Ih5-dR-Esh" secondAttribute="trailing" constant="10" id="mGr-oO-c3Z"/>

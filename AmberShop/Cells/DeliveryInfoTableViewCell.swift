@@ -12,6 +12,8 @@ class DeliveryInfoTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentTextView: UITextView!
     @IBOutlet weak var imgContainerStackView: UIStackView!
+    @IBOutlet var topTextViewConstraint: NSLayoutConstraint!
+    @IBOutlet var bottomTextViewConstraint: NSLayoutConstraint!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -19,6 +21,8 @@ class DeliveryInfoTableViewCell: UITableViewCell {
         self.backgroundColor = UIColor.hexColor(hex: "F7F7F7")
         contentTextView.backgroundColor = UIColor.hexColor(hex: "F7F7F7")
         imgContainerStackView.spacing = 8
+        contentTextView.sizeToFit()
+        contentTextView.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -27,9 +31,21 @@ class DeliveryInfoTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
+    override func prepareForReuse() {
+        imgContainerStackView.arrangedSubviews.forEach({view in
+            view.removeFromSuperview()
+        })
+        contentTextView.isHidden = true
+        topTextViewConstraint.constant = 0
+        bottomTextViewConstraint.constant = 0
+    }
+    
     
     func setText(text: String) {
-        contentTextView.attributedText = text.getHTMLText()
+        contentTextView.isHidden = false
+        topTextViewConstraint.constant = 16
+        bottomTextViewConstraint.constant = 16
+        contentTextView.attributedText = text.getHTMLText(with: contentTextView.font)
     }
     
     func setImages(imgs: [UIImage]?)

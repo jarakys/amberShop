@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ProductOption: Codable {
+struct ProductOptionRequestModel: Codable {
     let product_option_id: String
     let product_option_value_id: String
     let name: String
@@ -19,7 +19,7 @@ struct ProductModel: Codable {
     let name: String
     let quantity: Int
     let model: String
-    let options: [ProductOption]
+    let options: [ProductOptionRequestModel]
 }
 
 struct OrderRequestModel: Codable {
