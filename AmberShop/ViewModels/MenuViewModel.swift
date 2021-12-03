@@ -20,6 +20,7 @@ class MenuViewModel: BaseViewModel {
         inProgress = true
         StoreManager.shared.getMenu(completion: {[weak self] menuItems, error in
             guard let self = self else { return }
+            defer { self.inProgress = false }
             guard let menuItems = menuItems else {
                 self.error = error
                 return
@@ -29,7 +30,6 @@ class MenuViewModel: BaseViewModel {
             nodes.append(MenuModel(name: "delivery".localized, menuItems: []))
             nodes.append(MenuModel(name: "contacts".localized, menuItems: []))
             self.nodes = nodes
-            self.inProgress = false
         })
     }
     

@@ -36,8 +36,8 @@ class CatalogViewController: BaseViewController {
         
         viewModel.$error.sink(receiveValue: {[weak self] error in
             guard let error = error else { return }
-            let alert = UIAlertController(title: "Ошибка", message: error.localizedDescription, preferredStyle: .alert)
-            alert.addAction(.init(title: "Retry", style: .default, handler: {_ in
+            let alert = UIAlertController(title: "error".localized, message: error.localizedDescription, preferredStyle: .alert)
+            alert.addAction(.init(title: "retry".localized, style: .default, handler: {_ in
                 self?.viewModel.loadData()
             }))
             alert.addAction(.init(title: "cancel".localized, style: .default, handler: {_ in

@@ -41,7 +41,7 @@ struct ProductDetailModel: Codable {
     let add_photo1: String?
     let add_photo2: [String]?
     let quantity: String
-    let characteristics: [String]
+    let characteristics: [Characteristic]
     let option: [ProductOptionModel]
     
     var formatedPrice: String {

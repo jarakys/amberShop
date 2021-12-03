@@ -16,11 +16,23 @@ struct ProductItemModel: Codable {
     let special: String?
     let add_photo1: String?
     let add_photo2: [String?]?
-    let characteristics: [String?]?
+    let characteristics: [Characteristic]
     
     var formatedPrice: String {
         String(format: "%.02f", Double(price) ?? 470.0)
     }
+}
+
+struct Characteristic: Codable {
+    let attribute_group_id: String
+    let name: String
+    let attribute: [Attribute]
+}
+
+struct Attribute: Codable {
+    let attribute_id: String
+    let name: String
+    let text: String
 }
 
 extension ProductItemModel: Equatable, Hashable {
