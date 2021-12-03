@@ -15,10 +15,10 @@ extension MKPointAnnotation {
     public var localizationKey: String? {
         set {
             self.title = newValue?.localized
-            objc_setAssociatedObject(self, &UILabel.localizedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self, &MKPointAnnotation.localizedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
         get {
-            return objc_getAssociatedObject(self, &UILabel.localizedKey) as? String
+            return objc_getAssociatedObject(self, &MKPointAnnotation.localizedKey) as? String
         }
     }
 

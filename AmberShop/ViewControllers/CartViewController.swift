@@ -10,22 +10,10 @@ import UIKit
 class CartViewController: BaseViewController {
 
     @IBOutlet weak var contentTableView: UITableView!
-    let sectionTitels = ["your_basket".localized, "fill_out_the_application_form".localized]
+    let sectionTitels = ["your_basket", "fill_out_the_application_form"]
     
-    var products: [ProductItemModel] {
+    var products: [BasketWrapItem] {
         LocalStorageManager.shared.get(key: .savedProducts) ?? []
-    }
-    
-    var productsIdentity: [String: [ProductItemModel]] {
-        Dictionary(grouping: products, by: { $0.id })
-    }
-    
-    var productModels: [ProductModel] {
-        var models = [ProductModel]()
-        productsIdentity.forEach({ item in
-            models.append(ProductModel(product_id: Int(item.key) ?? 1, name: item.value.first?.name ?? "", quantity: item.value.count, model: item.value.first?.name ?? "", options: []))
-        })
-        return models
     }
     
     override func viewDidLoad() {
@@ -35,27 +23,64 @@ class CartViewController: BaseViewController {
         contentTableView.dataSource = self
         contentTableView.separatorStyle = .none
         contentTableView.allowsSelection = false
+        contentTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         contentTableView.register(UINib(nibName: "OrderFormTableViewCell", bundle: nil), forCellReuseIdentifier: "OrderFormTableViewCell")
         contentTableView.register(UINib(nibName: "DeliveryInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "DeliveryInfoTableViewCell")
         contentTableView.register(UINib(nibName: "CartTableViewCell", bundle: nil), forCellReuseIdentifier: "CartTableViewCell")
     }
     
-    private func calculateTotalPrice() -> Double {
-        return products.reduce(0, { result, nextItem in
-            (Double(nextItem.price) ?? 0) + result
-        })
+    override func configureLeftBar() {
+        let backBtn = UIButton()
+        backBtn.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        backBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        backBtn.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
+        let backBarBtn = UIBarButtonItem(customView: backBtn)
+        
+        let logoBtn: UIButton = UIButton()
+        logoBtn.setImage(UIImage(named: "logo.icon"), for: .normal)
+        logoBtn.setImage(UIImage(named: "logo.icon"), for: .highlighted)
+        logoBtn.setImage(UIImage(named: "logo.icon"), for: .selected)
+        logoBtn.isEnabled = false
+        logoBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 60)
+        let logoBarBtn = UIBarButtonItem(customView: logoBtn)
+
+        self.navigationItem.setLeftBarButtonItems([backBarBtn, logoBarBtn], animated: false)
     }
+    
+    override func closeButtonDidClick() {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    override func configureRightBar() {
+    }
+    
     private func makeOrder(userDataModel: UserDataModel) {
-        let orderRequestModel = OrderRequestModel(shipping_value: calculateTotalPrice(), comment: userDataModel.comment, products: productModels, email: userDataModel.email, telephone: userDataModel.telephone, firstname: userDataModel.firstname, lastname: userDataModel.lastname, address: userDataModel.address, number: userDataModel.number)
-        NetworkManager.shared.sendRequest(route: .sendOrder(orderRequestModel: orderRequestModel), completion: {response in
+        guard let basketWrapped: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts) else { return }
+        let basketItems = basketWrapped.map({ $0.basketModel })
+        userDataModel.products = basketItems
+        NetworkManager.shared.sendRequest(route: .sendOrder(orderRequestModel: userDataModel), completion: {[weak self] response in
             switch response {
             case .failure(let error):
-                print(error)
+                self?.showAlert(message: "server_error".localized)
             case .success(let data):
-                print(String(data: data, encoding: .utf8))
+                self?.showAlert(message: "order_accept".localized, action: {
+                    self?.navigationController?.popViewController(animated: true)
+                    LocalStorageManager.shared.clear(key: .savedProducts)
+                })
             }
         })
     }
+    
+    public override func showAlert(message: String, title: String = "error", action: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: "error".localized, message: message, preferredStyle: .alert)
+        alert.addAction(.init(title: "ok".localized, style: .default, handler: {_ in
+            action?()
+        }))
+        self.present(alert, animated: true, completion: nil)
+    }
+    
+    
     
 }
 
@@ -73,7 +98,15 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CartTableViewCell", for: indexPath) as! CartTableViewCell
             cell.configure(for: products)
             cell.sizeChanged = {[weak tableView] in
+                
                 tableView?.reloadData()
+            }
+            cell.itemDeletedAction = {[weak self] in
+                if self?.products.isEmpty == true {
+                    self?.showAlert(message: "basket_is_empty".localized, action: {
+                        self?.navigationController?.popViewController(animated: true)
+                    })
+                }
             }
             return cell
         } else if indexPath.section == 1 {
@@ -82,15 +115,22 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
                 guard let userDataModel = userDataModel else {
                     return
                 }
+                if error == .agreement {
+                    self?.showAlert(message: "accept_agreement".localized)
+                    return
+                }
                 self?.makeOrder(userDataModel: userDataModel)
             }
             return cell
         } else {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryInfoTableViewCell", for: indexPath) as! DeliveryInfoTableViewCell
-            cell.setImage(img: UIImage(named: "logo.icon")!)
+            cell.setImages(imgs: [UIImage(named: "image-visa")!, UIImage(named: "image-mastercard")!, UIImage(named: "image-fondy")!, UIImage(named: "image-novaposhta")!])
             cell.backgroundColor = .white
-            cell.setTitle(text: "payment_and_delivery".localized)
+            cell.setTitle(text: "payment_and_delivery")
             cell.contentTextView.backgroundColor = .white
+            cell.setText(text: "payment_and_delivery_desc")
+            cell.contentTextView.sizeToFit()
+            cell.setLeftTopConstraint(constatnt: 16)
             return cell
         }
     }
@@ -106,7 +146,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         
         let sectionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 25))
         if section < sectionTitels.count {
-            sectionLabel.text = sectionTitels[section]
+            sectionLabel.localizationKey = sectionTitels[section]
             sectionLabel.font = UIFont.boldSystemFont(ofSize: 18)
             sectionLabel.textAlignment = .left
         }

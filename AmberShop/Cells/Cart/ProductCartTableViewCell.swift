@@ -17,16 +17,30 @@ class ProductCartTableViewCell: UITableViewCell {
     @IBOutlet weak var countLabel: UILabel!
     @IBOutlet weak var deleteButton: UIButton!
     
+    private var model: ProductDetailModel?
+    private var basketItem: BasketItem?
+    private var modelBasket: BasketWrapItem?
+    
+    public var countChanged: (() -> Void)?
+    
     var count = 1
     public var deleteAction: (() -> Void) = {}
     
     @IBAction func decrementAcction(_ sender: Any) {
+        guard count > 1 else { return }
         count = count - 1
+        basketItem?.quantity -= 1
         countLabel.text = count.description
+        countChanged?()
+        calculateSum()
     }
     @IBAction func incrementAction(_ sender: Any) {
+        guard count < Int(model?.quantity ?? "0") ?? 10 else { return }
         count = count + 1
+        basketItem?.quantity += 1
         countLabel.text = count.description
+        countChanged?()
+        calculateSum()
     }
     
     override func awakeFromNib() {
@@ -46,10 +60,21 @@ class ProductCartTableViewCell: UITableViewCell {
         deleteButton.addTarget(self, action: #selector(deleteButtonDidClick), for: .touchUpInside)
     }
     
-    func configure(for model: ProductItemModel) {
-        iconImageVIew.loadImage(imageURL: (model.add_photo1 ?? model.add_photo2?.first ?? model.add_photo2?.last ?? "") ?? "")
-        titleLabel.attributedText = model.name.getHTMLText(with: titleLabel.font)
-        priceLabel.text = model.formatedPrice
+    func configure(for model: BasketWrapItem) {
+        self.model = model.product
+        self.basketItem = model.basketModel
+        self.modelBasket = model
+        iconImageVIew.loadImage(imageURL: (model.product.add_photo1 ?? model.product.add_photo2?.first ?? model.product.add_photo2?.last ?? ""))
+        titleLabel.attributedText = model.product.name.getHTMLText(with: titleLabel.font)
+        count = model.basketModel.quantity
+        countLabel.text = count.description
+        calculateSum()
+    }
+    
+    private func calculateSum() {
+        guard let modelBasket = modelBasket else { return }
+        
+        priceLabel.text = modelBasket.formatedPrice
     }
 
     @objc func deleteButtonDidClick() {

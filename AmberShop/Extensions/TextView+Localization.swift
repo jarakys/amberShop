@@ -14,10 +14,10 @@ extension UITextView {
     public var localizationKey: String? {
         set {
             text = newValue?.localized
-            objc_setAssociatedObject(self, &UILabel.localizedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
+            objc_setAssociatedObject(self, &UITextView.localizedKey, newValue, .OBJC_ASSOCIATION_RETAIN)
         }
         get {
-            return objc_getAssociatedObject(self, &UILabel.localizedKey) as? String
+            return objc_getAssociatedObject(self, &UITextView.localizedKey) as? String
         }
     }
 

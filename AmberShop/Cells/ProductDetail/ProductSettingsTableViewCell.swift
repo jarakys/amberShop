@@ -63,16 +63,6 @@ class ProductSettingsTableViewCell: UITableViewCell {
     let sizeDropDown = DropDown()
     let numberDropDown = DropDown()
     
-    override func awakeFromNib() {
-        super.awakeFromNib()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
     func configure(for model: ProductDetailModel) {
         firstViewButton.addTarget(self, action: #selector(showColors), for: .touchUpInside)
         secondViewButton.addTarget(self, action: #selector(showSize), for: .touchUpInside)
@@ -87,21 +77,23 @@ class ProductSettingsTableViewCell: UITableViewCell {
         toCartButton.layer.cornerRadius = 8
         toCartButton.backgroundColor = UIColor.hexColor(hex: "7D71B1")
         toCartButton.tintColor = .white
+        if let sizeModel = model.option.first(where: { $0.name == "Размер" || $0.name == "Розмір"}) {
+            state.size.product_option_id = sizeModel.product_option_id
+            state.size.name = sizeModel.name
+            state.size.value = sizeModel.value
+            let sizeDataSource = DropDownDataSource(id: sizeModel.product_option_id, nodes: sizeModel.product_option_value.map({ DropDownNodes(name: $0.name, id: $0.product_option_value_id)}))
+            setupSizeDropDown(dataSource: sizeDataSource)
+        }
+        if let colorModel = model.option.first(where: { $0.name == "Цвет текста" || $0.name == "Колір тексту" }) {
+            state.color.product_option_id = colorModel.product_option_id
+            state.color.name = colorModel.name
+            state.color.value = colorModel.value
+            let colorDataSource = DropDownDataSource(id: colorModel.product_option_id, nodes: colorModel.product_option_value.map({ DropDownNodes(name: $0.name, id: $0.product_option_value_id)}))
+            
+            setupColorDropDown(dataSource: colorDataSource)
+        }
         
-        let colorModel = model.option[0]
-        state.size.product_option_id = colorModel.product_option_id
-        state.size.name = colorModel.name
-        state.size.value = colorModel.value
-        let colorDataSource = DropDownDataSource(id: colorModel.product_option_id, nodes: colorModel.product_option_value.map({ DropDownNodes(name: $0.name, id: $0.product_option_value_id)}))
         
-        let sizeModel = model.option[1]
-        state.size.product_option_id = sizeModel.product_option_id
-        state.size.name = sizeModel.name
-        state.size.value = sizeModel.value
-        let sizeDataSource = DropDownDataSource(id: sizeModel.product_option_id, nodes: sizeModel.product_option_value.map({ DropDownNodes(name: $0.name, id: $0.product_option_value_id)}))
-        
-        setupColorDropDown(dataSource: colorDataSource)
-        setupSizeDropDown(dataSource: sizeDataSource)
         
         firstViewLabel.localizationKey = !state.color.isValid ? "text_color" : firstViewLabel.text
         secondViewLabel.localizationKey = !state.size.isValid ? "size" : secondViewLabel.text
@@ -119,7 +111,7 @@ class ProductSettingsTableViewCell: UITableViewCell {
     }
     
     func setSalePrice(text: String) {
-        priceLabel.textColor = .red
+//        priceLabel.textColor = .red
         priceLabel.text = text
     }
     
@@ -154,6 +146,7 @@ class ProductSettingsTableViewCell: UITableViewCell {
         colorDropDown.dataSource = dataSource.nodes.map({ $0.name })
         colorDropDown.selectionAction = { [weak self] (index, item) in
             self?.state.color.product_option_value_id = dataSource.nodes[index].id
+            self?.state.color.value = dataSource.nodes[index].name
             self?.firstViewLabel.text = item
         }
     }
@@ -165,6 +158,7 @@ class ProductSettingsTableViewCell: UITableViewCell {
         sizeDropDown.dataSource = dataSource.nodes.map({ $0.name })
         sizeDropDown.selectionAction = { [weak self] (index, item) in
             self?.state.size.product_option_value_id = dataSource.nodes[index].id
+            self?.state.size.value = dataSource.nodes[index].name
             self?.secondViewLabel.text = item
         }
     }
@@ -175,7 +169,7 @@ class ProductSettingsTableViewCell: UITableViewCell {
         // You can also use localizationKeysDataSource instead. Check the docs.
         numberDropDown.dataSource = dataSource.map({ $0.name })
         numberDropDown.selectionAction = { [weak self] (index, item) in
-            self?.state.count.product_option_value_id = dataSource[index].id
+            self?.state.count.value = dataSource[index].id
             self?.thirdViewLabel.text = item
         }
     }

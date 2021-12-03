@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "image-novaposhta.png",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}

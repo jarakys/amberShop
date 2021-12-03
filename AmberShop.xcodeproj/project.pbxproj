@@ -85,6 +85,8 @@
 		EDAFA2302759290500AE2073 /* UIView+addBlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA22F2759290500AE2073 /* UIView+addBlurLoader.swift */; };
 		EDAFA2322759292800AE2073 /* BlurLoader.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA2312759292800AE2073 /* BlurLoader.swift */; };
 		EDAFA23427594A0000AE2073 /* NSAttributedString+fromHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA23327594A0000AE2073 /* NSAttributedString+fromHTML.swift */; };
+		EDAFA23627595DF700AE2073 /* BasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA23527595DF700AE2073 /* BasketItem.swift */; };
+		EDAFA23827598E9600AE2073 /* UITextField+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA23727598E9600AE2073 /* UITextField+Localization.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -170,6 +172,8 @@
 		EDAFA22F2759290500AE2073 /* UIView+addBlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+addBlurLoader.swift"; sourceTree = "<group>"; };
 		EDAFA2312759292800AE2073 /* BlurLoader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlurLoader.swift; sourceTree = "<group>"; };
 		EDAFA23327594A0000AE2073 /* NSAttributedString+fromHTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+fromHTML.swift"; sourceTree = "<group>"; };
+		EDAFA23527595DF700AE2073 /* BasketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketItem.swift; sourceTree = "<group>"; };
+		EDAFA23727598E9600AE2073 /* UITextField+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Localization.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -276,6 +280,7 @@
 				112CD2312757989700EE36BF /* MKPointAnnotation+Localization.swift */,
 				EDAFA22F2759290500AE2073 /* UIView+addBlurLoader.swift */,
 				EDAFA23327594A0000AE2073 /* NSAttributedString+fromHTML.swift */,
+				EDAFA23727598E9600AE2073 /* UITextField+Localization.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 				EDAFA20E2756C76F00AE2073 /* OrderRequestModel.swift */,
 				EDAFA2102756D0BC00AE2073 /* DeliveryInfoModel.swift */,
 				EDAFA22D2759021100AE2073 /* ProductDetailModel.swift */,
+				EDAFA23527595DF700AE2073 /* BasketItem.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -549,8 +555,10 @@
 				116642E2274D3E5D006652ED /* ModalViewController.swift in Sources */,
 				112CD2442758105F00EE36BF /* TableSizesTableViewCell.swift in Sources */,
 				ED8CE90B2750547D00CECA8B /* ProductItemModel.swift in Sources */,
+				EDAFA23827598E9600AE2073 /* UITextField+Localization.swift in Sources */,
 				116642E4274D6182006652ED /* ContactsViewController.swift in Sources */,
 				112CD24027580AEB00EE36BF /* ProductSpecificationsTableViewCell.swift in Sources */,
+				EDAFA23627595DF700AE2073 /* BasketItem.swift in Sources */,
 				ED8CE91027505FCA00CECA8B /* UIImageView+LoadImage.swift in Sources */,
 				EDAFA2302759290500AE2073 /* UIView+addBlurLoader.swift in Sources */,
 				117F9391275398BB001EC86D /* CartViewController.swift in Sources */,
@@ -774,12 +782,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -804,12 +813,13 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0;
+				MARKETING_VERSION = 1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

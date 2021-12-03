@@ -14,4 +14,5 @@ enum OrderError: Error, CaseIterable {
     case email
     case cityAddress
     case postalAddress
+    case agreement
 }

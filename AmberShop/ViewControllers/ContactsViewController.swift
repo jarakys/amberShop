@@ -69,5 +69,22 @@ class ContactsViewController: BaseViewController {
     override func closeButtonDidClick() {
         self.navigationController?.popViewController(animated: true)
     }
-
+    
+    @IBAction func youtubeDidClick(_ sender: Any) {
+        if let url = URL(string: "https://www.youtube.com/channel/UCfRtugfqKg2tAk_cCtZ3rog") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func twitterDidClick(_ sender: Any) {
+        if let url = URL(string: "https://www.instagram.com/amberlawcompany/") {
+            UIApplication.shared.open(url)
+        }
+    }
+    
+    @IBAction func facebookDidClick(_ sender: Any) {
+        if let url = URL(string: "https://www.facebook.com/AmberLawCompany/") {
+            UIApplication.shared.open(url)
+        }
+    }
 }

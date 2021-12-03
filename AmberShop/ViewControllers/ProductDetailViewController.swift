@@ -90,6 +90,18 @@ class ProductDetailViewController: BaseViewController {
         navigationController?.popViewController(animated: true)
     }
     
+    private func addToBasket(state: ProductSettingsModel) {
+        guard let model = viewModel?.productItemDetails else {
+            return
+        }
+        
+        let basketWrapItem = BasketWrapItem(product: model, basketModel: BasketItem(product_id: Int(model.id) ?? 1, name: model.name, quantity: Int(state.count.value ?? "1") ?? 1, model: model.name, options: [state.color, state.size], price: model.price))
+        
+        LocalStorageManager.shared.add(key: .savedProducts, value: basketWrapItem)
+        
+        showAlert(message: "t_shirt_added_to_cart".localized, title: "success".localized, action: nil)
+        
+    }
     
     @objc func localizationChange(_ notification: Notification) {
         viewModel?.loadData()
@@ -131,7 +143,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             }
             
             cell.toBasketClick = {[weak self] state in
-                
+                self?.addToBasket(state: state)
             }
             cell.setSalePrice(text: (viewModel?.productItemDetails?.formatedPrice.description ?? "") + " грн")
             return cell
@@ -144,8 +156,8 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
             
         } else if indexPath.section == 3 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryInfoTableViewCell", for: indexPath) as! DeliveryInfoTableViewCell
-            cell.titleLabel.text = "Оплата и доставка"
-            cell.setImage(img: UIImage(named: "logo.icon")!)
+            cell.setTitle(text: "payment_and_delivery")
+            cell.setImages(imgs: [UIImage(named: "image-visa")!, UIImage(named: "image-mastercard")!, UIImage(named: "image-fondy")!, UIImage(named: "image-novaposhta")!])
             cell.contentTextView.text = nil
             cell.contentTextView.sizeToFit()
             cell.backgroundColor = .clear
@@ -154,7 +166,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
         } else if indexPath.section == 4 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProductSpecificationsTableViewCell", for: indexPath) as! ProductSpecificationsTableViewCell
             if let model = viewModel?.productItemDetails {
-                cell.configure(for: model)
+                cell.configure(for: model, branchName: viewModel?.branchName ?? "")
             }
             return cell
             

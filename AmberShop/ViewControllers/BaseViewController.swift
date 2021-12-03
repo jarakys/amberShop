@@ -70,11 +70,23 @@ class BaseViewController: UIViewController {
     }
     
     @objc func cartButtonDidClick() {
+        guard let basketData: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts),
+        !basketData.isEmpty else {
+            showAlert(message: "basket_is_empty".localized, action: nil)
+            return
+        }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Cart") as! CartViewController
-        navigationController?.popToRootViewController(animated: false)
-        navigationController?.pushViewController(vc, animated: false)
+        navigationController?.pushViewController(vc, animated: true)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    public func showAlert(message: String, title: String = "error", action: (() -> Void)? = nil) {
+        let alert = UIAlertController(title: title.localized, message: message, preferredStyle: .alert)
+        alert.addAction(.init(title: "ok".localized, style: .default, handler: {_ in
+            action?()
+        }))
+        self.present(alert, animated: true, completion: nil)
     }
     
     @objc func menuButtonDidClick() {

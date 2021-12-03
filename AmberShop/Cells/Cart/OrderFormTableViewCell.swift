@@ -24,6 +24,7 @@ class OrderFormTableViewCell: UITableViewCell {
     @IBOutlet weak var containerView: UIView!
     
     let lightGrayColor = UIColor.hexColor(hex: "F7F7F7")
+    
     let attribute = [NSAttributedString.Key.foregroundColor: UIColor.black]
     
     var errors = OrderError.allCases
@@ -59,7 +60,23 @@ class OrderFormTableViewCell: UITableViewCell {
         checkButton.tintColor = .black
         checkButton.addTarget(self, action: #selector(checkButtonDidClick), for: .touchUpInside)
         
+        setTextFieldsPlaceholder()
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("LocalizationChanged"), object: nil, queue: .main, using: {[weak self] _ in
+            self?.setTextFieldsPlaceholder()
+        })
+        
 
+        containerView.layer.borderWidth = 0.5
+        containerView.layer.borderColor = UIColor.black.withAlphaComponent(0.3).cgColor
+        
+        policyLabel.localizationKey = "policy"
+        checkoutButton.localizationKey = "checkout"
+        
+        setupTextFields()
+    }
+    
+    func setTextFieldsPlaceholder() {
         nameTextField.backgroundColor = lightGrayColor
         nameTextField.layer.cornerRadius = 10
         nameTextField.attributedPlaceholder = NSAttributedString(string: "your_name".localized, attributes: attribute)
@@ -87,14 +104,6 @@ class OrderFormTableViewCell: UITableViewCell {
         commentsTextField.backgroundColor = lightGrayColor
         commentsTextField.layer.cornerRadius = 10
         commentsTextField.attributedPlaceholder = NSAttributedString(string: "comment_on_the_order".localized, attributes: attribute)
-
-        containerView.layer.borderWidth = 0.5
-        containerView.layer.borderColor = UIColor.black.withAlphaComponent(0.3).cgColor
-        
-        policyLabel.text = "policy".localized
-        checkoutButton.setTitle("checkout".localized, for: .normal)
-        
-        setupTextFields()
     }
     
     func setupTextFields() {
@@ -181,8 +190,15 @@ class OrderFormTableViewCell: UITableViewCell {
         }
         var userDataModel: UserDataModel?
         if [name, secondName, phone, email, cityAddress, postalAddress].compactMap({ $0 }).count == 6 {
-            userDataModel = UserDataModel(comment: commentsTextField.text, email: email!, telephone: phone!, firstname: name!, lastname: secondName!, address: cityAddress!, number: postalAddress!)
+            userDataModel = UserDataModel(email: email!, telephone: phone!, firstname: name!, lastname: secondName!, address: cityAddress!, number: postalAddress!, comment: commentsTextField.text ?? "")
         }
+        
+        if !isChecked {
+            errors.append(.agreement)
+        } else {
+            errors.removeAll(where: { $0 == .agreement })
+        }
+        
         checkoutOrderClick?(errors.first, userDataModel)
     }
     

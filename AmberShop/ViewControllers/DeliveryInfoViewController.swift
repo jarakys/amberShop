@@ -17,7 +17,7 @@ class DeliveryInfoViewController: BaseViewController {
         }
     }
     
-    let imgs: [UIImage] = [UIImage(named: "logo.icon")!, UIImage(named: "logo.icon")!, UIImage(named: "logo.icon")!, UIImage(named: "logo.icon")!, UIImage(named: "logo.icon")!]
+    let imgs: [UIImage] = [UIImage(named: "image-visa")!, UIImage(named: "image-mastercard")!, UIImage(named: "image-fondy")!]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,31 +34,58 @@ class DeliveryInfoViewController: BaseViewController {
             self?.deliveryInfo = deliveryInfo
         })
     }
+    
+    override func configureLeftBar() {
+        let backBtn = UIButton()
+        backBtn.setImage(UIImage(systemName: "chevron.backward"), for: .normal)
+        backBtn.frame = CGRect(x: 0, y: 0, width: 20, height: 20)
+        backBtn.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
+        let backBarBtn = UIBarButtonItem(customView: backBtn)
+        
+        let logoBtn: UIButton = UIButton()
+        logoBtn.setImage(UIImage(named: "logo.icon"), for: .normal)
+        logoBtn.setImage(UIImage(named: "logo.icon"), for: .highlighted)
+        logoBtn.setImage(UIImage(named: "logo.icon"), for: .selected)
+        logoBtn.isEnabled = false
+        logoBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 60)
+        let logoBarBtn = UIBarButtonItem(customView: logoBtn)
+
+        self.navigationItem.setLeftBarButtonItems([backBarBtn, logoBarBtn], animated: false)
+    }
+    
+    override func closeButtonDidClick() {
+        navigationController?.popViewController(animated: true)
+    }
 
 }
 
 extension DeliveryInfoViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        deliveryInfo == nil ? 0 : 1
+        1
     }
     func numberOfSections(in tableView: UITableView) -> Int {
-        deliveryInfo == nil ? 0 : 3
+        3
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "DeliveryInfoTableViewCell", for: indexPath) as! DeliveryInfoTableViewCell
         if indexPath.section == 0 {
-            cell.setText(text: deliveryInfo?.del1 ?? "")
+            cell.setTitle(text: "delivery_title3")
+            cell.setText(text: "delivery_info3")
         } else if indexPath.section == 1 {
-            cell.setText(text: deliveryInfo?.del2 ?? "")
+            cell.setTitle(text: "delivery_title2")
+            cell.setText(text: "delivery_info2")
         } else {
-            cell.setText(text: deliveryInfo?.del3 ?? "")
+            cell.setTitle(text: "delivery_title1")
+            cell.setText(text: "delivery_info1")
         }
-        if indexPath.section == 2 {
+        if indexPath.section == 1 {
+            cell.setImage(img: UIImage(named: "image-novaposhta")!)
+        } else if indexPath.section == 2 {
             cell.setImages(imgs: imgs)
             return cell
         }
-        cell.setImage(img: UIImage(named: "logo.icon")!)
         return cell
     }
     

@@ -13,6 +13,7 @@ class LabelCollectionViewCell: UICollectionViewCell {
     override var isSelected: Bool {
         didSet {
             titleLabel.textColor =  isSelected ? .white : .black
+            backgroundColor = isSelected ? UIColor.hexColor(hex: "223766") : .white
         }
     }
     

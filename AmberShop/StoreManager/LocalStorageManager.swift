@@ -51,4 +51,8 @@ class LocalStorageManager {
         guard let data = storage.object(forKey: key.rawValue) as? Data else { return nil }
         return try? JSONDecoder().decode(T.self, from: data)
     }
+    
+    func clear(key: LocalKey) {
+        storage.setValue(nil, forKey: key.rawValue)
+    }
 }

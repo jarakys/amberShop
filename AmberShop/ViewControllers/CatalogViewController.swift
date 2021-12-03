@@ -95,6 +95,18 @@ class CatalogViewController: BaseViewController {
         viewModel.loadData()
     }
     
+    override func cartButtonDidClick() {
+        guard let basketData: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts),
+        !basketData.isEmpty else {
+            showAlert(message: "basket_is_empty".localized, action: nil)
+            return
+        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "Cart") as! CartViewController
+        separateNaviationController?.pushViewController(vc, animated: false)
+        self.dismiss(animated: true, completion: nil)
+    }
+    
     @objc private func contactsDidClick() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Contacts") as! ContactsViewController
@@ -103,12 +115,18 @@ class CatalogViewController: BaseViewController {
         self.dismiss(animated: true, completion: nil)
     }
     
-    @objc private func aboutUsDidClick() {
+    @objc private func deliveryDidClick() {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "DeliveryInfo") as! DeliveryInfoViewController
         separateNaviationController?.popToRootViewController(animated: false)
         separateNaviationController?.pushViewController(vc, animated: false)
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @objc private func aboutUsDidClick() {
+        if let url = URL(string: "https://amber-futbolka.com/about_us") {
+            UIApplication.shared.open(url)
+        }
     }
 }
 
@@ -162,7 +180,7 @@ extension CatalogViewController: UITableViewDelegate, UITableViewDataSource {
         let leftConstr = sectionLabel.leftAnchor.constraint(equalTo: sectionView.leftAnchor, constant: 20)
         sectionView.addConstraints([horizontalConstr, leftConstr])
         
-        if section == 2 {
+        if section == 1 {
             let sectionButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             let attributedString = NSAttributedString(string: viewModel.nodes[section].name, attributes: [
                 NSAttributedString.Key.foregroundColor : UIColor.black,
@@ -171,6 +189,20 @@ extension CatalogViewController: UITableViewDelegate, UITableViewDataSource {
 
             sectionButton.setAttributedTitle(attributedString, for: .normal)
             sectionButton.addTarget(self, action: #selector(aboutUsDidClick), for: .touchUpInside)
+            sectionButton.contentHorizontalAlignment = .left
+            sectionButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
+        return sectionButton
+        }
+        
+        if section == 2 {
+            let sectionButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+            let attributedString = NSAttributedString(string: viewModel.nodes[section].name, attributes: [
+                NSAttributedString.Key.foregroundColor : UIColor.black,
+                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+                ])
+
+            sectionButton.setAttributedTitle(attributedString, for: .normal)
+            sectionButton.addTarget(self, action: #selector(deliveryDidClick), for: .touchUpInside)
             sectionButton.contentHorizontalAlignment = .left
             sectionButton.contentEdgeInsets = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 0)
         return sectionButton

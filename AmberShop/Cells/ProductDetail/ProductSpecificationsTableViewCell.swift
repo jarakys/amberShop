@@ -33,7 +33,7 @@ class ProductSpecificationsTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(for model: ProductDetailModel) {
+    func configure(for model: ProductDetailModel, branchName: String) {
         materialLabel.localizationKey = "material"
         sizeLabel.localizationKey = "sizes"
         branchLabel.localizationKey = "branch"
@@ -48,6 +48,7 @@ class ProductSpecificationsTableViewCell: UITableViewCell {
         manufacturerNameLabel.attributedText = model.manufacturer?.getHTMLText(with: manufacturerNameLabel.font)
         typeInflictionNameLabel.localizationKey = "digital_printing"
         availabilityNameLabel.localizationKey = (Int(model.quantity) ?? 0) > 0 ? "in_stock" : "not_in_stock"
+        branchNameLabel.text = branchName
     }
     
 }

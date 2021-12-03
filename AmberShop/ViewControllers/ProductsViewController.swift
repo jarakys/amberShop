@@ -30,6 +30,7 @@ class ProductsViewController: BaseViewController {
         contentTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
         contentTableView.separatorStyle = .none
         contentTableView.allowsSelection = false
+        contentTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: contentTableView.frame.width, height: 50))
         headerView.backgroundColor = .clear
@@ -144,7 +145,7 @@ extension ProductsViewController: ProductTableViewCellDelegate {
     func toCartButtonDidClick(model: ProductItemModel) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetail") as! ProductDetailViewController
-        vc.viewModel = ProductDetailViewModel(productId: model.id)
+        vc.viewModel = ProductDetailViewModel(productId: model.id, branchName: categoryName)
         self.navigationController?.pushViewController(vc, animated: false)
     }
 }

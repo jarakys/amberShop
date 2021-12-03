@@ -12,7 +12,7 @@ enum APIRouter {
     case categories
     case menu
     case product(categoryId: String)
-    case sendOrder(orderRequestModel: OrderRequestModel)
+    case sendOrder(orderRequestModel: UserDataModel)
     case delivery
     case productDetails(productId: String)
 
@@ -57,7 +57,7 @@ enum APIRouter {
     }
     
     // MARK: - Parameters
-    private var parameters: OrderRequestModel? {
+    private var parameters: UserDataModel? {
         switch self {
         case .sendOrder(let orderRequestModel):
             return orderRequestModel

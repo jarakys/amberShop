@@ -11,6 +11,7 @@ import Foundation
 enum APIError: Error {
     case noData
     case invalidURL
+    case serverError
 }
 
 
@@ -28,6 +29,13 @@ class NetworkManager: NSObject {
         do {
             let task = session.dataTask(with: try route.asURLRequest()) {(data, response, error) in
                 var result: Result<Data, Error>
+                if let httpResponse = response as? HTTPURLResponse, httpResponse.statusCode != 200 {
+                    result = .failure(APIError.serverError)
+                    DispatchQueue.main.async {
+                        completion(result)
+                    }
+                    return
+                }
                 if let error = error {
                     result = .failure(error)
                 } else if let data = data {

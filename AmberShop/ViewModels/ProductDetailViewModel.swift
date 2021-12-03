@@ -12,10 +12,12 @@ class ProductDetailViewModel: BaseViewModel {
     
     private let productId: String
     
+    public let branchName: String
     @Published public var productItemDetails: ProductDetailModel?
     
-    init(productId: String) {
+    init(productId: String, branchName: String) {
         self.productId = productId
+        self.branchName = branchName
         super.init()
         loadData()
     }

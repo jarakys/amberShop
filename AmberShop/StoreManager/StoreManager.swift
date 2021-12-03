@@ -7,6 +7,10 @@
 
 import Foundation
 
+enum StoreManagerError: Error {
+    case invalidData
+}
+
 class StoreManager {
     
     static let shared = StoreManager()
@@ -36,7 +40,7 @@ class StoreManager {
             switch result {
             case .success(let data):
                 guard let categoriesObject = try? JSONDecoder().decode([CategoryModel].self, from: data) else {
-                    completion?(nil, nil)
+                    completion?(nil, StoreManagerError.invalidData)
                     return
                 }
                 self.categories = categoriesObject
@@ -58,7 +62,7 @@ class StoreManager {
             switch result {
             case .success(let data):
                 guard let menuObject = try? JSONDecoder().decode([MenuItemModel].self, from: data) else {
-                    completion?(nil, nil)
+                    completion?(nil, StoreManagerError.invalidData)
                     return
                 }
                 self.menu = menuObject
@@ -79,7 +83,7 @@ class StoreManager {
             switch result {
             case .success(let data):
                 guard let deliveryObject = try? JSONDecoder().decode(DeliveryInfoModel.self, from: data) else {
-                    completion?(nil, nil)
+                    completion?(nil, StoreManagerError.invalidData)
                     return
                 }
                 self.deliveryInfoModel = deliveryObject

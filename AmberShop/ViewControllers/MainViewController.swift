@@ -17,6 +17,8 @@ class MainViewController: BaseViewController {
         MainViewModel()
     }()
     
+    private var selectedCategoryId = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configNotification()
@@ -73,29 +75,20 @@ extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSour
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "LabelCollectionViewCell", for: indexPath) as! LabelCollectionViewCell
         let category = viewModel.nodes[indexPath.row]
+        cell.isSelected = category.category_id == selectedCategoryId
         cell.setTitle(text: category.name)
         return cell
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        guard let cell = collectionView.cellForItem(at: indexPath) as? LabelCollectionViewCell else { return }
-        
-        cell.backgroundColor = UIColor.hexColor(hex: "223766")
-        
         let category = viewModel.nodes[indexPath.row]
+        selectedCategoryId = category.category_id
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "Products") as! ProductsViewController
         vc.category = category
         let navController = UINavigationController(rootViewController: vc)
         navController.modalPresentationStyle = .fullScreen
         navigationController?.pushViewController(vc, animated: true)
-//        self.present(navController, animated: false, completion: nil)
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? LabelCollectionViewCell {
-            cell.backgroundColor = .white
-        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {

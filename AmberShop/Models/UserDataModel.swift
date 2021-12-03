@@ -7,7 +7,8 @@
 
 import Foundation
 
-struct UserDataModel {
+class UserDataModel: Codable {
+    let shipping_value: Double = 0
     let comment: String?
     let email: String
     let telephone: String
@@ -15,4 +16,16 @@ struct UserDataModel {
     let lastname: String
     let address: String
     let number: String
+    
+    var products: [BasketItem] = []
+    
+    init(email: String, telephone: String, firstname: String, lastname: String, address: String, number: String, comment: String? = "") {
+        self.email = email
+        self.telephone = telephone
+        self.firstname = firstname
+        self.lastname = lastname
+        self.address = address
+        self.number = number
+        self.comment = comment
+    }
 }

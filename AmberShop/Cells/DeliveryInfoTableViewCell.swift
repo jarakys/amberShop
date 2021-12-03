@@ -40,40 +40,40 @@ class DeliveryInfoTableViewCell: UITableViewCell {
         bottomTextViewConstraint.constant = 0
     }
     
-    
-    func setText(text: String) {
-        contentTextView.isHidden = false
-        topTextViewConstraint.constant = 16
-        bottomTextViewConstraint.constant = 16
-        contentTextView.attributedText = text.getHTMLText(with: contentTextView.font)
-    }
-    
     func setImages(imgs: [UIImage]?)
     {
         if imgs != nil {
             for item in imgs! {
                 let imgView = UIImageView(image: item)
+                imgView.contentMode = .scaleAspectFit
                 imgContainerStackView.addArrangedSubview(imgView)
                 imgView.translatesAutoresizingMaskIntoConstraints = false
-                imgView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+                imgView.heightAnchor.constraint(equalToConstant: 40).isActive = true
             }
         }
     }
     
+    func setLeftTopConstraint(constatnt: CGFloat) {
+        titleLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: constatnt).isActive = true
+    }
+    
     func setImage(img: UIImage) {
         let imgView = UIImageView(image: img)
+        imgView.contentMode = .scaleAspectFit
         imgContainerStackView.addArrangedSubview(imgView)
         imgView.translatesAutoresizingMaskIntoConstraints = false
-        imgView.heightAnchor.constraint(equalToConstant: 50).isActive = true
+        imgView.heightAnchor.constraint(equalToConstant: 40).isActive = true
         imgView.widthAnchor.constraint(equalToConstant: UIScreen.main.bounds.width / 4).isActive = true
     }
     
     func setTitle(text: String) {
-        titleLabel.text = text
+        titleLabel.localizationKey = text
     }
     
-    func setTextView(text: String) {
-        contentTextView.text = text
+    func setText(text: String) {
+        contentTextView.isHidden = false
+        topTextViewConstraint.constant = 16
+        bottomTextViewConstraint.constant = 16
+        contentTextView.localizationKey = text
     }
-    
 }
