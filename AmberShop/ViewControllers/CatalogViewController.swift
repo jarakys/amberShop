@@ -124,9 +124,11 @@ class CatalogViewController: BaseViewController {
     }
     
     @objc private func aboutUsDidClick() {
-        if let url = URL(string: "https://amber-futbolka.com/about_us") {
-            UIApplication.shared.open(url)
-        }
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "AboutUsViewController") as! AboutUsViewController
+        separateNaviationController?.popToRootViewController(animated: false)
+        separateNaviationController?.pushViewController(vc, animated: false)
+        self.dismiss(animated: true, completion: nil)
     }
 }
 

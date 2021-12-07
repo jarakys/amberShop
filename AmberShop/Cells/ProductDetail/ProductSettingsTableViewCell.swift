@@ -63,10 +63,14 @@ class ProductSettingsTableViewCell: UITableViewCell {
     let sizeDropDown = DropDown()
     let numberDropDown = DropDown()
     
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        firstView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showColors(_:))))
+        secondView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showSizes(_:))))
+        thirdView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(showQuantity(_:))))
+    }
+    
     func configure(for model: ProductDetailModel) {
-        firstViewButton.addTarget(self, action: #selector(showColors), for: .touchUpInside)
-        secondViewButton.addTarget(self, action: #selector(showSize), for: .touchUpInside)
-        thirdViewButton.addTarget(self, action: #selector(showNumber), for: .touchUpInside)
         
         self.contentView.backgroundColor = UIColor.hexColor(hex: "f7f7f7")
         firstView.layer.cornerRadius = 8
@@ -121,6 +125,17 @@ class ProductSettingsTableViewCell: UITableViewCell {
     
     @objc func showColors() {
         colorDropDown.show()
+    }
+    
+    @IBAction func showColors(_ sender: Any) {
+        showColors()
+    }
+    
+    @IBAction func showSizes(_ sender: Any) {
+        showSize()
+    }
+    @IBAction func showQuantity(_ sender: Any) {
+        showNumber()
     }
     
     @objc func showSize() {

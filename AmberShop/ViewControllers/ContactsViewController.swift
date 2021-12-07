@@ -55,12 +55,12 @@ class ContactsViewController: BaseViewController {
         let backBarBtn = UIBarButtonItem(customView: backBtn)
         
         let logoBtn: UIButton = UIButton()
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .normal)
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .highlighted)
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .selected)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .normal)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .highlighted)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .selected)
         logoBtn.isEnabled = false
         logoBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 60)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
         let logoBarBtn = UIBarButtonItem(customView: logoBtn)
 
         self.navigationItem.setLeftBarButtonItems([backBarBtn, logoBarBtn], animated: false)

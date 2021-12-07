@@ -29,7 +29,6 @@ class ProductsViewController: BaseViewController {
         contentTableView.dataSource = self
         contentTableView.register(UINib(nibName: "ProductTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductTableViewCell")
         contentTableView.separatorStyle = .none
-        contentTableView.allowsSelection = false
         contentTableView.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 0, right: 0)
         
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: contentTableView.frame.width, height: 50))
@@ -90,12 +89,12 @@ class ProductsViewController: BaseViewController {
         let backBarBtn = UIBarButtonItem(customView: backBtn)
         
         let logoBtn: UIButton = UIButton()
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .normal)
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .highlighted)
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .selected)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .normal)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .highlighted)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .selected)
         logoBtn.isEnabled = false
         logoBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 60)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
         let logoBarBtn = UIBarButtonItem(customView: logoBtn)
 
         self.navigationItem.setLeftBarButtonItems([backBarBtn, logoBarBtn], animated: false)
@@ -120,6 +119,14 @@ extension ProductsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         1
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "ProductDetail") as! ProductDetailViewController
+        let model = viewModel.nodes[indexPath.section]
+        vc.viewModel = ProductDetailViewModel(productId: model.id, branchName: categoryName)
+        self.navigationController?.pushViewController(vc, animated: false)
     }
 
     func numberOfSections(in tableView: UITableView) -> Int {

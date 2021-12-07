@@ -41,7 +41,10 @@ class ProductSpecificationsTableViewCell: UITableViewCell {
         typeInflictionLabel.localizationKey = "type_printing"
         availabilityLabel.localizationKey = "availability"
         
-        materialNameLabel.attributedText = model.manufacturer?.getHTMLText(with: materialNameLabel.font)
+        if let material = model.characteristics.first?.attribute.first(where: { $0.name == "material".localized }) {
+            materialNameLabel.attributedText = material.text.getHTMLText(with: materialNameLabel.font)
+        }
+        
         if let sizes = model.option.first(where: { $0.name == "Размер" || $0.name == "Розмір" }) {
             sizeNameLabel.text = sizes.product_option_value.map({ $0.name }).joined(separator: ", ")
         }

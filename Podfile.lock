@@ -1,20 +1,24 @@
 PODS:
+  - Cloudipsp (0.9.3)
   - DropDown (2.3.13)
   - Presentr (1.9)
 
 DEPENDENCIES:
+  - Cloudipsp (~> 0.9.3)
   - DropDown
   - Presentr
 
 SPEC REPOS:
   trunk:
+    - Cloudipsp
     - DropDown
     - Presentr
 
 SPEC CHECKSUMS:
+  Cloudipsp: adf2bca01d6c61fcaefe09806b92fc623f16f766
   DropDown: 8a2116376c1981888557f72ec2ffc9a5e0e456ec
   Presentr: 7078d7eb5d1661ebeaae60c9e42a1e534de1b993
 
-PODFILE CHECKSUM: a5b3e4b8b505e71c0adec0a36b9104bd92f9213f
+PODFILE CHECKSUM: 50421551c49f20eebff63a350c95c69c3a90c56d
 
 COCOAPODS: 1.11.2

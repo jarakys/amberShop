@@ -30,8 +30,6 @@ class ProductTableViewCell: UITableViewCell {
         toCartButton.layer.cornerRadius = 8
         toCartButton.backgroundColor = UIColor.hexColor(hex: "7D71B1")
         toCartButton.tintColor = .white
-        toCartButton.addTarget(self, action: #selector(toCartButtonDidClick), for: .touchUpInside)
-        
         descriptionLabel.textColor = .gray
         
         
@@ -48,6 +46,10 @@ class ProductTableViewCell: UITableViewCell {
         titleLabel.font = .boldSystemFont(ofSize: 17)
         descriptionLabel.textContainer.maximumNumberOfLines = 1
         
+        
+        let selectedBackgroundView = UIView()
+        selectedBackgroundView.backgroundColor = .clear
+        self.selectedBackgroundView = selectedBackgroundView
         
         toCartButton.localizationKey = "to_basket"
         

@@ -6,5 +6,6 @@ target 'AmberShop' do
   use_frameworks!
 
  pod 'Presentr'
- pod 'DropDown' 
+ pod 'DropDown'
+ pod 'Cloudipsp', '~> 0.9.3'
 end

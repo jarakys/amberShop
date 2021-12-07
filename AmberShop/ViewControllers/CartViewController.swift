@@ -37,12 +37,12 @@ class CartViewController: BaseViewController {
         let backBarBtn = UIBarButtonItem(customView: backBtn)
         
         let logoBtn: UIButton = UIButton()
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .normal)
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .highlighted)
-        logoBtn.setImage(UIImage(named: "logo.icon"), for: .selected)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .normal)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .highlighted)
+        logoBtn.setImage(UIImage(named: "logo".localized), for: .selected)
         logoBtn.isEnabled = false
         logoBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 60)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
         let logoBarBtn = UIBarButtonItem(customView: logoBtn)
 
         self.navigationItem.setLeftBarButtonItems([backBarBtn, logoBarBtn], animated: false)
@@ -64,16 +64,27 @@ class CartViewController: BaseViewController {
             case .failure(let error):
                 self?.showAlert(message: "server_error".localized)
             case .success(let data):
-                self?.showAlert(message: "order_accept".localized, action: {
-                    self?.navigationController?.popViewController(animated: true)
-                    LocalStorageManager.shared.clear(key: .savedProducts)
-                })
+                self?.openPaymentScreen(userDataModel: userDataModel)
+//                self?.showAlert(message: "order_accept".localized, title: "success".localized, action: {
+//                    self?.navigationController?.popViewController(animated: true)
+//                    LocalStorageManager.shared.clear(key: .savedProducts)
+//                })
             }
         })
     }
     
+    public func openPaymentScreen(userDataModel: UserDataModel) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
+        let price = userDataModel.products.reduce(0.0, { result, item in
+            return result + (Double(item.quantity) * (Double(item.price) ?? 0.0))
+        })
+        vc.viewModel = PaymentViewModel(customerEmail: userDataModel.email, sum: price)
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
     public override func showAlert(message: String, title: String = "error", action: (() -> Void)? = nil) {
-        let alert = UIAlertController(title: "error".localized, message: message, preferredStyle: .alert)
+        let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(.init(title: "ok".localized, style: .default, handler: {_ in
             action?()
         }))

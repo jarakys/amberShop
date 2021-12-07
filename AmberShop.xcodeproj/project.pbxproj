@@ -52,6 +52,10 @@
 		117F93982753F13D001EC86D /* ProductCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F93962753F13D001EC86D /* ProductCartTableViewCell.swift */; };
 		117F93992753F13D001EC86D /* ProductCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117F93972753F13D001EC86D /* ProductCartTableViewCell.xib */; };
 		D90084D767980F744C50CB3E /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */; };
+		ED20C08F275DAC5E005F472F /* AboutUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */; };
+		ED20C091275DB026005F472F /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C090275DB026005F472F /* AboutUsViewController.swift */; };
+		ED20C096275FC2B6005F472F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C095275FC2B6005F472F /* PaymentViewController.swift */; };
+		ED20C098275FC2C8005F472F /* PaymentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C097275FC2C8005F472F /* PaymentViewModel.swift */; };
 		ED8CE8F52750439700CECA8B /* APIRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8F42750439700CECA8B /* APIRouter.swift */; };
 		ED8CE8F7275043B800CECA8B /* NetwrokManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8F6275043B800CECA8B /* NetwrokManager.swift */; };
 		ED8CE8FB2750451A00CECA8B /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED8CE8FA2750451A00CECA8B /* MainViewModel.swift */; };
@@ -87,6 +91,8 @@
 		EDAFA23427594A0000AE2073 /* NSAttributedString+fromHTML.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA23327594A0000AE2073 /* NSAttributedString+fromHTML.swift */; };
 		EDAFA23627595DF700AE2073 /* BasketItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA23527595DF700AE2073 /* BasketItem.swift */; };
 		EDAFA23827598E9600AE2073 /* UITextField+Localization.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAFA23727598E9600AE2073 /* UITextField+Localization.swift */; };
+		EDF44D67275A8A1300559557 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = EDF44D66275A8A1300559557 /* Alamofire */; };
+		EDF44D69275AC1B500559557 /* AboutUsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = EDF44D68275AC1B500559557 /* AboutUsTableViewCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -139,6 +145,10 @@
 		299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
 		2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
 		6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsTableViewCell.swift; sourceTree = "<group>"; };
+		ED20C090275DB026005F472F /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
+		ED20C095275FC2B6005F472F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
+		ED20C097275FC2C8005F472F /* PaymentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewModel.swift; sourceTree = "<group>"; };
 		ED8CE8F42750439700CECA8B /* APIRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIRouter.swift; sourceTree = "<group>"; };
 		ED8CE8F6275043B800CECA8B /* NetwrokManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetwrokManager.swift; sourceTree = "<group>"; };
 		ED8CE8FA2750451A00CECA8B /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
@@ -174,6 +184,7 @@
 		EDAFA23327594A0000AE2073 /* NSAttributedString+fromHTML.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+fromHTML.swift"; sourceTree = "<group>"; };
 		EDAFA23527595DF700AE2073 /* BasketItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasketItem.swift; sourceTree = "<group>"; };
 		EDAFA23727598E9600AE2073 /* UITextField+Localization.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITextField+Localization.swift"; sourceTree = "<group>"; };
+		EDF44D68275AC1B500559557 /* AboutUsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AboutUsTableViewCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -182,6 +193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDAFA1FC2756A48600AE2073 /* Kingfisher in Frameworks */,
+				EDF44D67275A8A1300559557 /* Alamofire in Frameworks */,
 				EDAFA1FF2756A4BF00AE2073 /* IQKeyboardManagerSwift in Frameworks */,
 				D90084D767980F744C50CB3E /* Pods_AmberShop.framework in Frameworks */,
 			);
@@ -228,14 +240,13 @@
 		1162B1FB274970F2000F7A03 /* AmberShop */ = {
 			isa = PBXGroup;
 			children = (
+				ED20C092275FC02F005F472F /* Managers */,
 				EDAFA2122756DAB900AE2073 /* Utils */,
 				EDAFA2052756B98000AE2073 /* Errors */,
 				EDAFA2002756A71D00AE2073 /* Views */,
-				ED8CE8FF275047AD00CECA8B /* StoreManager */,
 				ED8CE8FC2750454200CECA8B /* Models */,
 				ED8CE8F92750450500CECA8B /* ViewControllers */,
 				ED8CE8F8275044FA00CECA8B /* ViewModels */,
-				ED8CE8F32750435700CECA8B /* Network */,
 				116F974E274C0BCA00F08F86 /* Extensions */,
 				116F973F274BD03F00F08F86 /* Cells */,
 				1162B1FC274970F2000F7A03 /* AppDelegate.swift */,
@@ -260,6 +271,8 @@
 				116642DE274D034A006652ED /* ProductTableViewCell.xib */,
 				117515A32751248000B41E1D /* DeliveryInfoTableViewCell.swift */,
 				117515A42751248000B41E1D /* DeliveryInfoTableViewCell.xib */,
+				EDF44D68275AC1B500559557 /* AboutUsTableViewCell.xib */,
+				ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -315,6 +328,15 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		ED20C092275FC02F005F472F /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				ED8CE8F32750435700CECA8B /* Network */,
+				ED8CE8FF275047AD00CECA8B /* StoreManager */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
 		ED8CE8F32750435700CECA8B /* Network */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +355,7 @@
 				ED8CE90C275055C000CECA8B /* ProductViewModel.swift */,
 				ED8CE9112750612C00CECA8B /* ModalViewModel.swift */,
 				EDAFA22B275901D600AE2073 /* ProductDetailViewModel.swift */,
+				ED20C097275FC2C8005F472F /* PaymentViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -349,6 +372,8 @@
 				117515A12751196000B41E1D /* DeliveryInfoViewController.swift */,
 				117F9390275398BB001EC86D /* CartViewController.swift */,
 				112CD2332757FA2B00EE36BF /* ProductDetailViewController.swift */,
+				ED20C090275DB026005F472F /* AboutUsViewController.swift */,
+				ED20C095275FC2B6005F472F /* PaymentViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -435,6 +460,7 @@
 			packageProductDependencies = (
 				EDAFA1FB2756A48600AE2073 /* Kingfisher */,
 				EDAFA1FE2756A4BF00AE2073 /* IQKeyboardManagerSwift */,
+				EDF44D66275A8A1300559557 /* Alamofire */,
 			);
 			productName = AmberShop;
 			productReference = 1162B1F9274970F2000F7A03 /* AmberShop.app */;
@@ -469,6 +495,7 @@
 			packageReferences = (
 				EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher" */,
 				EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				EDF44D65275A8A1300559557 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1162B1FA274970F2000F7A03 /* Products */;
 			projectDirPath = "";
@@ -489,6 +516,7 @@
 				EDAFA2182756DBE600AE2073 /* Localizable.strings in Resources */,
 				1162B209274970F4000F7A03 /* LaunchScreen.storyboard in Resources */,
 				112CD23D2757FEC200EE36BF /* ProductSettingsTableViewCell.xib in Resources */,
+				EDF44D69275AC1B500559557 /* AboutUsTableViewCell.xib in Resources */,
 				117F93992753F13D001EC86D /* ProductCartTableViewCell.xib in Resources */,
 				116642E0274D034A006652ED /* ProductTableViewCell.xib in Resources */,
 				112CD2452758105F00EE36BF /* TableSizesTableViewCell.xib in Resources */,
@@ -553,6 +581,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				116642E2274D3E5D006652ED /* ModalViewController.swift in Sources */,
+				ED20C08F275DAC5E005F472F /* AboutUsTableViewCell.swift in Sources */,
 				112CD2442758105F00EE36BF /* TableSizesTableViewCell.swift in Sources */,
 				ED8CE90B2750547D00CECA8B /* ProductItemModel.swift in Sources */,
 				EDAFA23827598E9600AE2073 /* UITextField+Localization.swift in Sources */,
@@ -578,6 +607,7 @@
 				1162B201274970F2000F7A03 /* MainViewController.swift in Sources */,
 				ED8CE8FE2750454D00CECA8B /* CategoryModel.swift in Sources */,
 				112CD2322757989700EE36BF /* MKPointAnnotation+Localization.swift in Sources */,
+				ED20C096275FC2B6005F472F /* PaymentViewController.swift in Sources */,
 				ED8CE8F7275043B800CECA8B /* NetwrokManager.swift in Sources */,
 				112CD22E27578EB200EE36BF /* UIButton+Localization.swift in Sources */,
 				116F9746274BD4F100F08F86 /* LabelCollectionViewCell.swift in Sources */,
@@ -592,11 +622,13 @@
 				112CD2382757FCA000EE36BF /* ImageTableViewCell.swift in Sources */,
 				EDAFA2322759292800AE2073 /* BlurLoader.swift in Sources */,
 				116642DA274CFECD006652ED /* UIColor.swift in Sources */,
+				ED20C098275FC2C8005F472F /* PaymentViewModel.swift in Sources */,
 				112CD2342757FA2B00EE36BF /* ProductDetailViewController.swift in Sources */,
 				ED8CE9122750612C00CECA8B /* ModalViewModel.swift in Sources */,
 				1162B1FD274970F2000F7A03 /* AppDelegate.swift in Sources */,
 				EDAFA20D2756C55300AE2073 /* UserDataModel.swift in Sources */,
 				ED8CE90D275055C000CECA8B /* ProductViewModel.swift in Sources */,
+				ED20C091275DB026005F472F /* AboutUsViewController.swift in Sources */,
 				116642DF274D034A006652ED /* ProductTableViewCell.swift in Sources */,
 				ED8CE914275063AD00CECA8B /* String+HTMLText.swift in Sources */,
 				116F9750274C0BEA00F08F86 /* UIView.swift in Sources */,
@@ -788,7 +820,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -819,7 +851,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1;
+				MARKETING_VERSION = 1.4;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -868,6 +900,14 @@
 				minimumVersion = 6.0.0;
 			};
 		};
+		EDF44D65275A8A1300559557 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -880,6 +920,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
+		};
+		EDF44D66275A8A1300559557 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = EDF44D65275A8A1300559557 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

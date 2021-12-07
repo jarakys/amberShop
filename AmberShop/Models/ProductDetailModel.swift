@@ -43,6 +43,7 @@ struct ProductDetailModel: Codable {
     let quantity: String
     let characteristics: [Characteristic]
     let option: [ProductOptionModel]
+    let table: String?
     
     var formatedPrice: String {
         String(format: "%.02f", Double(price) ?? 470.0)

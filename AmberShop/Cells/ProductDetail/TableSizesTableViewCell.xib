@@ -17,12 +17,6 @@
                 <rect key="frame" x="0.0" y="0.0" width="378" height="910"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="hkO-TG-0i7">
-                        <rect key="frame" x="0.0" y="159" width="378" height="350"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="350" id="57d-Ee-4jy"/>
-                        </constraints>
-                    </imageView>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="vtj-wr-L7r">
                         <rect key="frame" x="30" y="529" width="318" height="350"/>
                         <constraints>
@@ -35,23 +29,44 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <scrollView verifyAmbiguity="off" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" directionalLockEnabled="YES" bounces="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PWw-KV-LCn">
+                        <rect key="frame" x="20" y="159" width="338" height="350"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="BBy-wC-B2Q">
+                                <rect key="frame" x="0.0" y="0.0" width="338" height="350"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="350" id="Qpv-CI-IgG"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="BBy-wC-B2Q" firstAttribute="top" secondItem="PWw-KV-LCn" secondAttribute="top" id="6qh-Nm-2RY"/>
+                            <constraint firstAttribute="trailing" secondItem="BBy-wC-B2Q" secondAttribute="trailing" id="ME3-la-x6R"/>
+                            <constraint firstAttribute="bottom" secondItem="BBy-wC-B2Q" secondAttribute="bottom" id="b8G-ll-Jro"/>
+                            <constraint firstItem="BBy-wC-B2Q" firstAttribute="leading" secondItem="PWw-KV-LCn" secondAttribute="leading" id="cKz-14-0aF"/>
+                            <constraint firstAttribute="height" constant="350" id="ii3-jy-VLC"/>
+                        </constraints>
+                        <viewLayoutGuide key="contentLayoutGuide" id="Gvp-CH-aZt"/>
+                        <viewLayoutGuide key="frameLayoutGuide" id="jA6-Cp-TMN"/>
+                    </scrollView>
                 </subviews>
                 <constraints>
                     <constraint firstAttribute="bottomMargin" secondItem="vtj-wr-L7r" secondAttribute="bottom" constant="20" id="3XH-J5-k6K"/>
-                    <constraint firstItem="hkO-TG-0i7" firstAttribute="top" secondItem="lIL-G0-DoE" secondAttribute="bottom" constant="15" id="8Km-jD-BQq"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="PWw-KV-LCn" secondAttribute="trailing" id="D9c-5d-i1p"/>
+                    <constraint firstItem="PWw-KV-LCn" firstAttribute="top" secondItem="lIL-G0-DoE" secondAttribute="bottom" constant="15" id="E4Z-uF-an8"/>
                     <constraint firstItem="lIL-G0-DoE" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="GRV-13-XQB"/>
-                    <constraint firstItem="vtj-wr-L7r" firstAttribute="top" secondItem="hkO-TG-0i7" secondAttribute="bottom" constant="20" id="UPC-ow-fax"/>
+                    <constraint firstItem="PWw-KV-LCn" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="LIb-QN-sNp"/>
                     <constraint firstItem="vtj-wr-L7r" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="10" id="Y3b-zh-yUR"/>
                     <constraint firstItem="lIL-G0-DoE" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="bag-RZ-kHF"/>
+                    <constraint firstItem="vtj-wr-L7r" firstAttribute="top" secondItem="PWw-KV-LCn" secondAttribute="bottom" constant="20" id="j6B-di-J3w"/>
                     <constraint firstAttribute="trailingMargin" secondItem="vtj-wr-L7r" secondAttribute="trailing" constant="10" id="qKd-nW-Az2"/>
-                    <constraint firstItem="hkO-TG-0i7" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="vPG-Uk-SxR"/>
-                    <constraint firstAttribute="trailing" secondItem="hkO-TG-0i7" secondAttribute="trailing" id="xLk-H9-1Ug"/>
                     <constraint firstAttribute="trailing" secondItem="lIL-G0-DoE" secondAttribute="trailing" constant="10" id="xUx-PH-RXn"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="sizesImageView" destination="hkO-TG-0i7" id="rcG-mX-6g3"/>
+                <outlet property="imageScrollView" destination="PWw-KV-LCn" id="3BR-xv-pMr"/>
+                <outlet property="sizesImageView" destination="BBy-wC-B2Q" id="Wbj-TO-IBZ"/>
                 <outlet property="titleLabel" destination="lIL-G0-DoE" id="QuT-JZ-0mZ"/>
                 <outlet property="tshirtMetricsImageView" destination="vtj-wr-L7r" id="JTg-gz-6Wk"/>
             </connections>
