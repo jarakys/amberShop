@@ -35,8 +35,6 @@ class CartTableViewCell: UITableViewCell {
         productsTableView.allowsSelection = false
         productsTableView.register(UINib(nibName: "ProductCartTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCartTableViewCell")
         
-        totalPriceLabel.font = .boldSystemFont(ofSize: 18)
-        
         dataRows = LocalStorageManager.shared.get(key: .savedProducts) ?? []
         calculateTotalPrice()
         productsTableView.sizeChanged = {[weak self] in

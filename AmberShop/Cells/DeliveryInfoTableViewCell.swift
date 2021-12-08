@@ -17,7 +17,6 @@ class DeliveryInfoTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLabel.font = .boldSystemFont(ofSize: 17)
         self.backgroundColor = UIColor.hexColor(hex: "F7F7F7")
         contentTextView.backgroundColor = UIColor.hexColor(hex: "F7F7F7")
         imgContainerStackView.spacing = 8

@@ -16,6 +16,7 @@ class AboutUsViewController: BaseViewController {
         aboutUsTableView.register(UINib(nibName: "AboutUsTableViewCell", bundle: nil), forCellReuseIdentifier: "AboutUsTableViewCell")
         aboutUsTableView.delegate = self
         aboutUsTableView.dataSource = self
+        aboutUsTableView.allowsSelection = false
         // Do any additional setup after loading the view.
     }
     

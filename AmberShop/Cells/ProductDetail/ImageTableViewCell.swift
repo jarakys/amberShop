@@ -18,7 +18,7 @@ class ImageTableViewCell: UITableViewCell {
         super.awakeFromNib()
         iconImageView.layer.masksToBounds = false
         iconImageView.layer.cornerRadius = 8
-        titleLabel.font = .boldSystemFont(ofSize: 24)
+//        titleLabel.font = UIFont(name: "Oswald-SemiBold", size: 24)!
         
     }
 

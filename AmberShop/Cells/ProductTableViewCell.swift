@@ -31,7 +31,7 @@ class ProductTableViewCell: UITableViewCell {
         toCartButton.tintColor = .white
         
         
-        priceLabel.font = .boldSystemFont(ofSize: 20)
+        priceLabel.font = UIFont(name: "Oswald-Regular", size: 20)!
         
         containerView.backgroundColor = .white
         containerView.layer.masksToBounds = false
@@ -41,7 +41,7 @@ class ProductTableViewCell: UITableViewCell {
         containerView.layer.shadowRadius = 5
         
         titleLabel.textContainer.maximumNumberOfLines = 2
-        titleLabel.font = .boldSystemFont(ofSize: 17)
+        titleLabel.font = UIFont(name: "Oswald-Regular", size: 17)!
         
         
         let selectedBackgroundView = UIView()
@@ -64,7 +64,7 @@ class ProductTableViewCell: UITableViewCell {
         titleLabel.attributedText = model.name.getHTMLText(with: titleLabel.font)
         priceLabel.text = model.formatedPrice
         iconImageView.loadImage(imageURL: model.add_photo1 ?? "")
-        toCartButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
+        toCartButton.titleLabel?.font = UIFont(name: "Oswald-Regular", size: 17)!
     }
     
     @objc func toCartButtonDidClick(_ sender: Any) {

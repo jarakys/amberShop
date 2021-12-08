@@ -34,7 +34,7 @@ class ProductsViewController: BaseViewController {
         let headerView = UIView(frame: CGRect(x: 0, y: 0, width: contentTableView.frame.width, height: 50))
         headerView.backgroundColor = .clear
         headerLabel.localizationKey = "\("creative_sphere_t_shirts".localized) \(category?.name.localized ?? "")"
-        headerLabel.font = .boldSystemFont(ofSize: 20)
+        headerLabel.font = UIFont(name: "Oswald-SemiBold", size: 20)!
         headerLabel.textAlignment = .center
         headerLabel.adjustsFontSizeToFitWidth = true
         headerView.addSubview(headerLabel)

@@ -151,7 +151,7 @@ extension ProductDetailViewController: UITableViewDelegate, UITableViewDataSourc
         } else if indexPath.section == 2 {
             let description = viewModel?.productItemDetails?.description.replacingOccurrences(of: "/<img[^>]*>/g", with: "", options: String.CompareOptions.regularExpression, range: nil)
             let cell = tableView.dequeueReusableCell(withIdentifier: "TextDescriptionTableViewCell", for: indexPath) as! TextDescriptionTableViewCell
-            cell.contentLabel.attributedText = description?.getHTMLText(with: cell.contentLabel.font)
+            cell.contentLabel.attributedText = viewModel?.productItemDetails?.description.getHTMLText(with: cell.contentLabel.font)
 //            cell.contentLabel.font = .boldSystemFont(ofSize: 17)
             return cell
             

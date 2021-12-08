@@ -137,6 +137,7 @@ class SelectionCell: UITableViewCell {
     
     func setTitle(text: String) {
         titleLabel.text = text
+        titleLabel.font = UIFont(name: "Oswald-Regular", size: 17)!
     }
 }
 
@@ -173,7 +174,7 @@ extension CatalogViewController: UITableViewDelegate, UITableViewDataSource {
         
         let sectionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 25))
         sectionLabel.text = viewModel.nodes[section].name
-        sectionLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        sectionLabel.font = UIFont(name: "Oswald-SemiBold", size: 20)!
         sectionLabel.textAlignment = .left
         
         sectionView.addSubview(sectionLabel)
@@ -186,7 +187,8 @@ extension CatalogViewController: UITableViewDelegate, UITableViewDataSource {
             let sectionButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             let attributedString = NSAttributedString(string: viewModel.nodes[section].name, attributes: [
                 NSAttributedString.Key.foregroundColor : UIColor.black,
-                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+//                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+                NSAttributedString.Key.font : UIFont(name: "Oswald-SemiBold", size: 20)!
                 ])
 
             sectionButton.setAttributedTitle(attributedString, for: .normal)
@@ -200,7 +202,8 @@ extension CatalogViewController: UITableViewDelegate, UITableViewDataSource {
             let sectionButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             let attributedString = NSAttributedString(string: viewModel.nodes[section].name, attributes: [
                 NSAttributedString.Key.foregroundColor : UIColor.black,
-                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+//                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+                NSAttributedString.Key.font : UIFont(name: "Oswald-SemiBold", size: 20)!
                 ])
 
             sectionButton.setAttributedTitle(attributedString, for: .normal)
@@ -214,7 +217,8 @@ extension CatalogViewController: UITableViewDelegate, UITableViewDataSource {
             let sectionButton = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
             let attributedString = NSAttributedString(string: viewModel.nodes[section].name, attributes: [
                 NSAttributedString.Key.foregroundColor : UIColor.black,
-                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+//                NSAttributedString.Key.font : UIFont.boldSystemFont(ofSize: 20)
+                NSAttributedString.Key.font : UIFont(name: "Oswald-SemiBold", size: 20)!
                 ])
 
             sectionButton.setAttributedTitle(attributedString, for: .normal)

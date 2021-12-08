@@ -158,7 +158,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
         let sectionLabel = UILabel(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 25))
         if section < sectionTitels.count {
             sectionLabel.localizationKey = sectionTitels[section]
-            sectionLabel.font = UIFont.boldSystemFont(ofSize: 18)
+            sectionLabel.font = UIFont(name: "Oswald-SemiBold", size: 18)
             sectionLabel.textAlignment = .left
         }
     

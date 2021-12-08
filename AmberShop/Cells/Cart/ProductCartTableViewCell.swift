@@ -45,9 +45,6 @@ class ProductCartTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        titleLabel.font = .boldSystemFont(ofSize: 16)
-        priceLabel.font = .boldSystemFont(ofSize: 16)
-        
         iconImageVIew.layer.borderWidth = 0.5
         iconImageVIew.layer.borderColor = UIColor.black.withAlphaComponent(0.3).cgColor
         

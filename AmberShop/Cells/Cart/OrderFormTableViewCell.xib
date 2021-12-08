@@ -1,13 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Oswald-Regular.ttf">
+            <string>Oswald-Regular</string>
+        </array>
+        <array key="Oswald-SemiBold.ttf">
+            <string>Oswald-SemiBold</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
@@ -23,7 +31,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c1e-rI-hmX">
                                 <rect key="frame" x="20" y="20" width="366" height="184"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <fontDescription key="fontDescription" name="Oswald-SemiBold" family="Oswald" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -32,7 +40,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="NLB-mR-teg"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="given-name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="7fI-wh-cS5" customClass="TextFieldWithPadding" customModule="AmberShop" customModuleProvider="target">
@@ -40,7 +48,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="H3x-gh-SMf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="namePhonePad" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="family-name"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iwi-cn-Y2J" customClass="TextFieldWithPadding" customModule="AmberShop" customModuleProvider="target">
@@ -48,7 +56,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="eLc-25-iXI"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="phonePad" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="tel"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ASs-sz-aNn" customClass="TextFieldWithPadding" customModule="AmberShop" customModuleProvider="target">
@@ -56,7 +64,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="YUl-4d-svn"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="emailAddress" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="email"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="wWk-gP-Rrq" customClass="TextFieldWithPadding" customModule="AmberShop" customModuleProvider="target">
@@ -64,7 +72,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="gaX-UJ-LmA"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" smartDashesType="yes" smartInsertDeleteType="yes" textContentType="address-level2"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zSa-d6-jAk" customClass="TextFieldWithPadding" customModule="AmberShop" customModuleProvider="target">
@@ -72,7 +80,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="UZq-Tk-B3x"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="v9C-NT-QdG" customClass="TextFieldWithPadding" customModule="AmberShop" customModuleProvider="target">
@@ -80,7 +88,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="100" id="vmD-mg-B03"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="topPadding">
@@ -98,7 +106,7 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Соглашаюсь с условиями обработки данных" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rnZ-qu-05G">
                                 <rect key="frame" x="50" y="709" width="336" height="20"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="11"/>
+                                <fontDescription key="fontDescription" name="Oswald-SemiBold" family="Oswald" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -107,8 +115,8 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="O1E-jp-k3R"/>
                                 </constraints>
-                                <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain"/>
+                                <fontDescription key="fontDescription" name="Oswald-SemiBold" family="Oswald" pointSize="15"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>

@@ -51,6 +51,12 @@
 		117F93952753E988001EC86D /* CartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117F93932753E988001EC86D /* CartTableViewCell.xib */; };
 		117F93982753F13D001EC86D /* ProductCartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 117F93962753F13D001EC86D /* ProductCartTableViewCell.swift */; };
 		117F93992753F13D001EC86D /* ProductCartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 117F93972753F13D001EC86D /* ProductCartTableViewCell.xib */; };
+		1188BD102760CE1500FD5511 /* Oswald-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0A2760CE1400FD5511 /* Oswald-Bold.ttf */; };
+		1188BD112760CE1500FD5511 /* Oswald-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0B2760CE1400FD5511 /* Oswald-Medium.ttf */; };
+		1188BD122760CE1500FD5511 /* Oswald-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0C2760CE1400FD5511 /* Oswald-ExtraLight.ttf */; };
+		1188BD132760CE1500FD5511 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0D2760CE1400FD5511 /* Oswald-Regular.ttf */; };
+		1188BD142760CE1500FD5511 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0E2760CE1500FD5511 /* Oswald-Light.ttf */; };
+		1188BD152760CE1500FD5511 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0F2760CE1500FD5511 /* Oswald-SemiBold.ttf */; };
 		D90084D767980F744C50CB3E /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */; };
 		ED20C08F275DAC5E005F472F /* AboutUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */; };
 		ED20C091275DB026005F472F /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C090275DB026005F472F /* AboutUsViewController.swift */; };
@@ -142,6 +148,12 @@
 		117F93932753E988001EC86D /* CartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CartTableViewCell.xib; sourceTree = "<group>"; };
 		117F93962753F13D001EC86D /* ProductCartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCartTableViewCell.swift; sourceTree = "<group>"; };
 		117F93972753F13D001EC86D /* ProductCartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCartTableViewCell.xib; sourceTree = "<group>"; };
+		1188BD0A2760CE1400FD5511 /* Oswald-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Bold.ttf"; sourceTree = "<group>"; };
+		1188BD0B2760CE1400FD5511 /* Oswald-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Medium.ttf"; sourceTree = "<group>"; };
+		1188BD0C2760CE1400FD5511 /* Oswald-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-ExtraLight.ttf"; sourceTree = "<group>"; };
+		1188BD0D2760CE1400FD5511 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
+		1188BD0E2760CE1500FD5511 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
+		1188BD0F2760CE1500FD5511 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
 		299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
 		2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
 		6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -311,6 +323,19 @@
 			path = Cart;
 			sourceTree = "<group>";
 		};
+		1188BD092760CDED00FD5511 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				1188BD0A2760CE1400FD5511 /* Oswald-Bold.ttf */,
+				1188BD0C2760CE1400FD5511 /* Oswald-ExtraLight.ttf */,
+				1188BD0E2760CE1500FD5511 /* Oswald-Light.ttf */,
+				1188BD0B2760CE1400FD5511 /* Oswald-Medium.ttf */,
+				1188BD0D2760CE1400FD5511 /* Oswald-Regular.ttf */,
+				1188BD0F2760CE1500FD5511 /* Oswald-SemiBold.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		E1A2AAC5489D5D775620F684 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -432,6 +457,7 @@
 		EDAFA2152756DB4000AE2073 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				1188BD092760CDED00FD5511 /* Fonts */,
 				1162B202274970F2000F7A03 /* Main.storyboard */,
 				1162B207274970F4000F7A03 /* LaunchScreen.storyboard */,
 				EDAFA21A2756DBE600AE2073 /* Localizable.strings */,
@@ -516,16 +542,22 @@
 				EDAFA2182756DBE600AE2073 /* Localizable.strings in Resources */,
 				1162B209274970F4000F7A03 /* LaunchScreen.storyboard in Resources */,
 				112CD23D2757FEC200EE36BF /* ProductSettingsTableViewCell.xib in Resources */,
+				1188BD102760CE1500FD5511 /* Oswald-Bold.ttf in Resources */,
 				EDF44D69275AC1B500559557 /* AboutUsTableViewCell.xib in Resources */,
 				117F93992753F13D001EC86D /* ProductCartTableViewCell.xib in Resources */,
 				116642E0274D034A006652ED /* ProductTableViewCell.xib in Resources */,
 				112CD2452758105F00EE36BF /* TableSizesTableViewCell.xib in Resources */,
+				1188BD132760CE1500FD5511 /* Oswald-Regular.ttf in Resources */,
+				1188BD152760CE1500FD5511 /* Oswald-SemiBold.ttf in Resources */,
 				112CD24127580AEB00EE36BF /* ProductSpecificationsTableViewCell.xib in Resources */,
 				116F974D274C02AE00F08F86 /* ContactInformationTableViewCell.xib in Resources */,
+				1188BD112760CE1500FD5511 /* Oswald-Medium.ttf in Resources */,
 				112CD249275813AB00EE36BF /* TextDescriptionTableViewCell.xib in Resources */,
 				1162B206274970F4000F7A03 /* Assets.xcassets in Resources */,
 				1162B204274970F2000F7A03 /* Main.storyboard in Resources */,
+				1188BD122760CE1500FD5511 /* Oswald-ExtraLight.ttf in Resources */,
 				112CD2392757FCA000EE36BF /* ImageTableViewCell.xib in Resources */,
+				1188BD142760CE1500FD5511 /* Oswald-Light.ttf in Resources */,
 				117515AF27513D2800B41E1D /* OrderFormTableViewCell.xib in Resources */,
 				116F9747274BD4F100F08F86 /* LabelCollectionViewCell.xib in Resources */,
 			);
