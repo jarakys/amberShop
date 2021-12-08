@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -41,17 +41,10 @@
                                 </buttonConfiguration>
                             </button>
                             <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" editable="NO" text="232323123123123123123123123123123" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2pr-bw-qhZ">
-                                <rect key="frame" x="38" y="293" width="305" height="36.5"/>
+                                <rect key="frame" x="38" y="293" width="305" height="231.5"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
-                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                            </textView>
-                            <textView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" verticalHuggingPriority="249" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" editable="NO" text="asd" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SKg-Zx-TlS">
-                                <rect key="frame" x="38" y="349.5" width="305" height="175"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <color key="textColor" systemColor="systemGrayColor"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
@@ -60,17 +53,14 @@
                             <constraint firstAttribute="trailingMargin" secondItem="2pr-bw-qhZ" secondAttribute="trailing" constant="30" id="04d-jU-rAT"/>
                             <constraint firstItem="arN-VX-vx5" firstAttribute="leading" secondItem="4KP-Ns-X1O" secondAttribute="leadingMargin" constant="30" id="3mp-k9-god"/>
                             <constraint firstAttribute="trailingMargin" secondItem="n82-Lc-Eun" secondAttribute="trailing" constant="30" id="4xH-Qe-jOw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="SKg-Zx-TlS" secondAttribute="trailing" constant="30" id="5kx-cp-wYC"/>
+                            <constraint firstItem="n82-Lc-Eun" firstAttribute="top" secondItem="2pr-bw-qhZ" secondAttribute="bottom" constant="40" id="BPa-8M-zdq"/>
                             <constraint firstItem="CSU-Di-j00" firstAttribute="leading" secondItem="4KP-Ns-X1O" secondAttribute="leadingMargin" constant="20" id="CVZ-KO-byO"/>
                             <constraint firstAttribute="bottomMargin" secondItem="arN-VX-vx5" secondAttribute="bottom" constant="20" id="CrB-B5-K1i"/>
-                            <constraint firstItem="SKg-Zx-TlS" firstAttribute="leading" secondItem="4KP-Ns-X1O" secondAttribute="leadingMargin" constant="30" id="Fxg-UV-Wgn"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CSU-Di-j00" secondAttribute="trailing" constant="20" id="GaS-Tn-dhb"/>
-                            <constraint firstItem="n82-Lc-Eun" firstAttribute="top" secondItem="SKg-Zx-TlS" secondAttribute="bottom" constant="40" id="HeW-Pm-3zE"/>
                             <constraint firstItem="2pr-bw-qhZ" firstAttribute="top" secondItem="CSU-Di-j00" secondAttribute="bottom" constant="25" id="J9K-FZ-Wk7"/>
                             <constraint firstItem="CSU-Di-j00" firstAttribute="top" secondItem="4KP-Ns-X1O" secondAttribute="topMargin" constant="10" id="Jff-35-MaM"/>
                             <constraint firstItem="2pr-bw-qhZ" firstAttribute="leading" secondItem="4KP-Ns-X1O" secondAttribute="leadingMargin" constant="30" id="cdk-CE-8Ij"/>
-                            <constraint firstItem="arN-VX-vx5" firstAttribute="top" secondItem="SKg-Zx-TlS" secondAttribute="bottom" constant="40" id="cww-6x-YKC"/>
-                            <constraint firstItem="SKg-Zx-TlS" firstAttribute="top" secondItem="2pr-bw-qhZ" secondAttribute="bottom" constant="20" id="le3-7y-mu1"/>
+                            <constraint firstItem="arN-VX-vx5" firstAttribute="top" secondItem="2pr-bw-qhZ" secondAttribute="bottom" constant="40" id="oeD-7G-XJv"/>
                             <constraint firstAttribute="bottomMargin" secondItem="n82-Lc-Eun" secondAttribute="bottom" constant="20" id="v1U-qx-w5D"/>
                         </constraints>
                     </view>
@@ -85,7 +75,6 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="containerView" destination="4KP-Ns-X1O" id="WJc-tk-ifh"/>
-                <outlet property="descriptionLabel" destination="SKg-Zx-TlS" id="cXU-jA-EgX"/>
                 <outlet property="iconImageView" destination="CSU-Di-j00" id="o8S-B9-ook"/>
                 <outlet property="priceLabel" destination="arN-VX-vx5" id="m2l-nv-kPq"/>
                 <outlet property="titleLabel" destination="2pr-bw-qhZ" id="UVS-IS-AFi"/>
@@ -101,9 +90,6 @@
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
-        <systemColor name="systemGrayColor">
-            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

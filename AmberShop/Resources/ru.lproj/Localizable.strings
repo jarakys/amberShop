@@ -44,6 +44,7 @@
 "sizes" = "Доступные размеры";
 "type_printing" = "Способ нанесения";
 "digital_printing" = "Цифровая печать";
+"thermal_transfer" = "Термоперенос";
 "availability" = "Наличие";
 "in_stock" = "Есть в наличии";
 "not_in_stock" = "Нет в наличии";

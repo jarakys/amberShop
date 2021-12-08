@@ -10,7 +10,6 @@ import UIKit
 class MainViewController: BaseViewController {
     
     @IBOutlet weak var photoImageView: UIImageView!
-    @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentCollectionView: UICollectionView!
     
     private lazy var viewModel: MainViewModel = {
@@ -27,8 +26,6 @@ class MainViewController: BaseViewController {
         contentCollectionView.register(UINib(nibName: "LabelCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "LabelCollectionViewCell")
         contentCollectionView.allowsSelection = true
         photoImageView.image = UIImage(named: "testImg2")
-        titleLabel.localizationKey = "t_shirts_by_industry"
-        titleLabel.font = .boldSystemFont(ofSize: 25)
         viewModel.$nodes.sink(receiveValue: {[weak self] _ in
             DispatchQueue.main.async {
                 self?.contentCollectionView.reloadData()

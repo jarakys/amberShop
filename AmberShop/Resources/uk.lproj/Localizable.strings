@@ -44,6 +44,7 @@
 "sizes" = "Доступні розміри";
 "type_printing" = "Спосіб нанесення";
 "digital_printing" = "Цифровий друк";
+"thermal_transfer" = "Термоперенесення";
 "availability" = "Наявність";
 "in_stock" = "Є в наявності";
 "not_in_stock" = "Немає";

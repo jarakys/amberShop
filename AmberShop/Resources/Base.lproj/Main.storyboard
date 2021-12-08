@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5wI-nD-YDh">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="5wI-nD-YDh">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Image references" minToolsVersion="12.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -38,14 +38,8 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="U8C-PQ-Utu">
                                 <rect key="frame" x="0.0" y="98" width="414" height="421"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PHe-9M-Idl">
-                                <rect key="frame" x="177.5" y="549" width="59" height="30"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ScH-vi-xai">
-                                <rect key="frame" x="0.0" y="599" width="414" height="263"/>
+                                <rect key="frame" x="0.0" y="539" width="414" height="323"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="C7s-8A-YEu">
                                     <size key="itemSize" width="128" height="128"/>
@@ -70,12 +64,10 @@
                         <constraints>
                             <constraint firstItem="U8C-PQ-Utu" firstAttribute="leading" secondItem="6tp-Sb-XxH" secondAttribute="leading" id="C6e-bR-Wgq"/>
                             <constraint firstItem="U8C-PQ-Utu" firstAttribute="height" secondItem="nqy-tB-Wjo" secondAttribute="height" multiplier="0.47" id="DT9-Ih-CVs"/>
-                            <constraint firstItem="ScH-vi-xai" firstAttribute="top" secondItem="PHe-9M-Idl" secondAttribute="bottom" constant="20" id="Fv2-M4-H1K"/>
                             <constraint firstItem="6tp-Sb-XxH" firstAttribute="trailing" secondItem="U8C-PQ-Utu" secondAttribute="trailing" id="KSG-25-lYz"/>
                             <constraint firstItem="6tp-Sb-XxH" firstAttribute="bottom" secondItem="ScH-vi-xai" secondAttribute="bottom" id="MAl-0n-7fF"/>
                             <constraint firstItem="U8C-PQ-Utu" firstAttribute="top" secondItem="6tp-Sb-XxH" secondAttribute="top" constant="10" id="RM0-G8-rI3"/>
-                            <constraint firstItem="PHe-9M-Idl" firstAttribute="top" secondItem="U8C-PQ-Utu" secondAttribute="bottom" constant="30" id="TKY-se-Vez"/>
-                            <constraint firstItem="PHe-9M-Idl" firstAttribute="centerX" secondItem="nqy-tB-Wjo" secondAttribute="centerX" id="bxg-Vm-Tc6"/>
+                            <constraint firstItem="ScH-vi-xai" firstAttribute="top" secondItem="U8C-PQ-Utu" secondAttribute="bottom" constant="20" id="d0I-hB-uNu"/>
                             <constraint firstItem="6tp-Sb-XxH" firstAttribute="trailing" secondItem="ScH-vi-xai" secondAttribute="trailing" id="q0b-UL-dQH"/>
                             <constraint firstItem="ScH-vi-xai" firstAttribute="leading" secondItem="6tp-Sb-XxH" secondAttribute="leading" id="xpx-fI-ebz"/>
                         </constraints>
@@ -84,7 +76,6 @@
                     <connections>
                         <outlet property="contentCollectionView" destination="ScH-vi-xai" id="L7d-jO-aLH"/>
                         <outlet property="photoImageView" destination="U8C-PQ-Utu" id="78Z-NM-j7R"/>
-                        <outlet property="titleLabel" destination="PHe-9M-Idl" id="sCX-Se-g10"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ax8-YK-F0L" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

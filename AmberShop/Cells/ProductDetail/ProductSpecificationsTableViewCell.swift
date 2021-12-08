@@ -49,7 +49,7 @@ class ProductSpecificationsTableViewCell: UITableViewCell {
             sizeNameLabel.text = sizes.product_option_value.map({ $0.name }).joined(separator: ", ")
         }
         manufacturerNameLabel.attributedText = model.manufacturer?.getHTMLText(with: manufacturerNameLabel.font)
-        typeInflictionNameLabel.localizationKey = "digital_printing"
+        typeInflictionNameLabel.localizationKey = "thermal_transfer"
         availabilityNameLabel.localizationKey = (Int(model.quantity) ?? 0) > 0 ? "in_stock" : "not_in_stock"
         branchNameLabel.text = branchName
     }

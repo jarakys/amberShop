@@ -16,7 +16,6 @@ class ProductTableViewCell: UITableViewCell {
 
     @IBOutlet weak var iconImageView: UIImageView!
     @IBOutlet weak var titleLabel: UITextView!
-    @IBOutlet weak var descriptionLabel: UITextView!
     @IBOutlet weak var priceLabel: UILabel!
     @IBOutlet weak var toCartButton: UIButton!
     @IBOutlet weak var containerView: UIView!
@@ -30,7 +29,6 @@ class ProductTableViewCell: UITableViewCell {
         toCartButton.layer.cornerRadius = 8
         toCartButton.backgroundColor = UIColor.hexColor(hex: "7D71B1")
         toCartButton.tintColor = .white
-        descriptionLabel.textColor = .gray
         
         
         priceLabel.font = .boldSystemFont(ofSize: 20)
@@ -44,7 +42,6 @@ class ProductTableViewCell: UITableViewCell {
         
         titleLabel.textContainer.maximumNumberOfLines = 2
         titleLabel.font = .boldSystemFont(ofSize: 17)
-        descriptionLabel.textContainer.maximumNumberOfLines = 1
         
         
         let selectedBackgroundView = UIView()
@@ -65,7 +62,6 @@ class ProductTableViewCell: UITableViewCell {
     func configure(for model: ProductItemModel) {
         productItem = model
         titleLabel.attributedText = model.name.getHTMLText(with: titleLabel.font)
-        descriptionLabel.attributedText = model.description.getHTMLText(with: descriptionLabel.font)
         priceLabel.text = model.formatedPrice
         iconImageView.loadImage(imageURL: model.add_photo1 ?? "")
         toCartButton.titleLabel?.font = .boldSystemFont(ofSize: 16)
