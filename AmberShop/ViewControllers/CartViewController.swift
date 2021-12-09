@@ -64,21 +64,28 @@ class CartViewController: BaseViewController {
             case .failure(let error):
                 self?.showAlert(message: "server_error".localized)
             case .success(let data):
-                self?.openPaymentScreen(userDataModel: userDataModel)
-//                self?.showAlert(message: "order_accept".localized, title: "success".localized, action: {
-//                    self?.navigationController?.popViewController(animated: true)
-//                    LocalStorageManager.shared.clear(key: .savedProducts)
-//                })
+                self?.openPaymentScreen(userDataModel: userDataModel, paymentCompletion: { success in
+                    guard success else {
+                        self?.showAlert(message: "product_not_payed".localized)
+                        return
+                    }
+                    self?.showAlert(message: "order_accept".localized, title: "success".localized, action: {
+                        self?.navigationController?.popViewController(animated: true)
+                        LocalStorageManager.shared.clear(key: .savedProducts)
+                    })
+                })
+                
             }
         })
     }
     
-    public func openPaymentScreen(userDataModel: UserDataModel) {
+    public func openPaymentScreen(userDataModel: UserDataModel, paymentCompletion: ((Bool) -> Void)?) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         let vc = storyboard.instantiateViewController(withIdentifier: "PaymentViewController") as! PaymentViewController
         let price = userDataModel.products.reduce(0.0, { result, item in
             return result + (Double(item.quantity) * (Double(item.price) ?? 0.0))
         })
+        vc.completion = paymentCompletion
         vc.viewModel = PaymentViewModel(customerEmail: userDataModel.email, sum: price)
         navigationController?.pushViewController(vc, animated: true)
     }

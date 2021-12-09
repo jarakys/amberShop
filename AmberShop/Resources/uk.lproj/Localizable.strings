@@ -125,3 +125,5 @@
 
 "confirm_payment" = "Підтвердіть платіж";
 "attention" = "Повідомлення";
+"apple_pay_not_supported" = "ApplePay не підтримується";
+"product_not_payed" = "Продукт не сплачений";

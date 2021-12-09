@@ -26,10 +26,6 @@ class PaymentViewController: BaseViewController {
         PSCloudipspApi(merchant: 1396424, andCloudipspView: webView)
     }()
     
-    private lazy var applePayPSCloudipspApi: PSCloudipspApi = {
-        PSCloudipspApi(merchant: 1396424, andCloudipspView: nil)
-    }()
-    
     public var viewModel: PaymentViewModel!
 
     override func viewDidLoad() {
@@ -78,53 +74,23 @@ class PaymentViewController: BaseViewController {
         NotificationCenter.default.addObserver(self, selector: #selector(localizationChange(_:)), name: Notification.Name("LocalizationChanged"), object: nil)
     }
     
-    @objc func textFieldDidChange(_ textField: UITextField) {
-//        if cardTextField.text?.isEmpty == false {
-//            cardTextField.layer.remove(edge: .bottom)
-//            errors.removeAll(where: { $0 == .card })
-//        } else {
-//            errors.append(.card)
-//        }
-//        if yearMonthTextField.text?.isEmpty == false {
-//            yearMonthTextField.layer.remove(edge: .bottom)
-//            errors.removeAll(where: { $0 == .month })
-//        } else {
-//            errors.append(.month)
-//        }
-//        if yearTextField.text?.isEmpty == false {
-//            yearTextField.layer.remove(edge: .bottom)
-//            errors.removeAll(where: { $0 == .year })
-//        } else {
-//            errors.append(.year)
-//        }
-//        if cvvTextField.text?.isEmpty == false {
-//            cvvTextField.layer.remove(edge: .bottom)
-//            errors.removeAll(where: { $0 == .cvv })
-//        } else {
-//            errors.append(.cvv)
-//        }
-//        if emailTextField.text?.isEmpty == false && emailTextField.text?.isMatch("[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,64}") == true {
-//            emailTextField.layer.remove(edge: .bottom)
-//            errors.removeAll(where: { $0 == .email })
-//        } else {
-//            errors.append(.email)
-//        }
-    }
-    
     @objc func localizationChange(_ notification: Notification) {
         payButton.setTitle("\("pay".localized) \(viewModel.sum) ГРН", for: .normal)
     }
 
     @IBAction func applePayDidTap(_ sender: Any) {
         if PSCloudipspApi.supportsApplePay() {
-            print("huy")
+            showAlert(message: "apple_pay_not_supported".localized)
         }
         let order = PSOrder(order: Int(viewModel.sum), aCurrency: PSCurrency.init(rawValue: 1), aIdentifier: Date().timeIntervalSince1970.description, aAbout: "AmberShop")
-        applePayPSCloudipspApi.applePay(order, andDelegate: self)
+        psCloudipspApi.applePay(order, andDelegate: self)
     }
     
     @IBAction func payDidTap(_ sender: Any) {
-        let card = cardInputView.confirm(self)
+        guard let card = cardInputView.confirm(self) else {
+            return
+        }
+        
         let order = PSOrder(order: Int(viewModel.sum), aCurrency: PSCurrency.init(rawValue: 1), aIdentifier: Date().timeIntervalSince1970.description, aAbout: "AmberShop")
         
         psCloudipspApi.pay(card, with: order, andDelegate: self)
@@ -181,22 +147,3 @@ extension PaymentViewController: PSCardInputViewDelegate, PSPayCallbackDelegate,
         
     }
 }
-
-
-// MARK: UITextFieldDelegate
-//extension PaymentViewController: UITextFieldDelegate {
-//    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        var maxLength = 100
-//        if textField == cardTextField {
-//            maxLength = 19
-//        } else if textField == yearMonthTextField || textField == yearTextField {
-//            maxLength = 2
-//        } else if textField == cvvTextField {
-//            maxLength = 3
-//        }
-//        let currentString: NSString = (textField.text ?? "") as NSString
-//        let newString: NSString =
-//            currentString.replacingCharacters(in: range, with: string) as NSString
-//        return newString.length <= maxLength
-//    }
-//}
