@@ -90,7 +90,7 @@ class CartViewController: BaseViewController {
         navigationController?.pushViewController(vc, animated: true)
     }
     
-    public override func showAlert(message: String, title: String = "error", action: (() -> Void)? = nil) {
+    public override func showAlert(message: String, title: String = "error".localized, action: (() -> Void)? = nil) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addAction(.init(title: "ok".localized, style: .default, handler: {_ in
             action?()
