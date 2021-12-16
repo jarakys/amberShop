@@ -31,6 +31,10 @@ class BaseViewController: UIViewController {
         NotificationCenter.default.addObserver(forName: NSNotification.Name("LocalizationChanged"), object: nil, queue: .main, using: {[weak self] _ in
             self?.configureLeftBar()
         })
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name("AddedToBasket"), object: nil, queue: .main, using: {[weak self] _ in
+            self?.configureRightBar()
+        })
     }
     
     func configureLeftBar() {
@@ -56,6 +60,19 @@ class BaseViewController: UIViewController {
         // 7D71B1
         cartBtn.backgroundColor = UIColor.hexColor(hex: "7D71B1")
         cartBtn.layer.cornerRadius = 15
+        let countLabel = UILabel(frame: CGRect(x: cartBtn.frame.width + 10, y: -10, width: 40, height: 30))
+        countLabel.text = ""
+        countLabel.textColor = .white
+        countLabel.font = .systemFont(ofSize: 12, weight: .bold)
+        cartBtn.addSubview(countLabel)
+        countLabel.textAlignment = .center
+        countLabel.frame = CGRect(x: 0, y: -8, width: 40, height: 30)
+        
+        if let basket: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts),
+           !basket.isEmpty {
+            countLabel.text = basket.count.description
+        }
+        
         let cartBarBtn = UIBarButtonItem(customView: cartBtn)
 
 

@@ -132,6 +132,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
                         self?.navigationController?.popViewController(animated: true)
                     })
                 }
+                NotificationCenter.default.post(name: NSNotification.Name("AddedToBasket"), object: nil)
             }
             return cell
         } else if indexPath.section == 1 {

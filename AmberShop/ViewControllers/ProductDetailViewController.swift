@@ -110,6 +110,7 @@ class ProductDetailViewController: BaseViewController {
         
         showAlert(message: "t_shirt_added_to_cart".localized, title: "success".localized, action: nil)
         
+        NotificationCenter.default.post(name: NSNotification.Name("AddedToBasket"), object: nil)
     }
     
     @objc func localizationChange(_ notification: Notification) {
