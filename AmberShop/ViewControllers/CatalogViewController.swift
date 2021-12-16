@@ -9,6 +9,7 @@ import UIKit
 
 class CatalogViewController: BaseViewController {
 
+    @IBOutlet var shadowView: UIView!
     @IBOutlet weak var catalogTableView: UITableView!
     @IBOutlet weak var ruButton: UIButton!
     @IBOutlet weak var uaBtton: UIButton!
@@ -21,6 +22,13 @@ class CatalogViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame.size = shadowView.frame.size
+        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
+        gradientLayer.locations = [0.3, 1.0]
+        shadowView.layer.addSublayer(gradientLayer)
+        
         catalogTableView.delegate = self
         catalogTableView.dataSource = self
         catalogTableView.separatorStyle = .none

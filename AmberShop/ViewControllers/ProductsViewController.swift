@@ -10,6 +10,7 @@ import Presentr
 
 class ProductsViewController: BaseViewController {
 
+    @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var contentTableView: UITableView!
     
@@ -24,6 +25,13 @@ class ProductsViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame.size = shadowView.frame.size
+        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
+        gradientLayer.locations = [0.3, 1.0]
+        shadowView.layer.addSublayer(gradientLayer)
+        
         configNotification()
         contentTableView.delegate = self
         contentTableView.dataSource = self

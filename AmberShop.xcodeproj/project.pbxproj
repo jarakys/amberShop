@@ -57,7 +57,7 @@
 		1188BD132760CE1500FD5511 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0D2760CE1400FD5511 /* Oswald-Regular.ttf */; };
 		1188BD142760CE1500FD5511 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0E2760CE1500FD5511 /* Oswald-Light.ttf */; };
 		1188BD152760CE1500FD5511 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0F2760CE1500FD5511 /* Oswald-SemiBold.ttf */; };
-		D90084D767980F744C50CB3E /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */; };
+		230828FB069C36EE5F696BC7 /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F014BF834776FC9DC8A203 /* Pods_AmberShop.framework */; };
 		ED20C08F275DAC5E005F472F /* AboutUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */; };
 		ED20C091275DB026005F472F /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C090275DB026005F472F /* AboutUsViewController.swift */; };
 		ED20C096275FC2B6005F472F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C095275FC2B6005F472F /* PaymentViewController.swift */; };
@@ -154,9 +154,9 @@
 		1188BD0D2760CE1400FD5511 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		1188BD0E2760CE1500FD5511 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
 		1188BD0F2760CE1500FD5511 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
-		299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
-		2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
-		6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		61D840A9175683EE4C83C95F /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
+		AA006DF842684BBCC0E249E8 /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
+		C5F014BF834776FC9DC8A203 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsTableViewCell.swift; sourceTree = "<group>"; };
 		ED20C090275DB026005F472F /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		ED20C095275FC2B6005F472F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -175,6 +175,7 @@
 		ED8CE90F27505FCA00CECA8B /* UIImageView+LoadImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImageView+LoadImage.swift"; sourceTree = "<group>"; };
 		ED8CE9112750612C00CECA8B /* ModalViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModalViewModel.swift; sourceTree = "<group>"; };
 		ED8CE913275063AD00CECA8B /* String+HTMLText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+HTMLText.swift"; sourceTree = "<group>"; };
+		ED8F8B662768A97600FF6658 /* AmberShop.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = AmberShop.entitlements; sourceTree = "<group>"; };
 		EDAFA2012756A73900AE2073 /* ContentSizedTableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentSizedTableView.swift; sourceTree = "<group>"; };
 		EDAFA2032756B11700AE2073 /* LocalStorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalStorageManager.swift; sourceTree = "<group>"; };
 		EDAFA2062756B98A00AE2073 /* OrderError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderError.swift; sourceTree = "<group>"; };
@@ -207,7 +208,7 @@
 				EDAFA1FC2756A48600AE2073 /* Kingfisher in Frameworks */,
 				EDF44D67275A8A1300559557 /* Alamofire in Frameworks */,
 				EDAFA1FF2756A4BF00AE2073 /* IQKeyboardManagerSwift in Frameworks */,
-				D90084D767980F744C50CB3E /* Pods_AmberShop.framework in Frameworks */,
+				230828FB069C36EE5F696BC7 /* Pods_AmberShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -237,7 +238,7 @@
 				1162B1FB274970F2000F7A03 /* AmberShop */,
 				1162B1FA274970F2000F7A03 /* Products */,
 				E3263FDEB01754846B0755AD /* Pods */,
-				E1A2AAC5489D5D775620F684 /* Frameworks */,
+				F759A81DA37874080E5291F4 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -252,6 +253,7 @@
 		1162B1FB274970F2000F7A03 /* AmberShop */ = {
 			isa = PBXGroup;
 			children = (
+				ED8F8B662768A97600FF6658 /* AmberShop.entitlements */,
 				ED20C092275FC02F005F472F /* Managers */,
 				EDAFA2122756DAB900AE2073 /* Utils */,
 				EDAFA2052756B98000AE2073 /* Errors */,
@@ -336,19 +338,11 @@
 			path = Fonts;
 			sourceTree = "<group>";
 		};
-		E1A2AAC5489D5D775620F684 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				6C0D8575D3161731BB08B7E9 /* Pods_AmberShop.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		E3263FDEB01754846B0755AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */,
-				299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */,
+				AA006DF842684BBCC0E249E8 /* Pods-AmberShop.debug.xcconfig */,
+				61D840A9175683EE4C83C95F /* Pods-AmberShop.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -465,6 +459,14 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		F759A81DA37874080E5291F4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C5F014BF834776FC9DC8A203 /* Pods_AmberShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -472,11 +474,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1162B20D274970F4000F7A03 /* Build configuration list for PBXNativeTarget "AmberShop" */;
 			buildPhases = (
-				C36027415CD9AA90233C4AC1 /* [CP] Check Pods Manifest.lock */,
+				533790218096715A3FBEB242 /* [CP] Check Pods Manifest.lock */,
 				1162B1F5274970F2000F7A03 /* Sources */,
 				1162B1F6274970F2000F7A03 /* Frameworks */,
 				1162B1F7274970F2000F7A03 /* Resources */,
-				F1BC5C544306C6668EEDA407 /* [CP] Embed Pods Frameworks */,
+				69A9D217D18D62F385FAEDB2 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -519,8 +521,8 @@
 			);
 			mainGroup = 1162B1F0274970F2000F7A03;
 			packageReferences = (
-				EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher" */,
-				EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
+				EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
+				EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */,
 				EDF44D65275A8A1300559557 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1162B1FA274970F2000F7A03 /* Products */;
@@ -566,7 +568,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		C36027415CD9AA90233C4AC1 /* [CP] Check Pods Manifest.lock */ = {
+		533790218096715A3FBEB242 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -588,7 +590,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		F1BC5C544306C6668EEDA407 /* [CP] Embed Pods Frameworks */ = {
+		69A9D217D18D62F385FAEDB2 /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -832,10 +834,11 @@
 		};
 		1162B20E274970F4000F7A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2CF07CC7DCED56656E024EAB /* Pods-AmberShop.debug.xcconfig */;
+			baseConfigurationReference = AA006DF842684BBCC0E249E8 /* Pods-AmberShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AmberShop/AmberShop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
@@ -863,10 +866,11 @@
 		};
 		1162B20F274970F4000F7A03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 299CD8DAAF8189C5810E6E71 /* Pods-AmberShop.release.xcconfig */;
+			baseConfigurationReference = 61D840A9175683EE4C83C95F /* Pods-AmberShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = AmberShop/AmberShop.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
@@ -916,7 +920,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+		EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -924,7 +928,7 @@
 				kind = branch;
 			};
 		};
-		EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
+		EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -945,12 +949,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		EDAFA1FB2756A48600AE2073 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			package = EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
 			productName = Kingfisher;
 		};
 		EDAFA1FE2756A4BF00AE2073 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
+			package = EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */;
 			productName = IQKeyboardManagerSwift;
 		};
 		EDF44D66275A8A1300559557 /* Alamofire */ = {

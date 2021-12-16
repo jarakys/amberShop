@@ -23,7 +23,7 @@ class PaymentViewController: BaseViewController {
     public var completion: ((Bool)-> Void)?
     
     private lazy var psCloudipspApi: PSCloudipspApi = {
-        PSCloudipspApi(merchant: 1396424, andCloudipspView: webView)
+        PSCloudipspApi(merchant: 1492633, andCloudipspView: webView)
     }()
     
     public var viewModel: PaymentViewModel!

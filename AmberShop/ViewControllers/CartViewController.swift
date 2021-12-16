@@ -9,6 +9,7 @@ import UIKit
 
 class CartViewController: BaseViewController {
 
+    @IBOutlet var shadowView: UIView!
     @IBOutlet weak var contentTableView: UITableView!
     let sectionTitels = ["your_basket", "fill_out_the_application_form"]
     
@@ -19,6 +20,12 @@ class CartViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame.size = shadowView.frame.size
+        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
+        gradientLayer.locations = [0.3, 1.0]
+        shadowView.layer.addSublayer(gradientLayer)
+        
         contentTableView.delegate = self
         contentTableView.dataSource = self
         contentTableView.separatorStyle = .none

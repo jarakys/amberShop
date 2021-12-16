@@ -34,7 +34,6 @@ class CartTableViewCell: UITableViewCell {
         productsTableView.separatorStyle = .none
         productsTableView.allowsSelection = false
         productsTableView.register(UINib(nibName: "ProductCartTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductCartTableViewCell")
-        
         dataRows = LocalStorageManager.shared.get(key: .savedProducts) ?? []
         calculateTotalPrice()
         productsTableView.sizeChanged = {[weak self] in
@@ -45,7 +44,6 @@ class CartTableViewCell: UITableViewCell {
             
             //WTF?
             self?.containerView.layer.addBorder(edge: .left, color: .black.withAlphaComponent(0.3), thickness: 0.5)
-            self?.containerView.addBorderTop(size: 0.5, color: .black.withAlphaComponent(0.3))
             self?.containerView.layer.addBorder(edge: .right, color: .black.withAlphaComponent(0.3), thickness: 0.5)
             self?.containerView.layer.addBorder(edge: .bottom, color: .black.withAlphaComponent(0.3), thickness: 0.5)
             self?.sizeChanged?()

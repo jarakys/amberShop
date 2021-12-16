@@ -9,10 +9,18 @@ import UIKit
 
 class AboutUsViewController: BaseViewController {
 
+    @IBOutlet var shadowView: UIView!
     @IBOutlet var aboutUsTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame.size = shadowView.frame.size
+        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
+        gradientLayer.locations = [0.3, 1.0]
+        shadowView.layer.addSublayer(gradientLayer)
+        
         aboutUsTableView.register(UINib(nibName: "AboutUsTableViewCell", bundle: nil), forCellReuseIdentifier: "AboutUsTableViewCell")
         aboutUsTableView.delegate = self
         aboutUsTableView.dataSource = self

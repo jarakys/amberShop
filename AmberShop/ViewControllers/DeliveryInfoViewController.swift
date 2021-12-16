@@ -9,6 +9,7 @@ import UIKit
 
 class DeliveryInfoViewController: BaseViewController {
 
+    @IBOutlet var shadowView: UIView!
     @IBOutlet weak var contentTableView: UITableView!
     
     private var deliveryInfo: DeliveryInfoModel? {
@@ -22,6 +23,12 @@ class DeliveryInfoViewController: BaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame.size = shadowView.frame.size
+        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
+        gradientLayer.locations = [0.3, 1.0]
+        shadowView.layer.addSublayer(gradientLayer)
+        
         contentTableView.delegate = self
         contentTableView.dataSource = self
         contentTableView.register(UINib(nibName: "DeliveryInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "DeliveryInfoTableViewCell")

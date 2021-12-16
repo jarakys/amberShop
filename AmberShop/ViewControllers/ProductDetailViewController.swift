@@ -12,15 +12,24 @@ class ProductDetailViewController: BaseViewController {
     public var viewModel: ProductDetailViewModel?
 
     @IBOutlet weak var contentTableView: UITableView!
+    @IBOutlet var shadowView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let gradientLayer = CAGradientLayer()
+        gradientLayer.frame.size = shadowView.frame.size
+        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
+        gradientLayer.locations = [0.3, 1.0]
+        shadowView.layer.addSublayer(gradientLayer)
+        
         configNotification()
         contentTableView.separatorStyle = .none
         contentTableView.allowsSelection = false
         contentTableView.delegate = self
         contentTableView.dataSource = self
         configure()
+        contentTableView.addShadow(location: .top)
         contentTableView.register(UINib(nibName: "ProductSettingsTableViewCell", bundle: nil), forCellReuseIdentifier: "ProductSettingsTableViewCell")
         contentTableView.register(UINib(nibName: "ImageTableViewCell", bundle: nil), forCellReuseIdentifier: "ImageTableViewCell")
         contentTableView.register(UINib(nibName: "TextDescriptionTableViewCell", bundle: nil), forCellReuseIdentifier: "TextDescriptionTableViewCell")

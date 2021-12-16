@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -23,15 +23,15 @@
                 <rect key="frame" x="0.0" y="0.0" width="370" height="318"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5R7-1K-3EQ" customClass="ContentSizedTableView" customModule="AmberShop" customModuleProvider="target">
+                    <tableView clipsSubviews="YES" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" bouncesZoom="NO" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="5R7-1K-3EQ" customClass="ContentSizedTableView" customModule="AmberShop" customModuleProvider="target">
                         <rect key="frame" x="0.0" y="0.0" width="370" height="248"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </tableView>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="P6H-4X-gW2">
-                        <rect key="frame" x="0.0" y="248" width="370" height="70"/>
+                        <rect key="frame" x="10" y="248" width="350" height="70"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gdo-RS-SUN">
-                                <rect key="frame" x="168.5" y="22.5" width="33" height="25.5"/>
+                                <rect key="frame" x="158.5" y="22.5" width="33" height="25.5"/>
                                 <fontDescription key="fontDescription" name="Oswald-Regular" family="Oswald" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -46,9 +46,9 @@
                     </view>
                 </subviews>
                 <constraints>
-                    <constraint firstItem="P6H-4X-gW2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="Cje-va-s9f"/>
+                    <constraint firstItem="P6H-4X-gW2" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="Cje-va-s9f"/>
                     <constraint firstItem="5R7-1K-3EQ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="YbO-li-MM0"/>
-                    <constraint firstAttribute="trailing" secondItem="P6H-4X-gW2" secondAttribute="trailing" id="cND-md-Hah"/>
+                    <constraint firstAttribute="trailing" secondItem="P6H-4X-gW2" secondAttribute="trailing" constant="10" id="cND-md-Hah"/>
                     <constraint firstAttribute="bottom" secondItem="P6H-4X-gW2" secondAttribute="bottom" id="fFC-uJ-0uv"/>
                     <constraint firstItem="5R7-1K-3EQ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="hKn-Ro-tgg"/>
                     <constraint firstItem="P6H-4X-gW2" firstAttribute="top" secondItem="5R7-1K-3EQ" secondAttribute="bottom" id="j86-d9-MeL"/>
