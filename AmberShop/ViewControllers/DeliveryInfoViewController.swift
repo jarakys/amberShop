@@ -9,7 +9,6 @@ import UIKit
 
 class DeliveryInfoViewController: BaseViewController {
 
-    @IBOutlet var shadowView: UIView!
     @IBOutlet weak var contentTableView: UITableView!
     
     private var deliveryInfo: DeliveryInfoModel? {
@@ -22,13 +21,6 @@ class DeliveryInfoViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame.size = shadowView.frame.size
-        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
-        gradientLayer.locations = [0.3, 1.0]
-        shadowView.layer.addSublayer(gradientLayer)
-        
         contentTableView.delegate = self
         contentTableView.dataSource = self
         contentTableView.register(UINib(nibName: "DeliveryInfoTableViewCell", bundle: nil), forCellReuseIdentifier: "DeliveryInfoTableViewCell")
@@ -55,7 +47,7 @@ class DeliveryInfoViewController: BaseViewController {
         logoBtn.setImage(UIImage(named: "logo".localized), for: .selected)
         logoBtn.isEnabled = false
         logoBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 100)
         let logoBarBtn = UIBarButtonItem(customView: logoBtn)
 
         self.navigationItem.setLeftBarButtonItems([backBarBtn, logoBarBtn], animated: false)

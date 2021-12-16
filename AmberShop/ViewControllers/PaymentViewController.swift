@@ -50,7 +50,7 @@ class PaymentViewController: BaseViewController {
         logoBtn.setImage(UIImage(named: "logo".localized), for: .selected)
         logoBtn.isEnabled = false
         logoBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
-        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 100)
         let logoBarBtn = UIBarButtonItem(customView: logoBtn)
 
         self.navigationItem.setLeftBarButtonItems([backBarBtn, logoBarBtn], animated: false)

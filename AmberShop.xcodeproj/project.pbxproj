@@ -521,8 +521,8 @@
 			);
 			mainGroup = 1162B1F0274970F2000F7A03;
 			packageReferences = (
-				EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher.git" */,
-				EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */,
+				EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */,
 				EDF44D65275A8A1300559557 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 1162B1FA274970F2000F7A03 /* Products */;
@@ -844,6 +844,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmberShop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Амбер-Футболка";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -855,7 +856,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -876,6 +877,7 @@
 				DEVELOPMENT_TEAM = 6NNWR2JHQ8;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = AmberShop/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "Амбер-Футболка";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -887,7 +889,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.6;
+				MARKETING_VERSION = 1.8;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -920,7 +922,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher.git" */ = {
+		EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
 			requirement = {
@@ -928,7 +930,7 @@
 				kind = branch;
 			};
 		};
-		EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */ = {
+		EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/hackiftekhar/IQKeyboardManager.git";
 			requirement = {
@@ -949,12 +951,12 @@
 /* Begin XCSwiftPackageProductDependency section */
 		EDAFA1FB2756A48600AE2073 /* Kingfisher */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher.git" */;
+			package = EDAFA1FA2756A48600AE2073 /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
 		};
 		EDAFA1FE2756A4BF00AE2073 /* IQKeyboardManagerSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager.git" */;
+			package = EDAFA1FD2756A4BF00AE2073 /* XCRemoteSwiftPackageReference "IQKeyboardManager" */;
 			productName = IQKeyboardManagerSwift;
 		};
 		EDF44D66275A8A1300559557 /* Alamofire */ = {

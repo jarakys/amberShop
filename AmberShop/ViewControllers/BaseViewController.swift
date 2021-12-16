@@ -26,6 +26,13 @@ class BaseViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        self.navigationController?.navigationBar.layer.masksToBounds = false
+        self.navigationController?.navigationBar.layer.shadowColor = UIColor.lightGray.cgColor
+        self.navigationController?.navigationBar.layer.shadowOpacity = 0.5
+        self.navigationController?.navigationBar.layer.shadowOffset = CGSize(width: 0, height: 2.0)
+        self.navigationController?.navigationBar.layer.shadowRadius = 10
+        
         configureLeftBar()
         configureRightBar()
         NotificationCenter.default.addObserver(forName: NSNotification.Name("LocalizationChanged"), object: nil, queue: .main, using: {[weak self] _ in
@@ -45,7 +52,7 @@ class BaseViewController: UIViewController {
         logoBtn.isEnabled = false
         logoBtn.backgroundColor = .clear
         logoBtn.frame = CGRect(x: 0, y: 0, width: 80, height: 40)
-        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 100)
+        logoBtn.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 5, right: 100)
         let logoBarBtn = UIBarButtonItem(customView: logoBtn)
 
         self.navigationItem.setLeftBarButton(logoBarBtn, animated: false)
@@ -55,22 +62,25 @@ class BaseViewController: UIViewController {
         let cartBtn: UIButton = UIButton()
         cartBtn.setImage(UIImage(systemName: "cart"), for: .normal)
         cartBtn.addTarget(self, action: #selector(cartButtonDidClick), for: .touchUpInside)
-        cartBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        cartBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         cartBtn.tintColor = .white
         // 7D71B1
         cartBtn.backgroundColor = UIColor.hexColor(hex: "7D71B1")
-        cartBtn.layer.cornerRadius = 15
+        cartBtn.layer.cornerRadius = 13
         let countLabel = UILabel(frame: CGRect(x: cartBtn.frame.width + 10, y: -10, width: 40, height: 30))
         countLabel.text = ""
         countLabel.textColor = .white
-        countLabel.font = .systemFont(ofSize: 12, weight: .bold)
+        countLabel.font = .systemFont(ofSize: 10, weight: .bold)
         cartBtn.addSubview(countLabel)
         countLabel.textAlignment = .center
-        countLabel.frame = CGRect(x: 0, y: -8, width: 40, height: 30)
+        countLabel.frame = CGRect(x: 0, y: -8, width: 35, height: 30)
         
-        if let basket: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts),
-           !basket.isEmpty {
-            countLabel.text = basket.count.description
+        if let basketItems: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts),
+           !basketItems.isEmpty {
+            let count = basketItems.reduce(0, {result, item in
+                return result + item.basketModel.quantity
+            })
+            countLabel.text = count.description
         }
         
         let cartBarBtn = UIBarButtonItem(customView: cartBtn)
@@ -79,10 +89,10 @@ class BaseViewController: UIViewController {
         let menuBtn: UIButton = UIButton()
         menuBtn.setImage(UIImage(systemName: "line.horizontal.3"), for: .normal)
         menuBtn.addTarget(self, action: #selector(menuButtonDidClick), for: .touchUpInside)
-        menuBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        menuBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         menuBtn.tintColor = .white
         menuBtn.backgroundColor = UIColor.hexColor(hex: "7D71B1")
-        menuBtn.layer.cornerRadius = 15
+        menuBtn.layer.cornerRadius = 13
         let menuBarBtn = UIBarButtonItem(customView: menuBtn)
         
         self.navigationItem.setRightBarButtonItems([menuBarBtn, cartBarBtn], animated: false)

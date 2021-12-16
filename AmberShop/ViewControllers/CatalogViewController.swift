@@ -9,7 +9,6 @@ import UIKit
 
 class CatalogViewController: BaseViewController {
 
-    @IBOutlet var shadowView: UIView!
     @IBOutlet weak var catalogTableView: UITableView!
     @IBOutlet weak var ruButton: UIButton!
     @IBOutlet weak var uaBtton: UIButton!
@@ -22,13 +21,6 @@ class CatalogViewController: BaseViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        let gradientLayer = CAGradientLayer()
-        gradientLayer.frame.size = shadowView.frame.size
-        gradientLayer.colors = [UIColor.white.cgColor,UIColor.gray.withAlphaComponent(0.3).cgColor]
-        gradientLayer.locations = [0.3, 1.0]
-        shadowView.layer.addSublayer(gradientLayer)
-        
         catalogTableView.delegate = self
         catalogTableView.dataSource = self
         catalogTableView.separatorStyle = .none
@@ -66,20 +58,37 @@ class CatalogViewController: BaseViewController {
         let cartBtn: UIButton = UIButton()
         cartBtn.setImage(UIImage(systemName: "cart"), for: .normal)
         cartBtn.addTarget(self, action: #selector(cartButtonDidClick), for: .touchUpInside)
-        cartBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        cartBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         cartBtn.tintColor = .white
         cartBtn.backgroundColor = UIColor.hexColor(hex: "7D71B1")
-        cartBtn.layer.cornerRadius = 15
+        cartBtn.layer.cornerRadius = 13
+        
+        let countLabel = UILabel(frame: CGRect(x: cartBtn.frame.width + 10, y: -10, width: 40, height: 30))
+        countLabel.text = ""
+        countLabel.textColor = .white
+        countLabel.font = .systemFont(ofSize: 10, weight: .bold)
+        cartBtn.addSubview(countLabel)
+        countLabel.textAlignment = .center
+        countLabel.frame = CGRect(x: 0, y: -8, width: 35, height: 30)
+        
+        if let basketItems: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts),
+           !basketItems.isEmpty {
+            let count = basketItems.reduce(0, {result, item in
+                return result + item.basketModel.quantity
+            })
+            countLabel.text = count.description
+        }
+        
         let cartBarBtn = UIBarButtonItem(customView: cartBtn)
 
 
         let closeBtn: UIButton = UIButton()
         closeBtn.setImage(UIImage(systemName: "multiply"), for: .normal)
         closeBtn.addTarget(self, action: #selector(closeButtonDidClick), for: .touchUpInside)
-        closeBtn.frame = CGRect(x: 0, y: 0, width: 40, height: 40)
+        closeBtn.frame = CGRect(x: 0, y: 0, width: 35, height: 35)
         closeBtn.tintColor = .white
         closeBtn.backgroundColor = UIColor.hexColor(hex: "7D71B1")
-        closeBtn.layer.cornerRadius = 15
+        closeBtn.layer.cornerRadius = 13
         let closeBarBtn = UIBarButtonItem(customView: closeBtn)
         
         self.navigationItem.setRightBarButtonItems([closeBarBtn, cartBarBtn], animated: false)
