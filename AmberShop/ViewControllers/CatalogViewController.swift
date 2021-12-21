@@ -115,7 +115,7 @@ class CatalogViewController: BaseViewController {
     override func cartButtonDidClick() {
         guard let basketData: [BasketWrapItem] = LocalStorageManager.shared.get(key: .savedProducts),
         !basketData.isEmpty else {
-            showAlert(message: "basket_is_empty".localized, action: nil)
+            showAlert(message: "basket_is_empty".localized, title: "", action: nil)
             return
         }
         let storyboard = UIStoryboard(name: "Main", bundle: nil)

@@ -57,7 +57,7 @@
 		1188BD132760CE1500FD5511 /* Oswald-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0D2760CE1400FD5511 /* Oswald-Regular.ttf */; };
 		1188BD142760CE1500FD5511 /* Oswald-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0E2760CE1500FD5511 /* Oswald-Light.ttf */; };
 		1188BD152760CE1500FD5511 /* Oswald-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1188BD0F2760CE1500FD5511 /* Oswald-SemiBold.ttf */; };
-		230828FB069C36EE5F696BC7 /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C5F014BF834776FC9DC8A203 /* Pods_AmberShop.framework */; };
+		E896DD5AD92C6BBEC4F3A1DC /* Pods_AmberShop.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A998B2D99E6DAA6AD9868B95 /* Pods_AmberShop.framework */; };
 		ED20C08F275DAC5E005F472F /* AboutUsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */; };
 		ED20C091275DB026005F472F /* AboutUsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C090275DB026005F472F /* AboutUsViewController.swift */; };
 		ED20C096275FC2B6005F472F /* PaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED20C095275FC2B6005F472F /* PaymentViewController.swift */; };
@@ -154,9 +154,9 @@
 		1188BD0D2760CE1400FD5511 /* Oswald-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Regular.ttf"; sourceTree = "<group>"; };
 		1188BD0E2760CE1500FD5511 /* Oswald-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-Light.ttf"; sourceTree = "<group>"; };
 		1188BD0F2760CE1500FD5511 /* Oswald-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Oswald-SemiBold.ttf"; sourceTree = "<group>"; };
-		61D840A9175683EE4C83C95F /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
-		AA006DF842684BBCC0E249E8 /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
-		C5F014BF834776FC9DC8A203 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A998B2D99E6DAA6AD9868B95 /* Pods_AmberShop.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AmberShop.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		AEF8D5E8CE064AAA00E81B71 /* Pods-AmberShop.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.debug.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.debug.xcconfig"; sourceTree = "<group>"; };
+		B19427CE2A98F56BC64F59E2 /* Pods-AmberShop.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AmberShop.release.xcconfig"; path = "Target Support Files/Pods-AmberShop/Pods-AmberShop.release.xcconfig"; sourceTree = "<group>"; };
 		ED20C08E275DAC5E005F472F /* AboutUsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsTableViewCell.swift; sourceTree = "<group>"; };
 		ED20C090275DB026005F472F /* AboutUsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutUsViewController.swift; sourceTree = "<group>"; };
 		ED20C095275FC2B6005F472F /* PaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PaymentViewController.swift; sourceTree = "<group>"; };
@@ -208,13 +208,21 @@
 				EDAFA1FC2756A48600AE2073 /* Kingfisher in Frameworks */,
 				EDF44D67275A8A1300559557 /* Alamofire in Frameworks */,
 				EDAFA1FF2756A4BF00AE2073 /* IQKeyboardManagerSwift in Frameworks */,
-				230828FB069C36EE5F696BC7 /* Pods_AmberShop.framework in Frameworks */,
+				E896DD5AD92C6BBEC4F3A1DC /* Pods_AmberShop.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0F747C4B705F6AF14CE70B8E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A998B2D99E6DAA6AD9868B95 /* Pods_AmberShop.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		112CD2352757FA4300EE36BF /* ProductDetail */ = {
 			isa = PBXGroup;
 			children = (
@@ -238,7 +246,7 @@
 				1162B1FB274970F2000F7A03 /* AmberShop */,
 				1162B1FA274970F2000F7A03 /* Products */,
 				E3263FDEB01754846B0755AD /* Pods */,
-				F759A81DA37874080E5291F4 /* Frameworks */,
+				0F747C4B705F6AF14CE70B8E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -341,8 +349,8 @@
 		E3263FDEB01754846B0755AD /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				AA006DF842684BBCC0E249E8 /* Pods-AmberShop.debug.xcconfig */,
-				61D840A9175683EE4C83C95F /* Pods-AmberShop.release.xcconfig */,
+				AEF8D5E8CE064AAA00E81B71 /* Pods-AmberShop.debug.xcconfig */,
+				B19427CE2A98F56BC64F59E2 /* Pods-AmberShop.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -459,14 +467,6 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
-		F759A81DA37874080E5291F4 /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				C5F014BF834776FC9DC8A203 /* Pods_AmberShop.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -474,11 +474,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1162B20D274970F4000F7A03 /* Build configuration list for PBXNativeTarget "AmberShop" */;
 			buildPhases = (
-				533790218096715A3FBEB242 /* [CP] Check Pods Manifest.lock */,
+				0FB4327D16D69174D748F03B /* [CP] Check Pods Manifest.lock */,
 				1162B1F5274970F2000F7A03 /* Sources */,
 				1162B1F6274970F2000F7A03 /* Frameworks */,
 				1162B1F7274970F2000F7A03 /* Resources */,
-				69A9D217D18D62F385FAEDB2 /* [CP] Embed Pods Frameworks */,
+				5B42AE966368421B7345364B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -568,7 +568,7 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		533790218096715A3FBEB242 /* [CP] Check Pods Manifest.lock */ = {
+		0FB4327D16D69174D748F03B /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -590,7 +590,7 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
-		69A9D217D18D62F385FAEDB2 /* [CP] Embed Pods Frameworks */ = {
+		5B42AE966368421B7345364B /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -834,7 +834,7 @@
 		};
 		1162B20E274970F4000F7A03 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = AA006DF842684BBCC0E249E8 /* Pods-AmberShop.debug.xcconfig */;
+			baseConfigurationReference = AEF8D5E8CE064AAA00E81B71 /* Pods-AmberShop.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -856,7 +856,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
@@ -867,7 +867,7 @@
 		};
 		1162B20F274970F4000F7A03 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 61D840A9175683EE4C83C95F /* Pods-AmberShop.release.xcconfig */;
+			baseConfigurationReference = B19427CE2A98F56BC64F59E2 /* Pods-AmberShop.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -889,7 +889,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.8;
+				MARKETING_VERSION = 1.9;
 				PRODUCT_BUNDLE_IDENTIFIER = KirillChernovInc.AmberShop;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;

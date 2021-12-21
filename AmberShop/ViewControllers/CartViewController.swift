@@ -120,7 +120,7 @@ extension CartViewController: UITableViewDelegate, UITableViewDataSource {
             }
             cell.itemDeletedAction = {[weak self] in
                 if self?.products.isEmpty == true {
-                    self?.showAlert(message: "basket_is_empty".localized, action: {
+                    self?.showAlert(message: "basket_is_empty".localized, title: "", action: {
                         self?.navigationController?.popViewController(animated: true)
                     })
                 }
